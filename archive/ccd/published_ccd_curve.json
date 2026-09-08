@@ -1,0 +1,1605 @@
+{
+  "description": "Global Published CCD Curve: unweighted mean across regional/basin sources at each age. See prep_ccd.py's module doc for method and caveats.",
+  "sources": [
+    "palike_pacific",
+    "dutkiewicz_south_atlantic",
+    "van_andel_indian",
+    "van_andel_atlantic_south",
+    "van_andel_atlantic_north",
+    "van_andel_pacific"
+  ],
+  "age_range_ma": [
+    0,
+    140.0
+  ],
+  "curve": [
+    {
+      "age_ma": 0.0,
+      "ccd_km": 4.65,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "palike_pacific": 4.65
+      }
+    },
+    {
+      "age_ma": 1.0,
+      "ccd_km": 4.5318,
+      "tier": "real",
+      "spread_km": 0.1363,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.6,
+        "dutkiewicz_south_atlantic": 4.4637
+      }
+    },
+    {
+      "age_ma": 2.0,
+      "ccd_km": 4.6509,
+      "tier": "real",
+      "spread_km": 0.3018,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.5,
+        "dutkiewicz_south_atlantic": 4.8018
+      }
+    },
+    {
+      "age_ma": 3.0,
+      "ccd_km": 4.5833,
+      "tier": "real",
+      "spread_km": 0.0334,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.6,
+        "dutkiewicz_south_atlantic": 4.5666
+      }
+    },
+    {
+      "age_ma": 4.0,
+      "ccd_km": 4.4453,
+      "tier": "real",
+      "spread_km": 0.0906,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.4,
+        "dutkiewicz_south_atlantic": 4.4906
+      }
+    },
+    {
+      "age_ma": 5.0,
+      "ccd_km": 4.6735,
+      "tier": "real",
+      "spread_km": 0.347,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.5,
+        "dutkiewicz_south_atlantic": 4.847
+      }
+    },
+    {
+      "age_ma": 6.0,
+      "ccd_km": 4.5232,
+      "tier": "real",
+      "spread_km": 0.0536,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.55,
+        "dutkiewicz_south_atlantic": 4.4964
+      }
+    },
+    {
+      "age_ma": 7.0,
+      "ccd_km": 4.4737,
+      "tier": "real",
+      "spread_km": 0.0527,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.5,
+        "dutkiewicz_south_atlantic": 4.4473
+      }
+    },
+    {
+      "age_ma": 8.0,
+      "ccd_km": 4.4491,
+      "tier": "real",
+      "spread_km": 0.1017,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.5,
+        "dutkiewicz_south_atlantic": 4.3983
+      }
+    },
+    {
+      "age_ma": 9.0,
+      "ccd_km": 4.518,
+      "tier": "real",
+      "spread_km": 0.0641,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.55,
+        "dutkiewicz_south_atlantic": 4.4859
+      }
+    },
+    {
+      "age_ma": 10.0,
+      "ccd_km": 4.4301,
+      "tier": "real",
+      "spread_km": 0.1398,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.5,
+        "dutkiewicz_south_atlantic": 4.3602
+      }
+    },
+    {
+      "age_ma": 11.0,
+      "ccd_km": 4.6198,
+      "tier": "real",
+      "spread_km": 0.4605,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.85,
+        "dutkiewicz_south_atlantic": 4.3895
+      }
+    },
+    {
+      "age_ma": 12.0,
+      "ccd_km": 4.5345,
+      "tier": "real",
+      "spread_km": 0.5309,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.8,
+        "dutkiewicz_south_atlantic": 4.2691
+      }
+    },
+    {
+      "age_ma": 13.0,
+      "ccd_km": 4.5678,
+      "tier": "real",
+      "spread_km": 0.3644,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.75,
+        "dutkiewicz_south_atlantic": 4.3856
+      }
+    },
+    {
+      "age_ma": 14.0,
+      "ccd_km": 4.626,
+      "tier": "real",
+      "spread_km": 0.2479,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.75,
+        "dutkiewicz_south_atlantic": 4.5021
+      }
+    },
+    {
+      "age_ma": 15.0,
+      "ccd_km": 4.6593,
+      "tier": "real",
+      "spread_km": 0.0814,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.7,
+        "dutkiewicz_south_atlantic": 4.6186
+      }
+    },
+    {
+      "age_ma": 16.0,
+      "ccd_km": 4.2768,
+      "tier": "real",
+      "spread_km": 0.0464,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.3,
+        "dutkiewicz_south_atlantic": 4.2536
+      }
+    },
+    {
+      "age_ma": 17.0,
+      "ccd_km": 3.9586,
+      "tier": "real",
+      "spread_km": 0.5828,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.25,
+        "dutkiewicz_south_atlantic": 3.6672
+      }
+    },
+    {
+      "age_ma": 18.0,
+      "ccd_km": 4.0547,
+      "tier": "real",
+      "spread_km": 0.3906,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.25,
+        "dutkiewicz_south_atlantic": 3.8594
+      }
+    },
+    {
+      "age_ma": 19.0,
+      "ccd_km": 4.3758,
+      "tier": "real",
+      "spread_km": 0.6484,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.7,
+        "dutkiewicz_south_atlantic": 4.0516
+      }
+    },
+    {
+      "age_ma": 20.0,
+      "ccd_km": 4.5233,
+      "tier": "real",
+      "spread_km": 0.3534,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.7,
+        "dutkiewicz_south_atlantic": 4.3466
+      }
+    },
+    {
+      "age_ma": 21.0,
+      "ccd_km": 4.4618,
+      "tier": "real",
+      "spread_km": 0.4764,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.7,
+        "dutkiewicz_south_atlantic": 4.2236
+      }
+    },
+    {
+      "age_ma": 22.0,
+      "ccd_km": 4.4003,
+      "tier": "real",
+      "spread_km": 0.5993,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.7,
+        "dutkiewicz_south_atlantic": 4.1007
+      }
+    },
+    {
+      "age_ma": 23.0,
+      "ccd_km": 4.4305,
+      "tier": "real",
+      "spread_km": 0.5391,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.7,
+        "dutkiewicz_south_atlantic": 4.1609
+      }
+    },
+    {
+      "age_ma": 24.0,
+      "ccd_km": 4.2836,
+      "tier": "real",
+      "spread_km": 0.7327,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.65,
+        "dutkiewicz_south_atlantic": 3.9173
+      }
+    },
+    {
+      "age_ma": 25.0,
+      "ccd_km": 4.2283,
+      "tier": "real",
+      "spread_km": 0.8433,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.65,
+        "dutkiewicz_south_atlantic": 3.8067
+      }
+    },
+    {
+      "age_ma": 26.0,
+      "ccd_km": 4.3903,
+      "tier": "real",
+      "spread_km": 0.5194,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.65,
+        "dutkiewicz_south_atlantic": 4.1306
+      }
+    },
+    {
+      "age_ma": 27.0,
+      "ccd_km": 4.4621,
+      "tier": "real",
+      "spread_km": 0.2758,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.6,
+        "dutkiewicz_south_atlantic": 4.3242
+      }
+    },
+    {
+      "age_ma": 28.0,
+      "ccd_km": 4.2573,
+      "tier": "real",
+      "spread_km": 0.6855,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.6,
+        "dutkiewicz_south_atlantic": 3.9145
+      }
+    },
+    {
+      "age_ma": 29.0,
+      "ccd_km": 4.3296,
+      "tier": "real",
+      "spread_km": 0.5409,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.6,
+        "dutkiewicz_south_atlantic": 4.0591
+      }
+    },
+    {
+      "age_ma": 30.0,
+      "ccd_km": 4.2421,
+      "tier": "real",
+      "spread_km": 0.7158,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.6,
+        "dutkiewicz_south_atlantic": 3.8842
+      }
+    },
+    {
+      "age_ma": 31.0,
+      "ccd_km": 4.4825,
+      "tier": "real",
+      "spread_km": 0.2349,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.6,
+        "dutkiewicz_south_atlantic": 4.3651
+      }
+    },
+    {
+      "age_ma": 32.0,
+      "ccd_km": 4.0757,
+      "tier": "real",
+      "spread_km": 0.8486,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.5,
+        "dutkiewicz_south_atlantic": 3.6514
+      }
+    },
+    {
+      "age_ma": 33.0,
+      "ccd_km": 4.2385,
+      "tier": "real",
+      "spread_km": 0.5229,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.5,
+        "dutkiewicz_south_atlantic": 3.9771
+      }
+    },
+    {
+      "age_ma": 34.0,
+      "ccd_km": 4.1514,
+      "tier": "real",
+      "spread_km": 0.3028,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.0,
+        "dutkiewicz_south_atlantic": 4.3028
+      }
+    },
+    {
+      "age_ma": 35.0,
+      "ccd_km": 3.9977,
+      "tier": "real",
+      "spread_km": 0.1954,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.9,
+        "dutkiewicz_south_atlantic": 4.0954
+      }
+    },
+    {
+      "age_ma": 36.0,
+      "ccd_km": 4.1167,
+      "tier": "real",
+      "spread_km": 0.4333,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.9,
+        "dutkiewicz_south_atlantic": 4.3333
+      }
+    },
+    {
+      "age_ma": 37.0,
+      "ccd_km": 4.1856,
+      "tier": "real",
+      "spread_km": 0.7712,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.8,
+        "dutkiewicz_south_atlantic": 4.5712
+      }
+    },
+    {
+      "age_ma": 38.0,
+      "ccd_km": 3.8476,
+      "tier": "real",
+      "spread_km": 0.5952,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.55,
+        "dutkiewicz_south_atlantic": 4.1452
+      }
+    },
+    {
+      "age_ma": 39.0,
+      "ccd_km": 4.3552,
+      "tier": "real",
+      "spread_km": 0.5103,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.1,
+        "dutkiewicz_south_atlantic": 4.6103
+      }
+    },
+    {
+      "age_ma": 40.0,
+      "ccd_km": 3.8133,
+      "tier": "real",
+      "spread_km": 1.1267,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.25,
+        "dutkiewicz_south_atlantic": 4.3767
+      }
+    },
+    {
+      "age_ma": 41.0,
+      "ccd_km": 3.9418,
+      "tier": "real",
+      "spread_km": 0.2165,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 4.05,
+        "dutkiewicz_south_atlantic": 3.8335
+      }
+    },
+    {
+      "age_ma": 42.0,
+      "ccd_km": 4.0994,
+      "tier": "real",
+      "spread_km": 0.2989,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.95,
+        "dutkiewicz_south_atlantic": 4.2489
+      }
+    },
+    {
+      "age_ma": 43.0,
+      "ccd_km": 3.6708,
+      "tier": "real",
+      "spread_km": 0.3416,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.5,
+        "dutkiewicz_south_atlantic": 3.8416
+      }
+    },
+    {
+      "age_ma": 44.0,
+      "ccd_km": 4.0004,
+      "tier": "real",
+      "spread_km": 0.2007,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.9,
+        "dutkiewicz_south_atlantic": 4.1007
+      }
+    },
+    {
+      "age_ma": 45.0,
+      "ccd_km": 4.0576,
+      "tier": "real",
+      "spread_km": 1.4152,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.35,
+        "dutkiewicz_south_atlantic": 4.7652
+      }
+    },
+    {
+      "age_ma": 46.0,
+      "ccd_km": 4.0933,
+      "tier": "real",
+      "spread_km": 1.5867,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.3,
+        "dutkiewicz_south_atlantic": 4.8867
+      }
+    },
+    {
+      "age_ma": 47.0,
+      "ccd_km": 3.6599,
+      "tier": "real",
+      "spread_km": 0.9197,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.2,
+        "dutkiewicz_south_atlantic": 4.1197
+      }
+    },
+    {
+      "age_ma": 48.0,
+      "ccd_km": 3.9047,
+      "tier": "real",
+      "spread_km": 1.6095,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.1,
+        "dutkiewicz_south_atlantic": 4.7095
+      }
+    },
+    {
+      "age_ma": 49.0,
+      "ccd_km": 3.845,
+      "tier": "real",
+      "spread_km": 1.6899,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.0,
+        "dutkiewicz_south_atlantic": 4.6899
+      }
+    },
+    {
+      "age_ma": 50.0,
+      "ccd_km": 3.8352,
+      "tier": "real",
+      "spread_km": 1.6704,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.0,
+        "dutkiewicz_south_atlantic": 4.6704
+      }
+    },
+    {
+      "age_ma": 51.0,
+      "ccd_km": 3.7677,
+      "tier": "real",
+      "spread_km": 1.6354,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 2.95,
+        "dutkiewicz_south_atlantic": 4.5854
+      }
+    },
+    {
+      "age_ma": 52.0,
+      "ccd_km": 3.7487,
+      "tier": "real",
+      "spread_km": 1.8973,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 2.8,
+        "dutkiewicz_south_atlantic": 4.6973
+      }
+    },
+    {
+      "age_ma": 53.0,
+      "ccd_km": 3.9584,
+      "tier": "real",
+      "spread_km": 1.7167,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.1,
+        "dutkiewicz_south_atlantic": 4.8167
+      }
+    },
+    {
+      "age_ma": 54.0,
+      "ccd_km": 4.1259,
+      "tier": "real",
+      "spread_km": 1.2519,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.5,
+        "dutkiewicz_south_atlantic": 4.7519
+      }
+    },
+    {
+      "age_ma": 55.0,
+      "ccd_km": 3.8435,
+      "tier": "real",
+      "spread_km": 1.6871,
+      "n_sources": 2,
+      "per_source_km": {
+        "palike_pacific": 3.0,
+        "dutkiewicz_south_atlantic": 4.6871
+      }
+    },
+    {
+      "age_ma": 56.0,
+      "ccd_km": 4.8061,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.8061
+      }
+    },
+    {
+      "age_ma": 57.0,
+      "ccd_km": 4.9252,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.9252
+      }
+    },
+    {
+      "age_ma": 58.0,
+      "ccd_km": 5.0443,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 5.0443
+      }
+    },
+    {
+      "age_ma": 59.0,
+      "ccd_km": 4.1279,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.1279
+      }
+    },
+    {
+      "age_ma": 60.0,
+      "ccd_km": 4.2807,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.2807
+      }
+    },
+    {
+      "age_ma": 61.0,
+      "ccd_km": 4.4336,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.4336
+      }
+    },
+    {
+      "age_ma": 62.0,
+      "ccd_km": 4.5865,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.5865
+      }
+    },
+    {
+      "age_ma": 63.0,
+      "ccd_km": 4.1771,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.1771
+      }
+    },
+    {
+      "age_ma": 64.0,
+      "ccd_km": 3.7677,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 3.7677
+      }
+    },
+    {
+      "age_ma": 65.0,
+      "ccd_km": 4.3186,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.3186
+      }
+    },
+    {
+      "age_ma": 66.0,
+      "ccd_km": 4.8694,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.8694
+      }
+    },
+    {
+      "age_ma": 67.0,
+      "ccd_km": 5.2459,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 5.2459
+      }
+    },
+    {
+      "age_ma": 68.0,
+      "ccd_km": 4.9557,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 4.9557
+      }
+    },
+    {
+      "age_ma": 69.0,
+      "ccd_km": 3.9542,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 3.9542
+      }
+    },
+    {
+      "age_ma": 70.0,
+      "ccd_km": 2.9526,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 2.9526
+      }
+    },
+    {
+      "age_ma": 71.0,
+      "ccd_km": 2.9153,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 2.9153
+      }
+    },
+    {
+      "age_ma": 72.0,
+      "ccd_km": 2.8779,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 2.8779
+      }
+    },
+    {
+      "age_ma": 73.0,
+      "ccd_km": 2.8405,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 2.8405
+      }
+    },
+    {
+      "age_ma": 74.0,
+      "ccd_km": 3.0733,
+      "tier": "real",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "dutkiewicz_south_atlantic": 3.0733
+      }
+    },
+    {
+      "age_ma": 75.0,
+      "ccd_km": 3.1812,
+      "tier": "digitized",
+      "spread_km": 0.45,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.125,
+        "van_andel_atlantic_south": 3.05,
+        "van_andel_atlantic_north": 3.05,
+        "van_andel_pacific": 3.5
+      }
+    },
+    {
+      "age_ma": 76.0,
+      "ccd_km": 3.1825,
+      "tier": "digitized",
+      "spread_km": 0.46,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.12,
+        "van_andel_atlantic_south": 3.05,
+        "van_andel_atlantic_north": 3.05,
+        "van_andel_pacific": 3.51
+      }
+    },
+    {
+      "age_ma": 77.0,
+      "ccd_km": 3.1837,
+      "tier": "digitized",
+      "spread_km": 0.47,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.115,
+        "van_andel_atlantic_south": 3.05,
+        "van_andel_atlantic_north": 3.05,
+        "van_andel_pacific": 3.52
+      }
+    },
+    {
+      "age_ma": 78.0,
+      "ccd_km": 3.185,
+      "tier": "digitized",
+      "spread_km": 0.48,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.11,
+        "van_andel_atlantic_south": 3.05,
+        "van_andel_atlantic_north": 3.05,
+        "van_andel_pacific": 3.53
+      }
+    },
+    {
+      "age_ma": 79.0,
+      "ccd_km": 3.1862,
+      "tier": "digitized",
+      "spread_km": 0.49,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.105,
+        "van_andel_atlantic_south": 3.05,
+        "van_andel_atlantic_north": 3.05,
+        "van_andel_pacific": 3.54
+      }
+    },
+    {
+      "age_ma": 80.0,
+      "ccd_km": 3.1875,
+      "tier": "digitized",
+      "spread_km": 0.5,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.05,
+        "van_andel_atlantic_north": 3.05,
+        "van_andel_pacific": 3.55
+      }
+    },
+    {
+      "age_ma": 81.0,
+      "ccd_km": 3.195,
+      "tier": "digitized",
+      "spread_km": 0.5,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.06,
+        "van_andel_atlantic_north": 3.06,
+        "van_andel_pacific": 3.56
+      }
+    },
+    {
+      "age_ma": 82.0,
+      "ccd_km": 3.2025,
+      "tier": "digitized",
+      "spread_km": 0.5,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.07,
+        "van_andel_atlantic_north": 3.07,
+        "van_andel_pacific": 3.57
+      }
+    },
+    {
+      "age_ma": 83.0,
+      "ccd_km": 3.21,
+      "tier": "digitized",
+      "spread_km": 0.5,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.08,
+        "van_andel_atlantic_north": 3.08,
+        "van_andel_pacific": 3.58
+      }
+    },
+    {
+      "age_ma": 84.0,
+      "ccd_km": 3.2175,
+      "tier": "digitized",
+      "spread_km": 0.5,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.09,
+        "van_andel_atlantic_north": 3.09,
+        "van_andel_pacific": 3.59
+      }
+    },
+    {
+      "age_ma": 85.0,
+      "ccd_km": 3.225,
+      "tier": "digitized",
+      "spread_km": 0.5,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.1,
+        "van_andel_atlantic_north": 3.1,
+        "van_andel_pacific": 3.6
+      }
+    },
+    {
+      "age_ma": 86.0,
+      "ccd_km": 3.2325,
+      "tier": "digitized",
+      "spread_km": 0.51,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.11,
+        "van_andel_atlantic_north": 3.11,
+        "van_andel_pacific": 3.61
+      }
+    },
+    {
+      "age_ma": 87.0,
+      "ccd_km": 3.24,
+      "tier": "digitized",
+      "spread_km": 0.52,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.12,
+        "van_andel_atlantic_north": 3.12,
+        "van_andel_pacific": 3.62
+      }
+    },
+    {
+      "age_ma": 88.0,
+      "ccd_km": 3.2475,
+      "tier": "digitized",
+      "spread_km": 0.53,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.13,
+        "van_andel_atlantic_north": 3.13,
+        "van_andel_pacific": 3.63
+      }
+    },
+    {
+      "age_ma": 89.0,
+      "ccd_km": 3.255,
+      "tier": "digitized",
+      "spread_km": 0.54,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.14,
+        "van_andel_atlantic_north": 3.14,
+        "van_andel_pacific": 3.64
+      }
+    },
+    {
+      "age_ma": 90.0,
+      "ccd_km": 3.2625,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.1,
+        "van_andel_atlantic_south": 3.15,
+        "van_andel_atlantic_north": 3.15,
+        "van_andel_pacific": 3.65
+      }
+    },
+    {
+      "age_ma": 91.0,
+      "ccd_km": 3.2775,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.11,
+        "van_andel_atlantic_south": 3.17,
+        "van_andel_atlantic_north": 3.17,
+        "van_andel_pacific": 3.66
+      }
+    },
+    {
+      "age_ma": 92.0,
+      "ccd_km": 3.2925,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.12,
+        "van_andel_atlantic_south": 3.19,
+        "van_andel_atlantic_north": 3.19,
+        "van_andel_pacific": 3.67
+      }
+    },
+    {
+      "age_ma": 93.0,
+      "ccd_km": 3.3075,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.13,
+        "van_andel_atlantic_south": 3.21,
+        "van_andel_atlantic_north": 3.21,
+        "van_andel_pacific": 3.68
+      }
+    },
+    {
+      "age_ma": 94.0,
+      "ccd_km": 3.3225,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.14,
+        "van_andel_atlantic_south": 3.23,
+        "van_andel_atlantic_north": 3.23,
+        "van_andel_pacific": 3.69
+      }
+    },
+    {
+      "age_ma": 95.0,
+      "ccd_km": 3.3375,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.15,
+        "van_andel_atlantic_south": 3.25,
+        "van_andel_atlantic_north": 3.25,
+        "van_andel_pacific": 3.7
+      }
+    },
+    {
+      "age_ma": 96.0,
+      "ccd_km": 3.3525,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.16,
+        "van_andel_atlantic_south": 3.27,
+        "van_andel_atlantic_north": 3.27,
+        "van_andel_pacific": 3.71
+      }
+    },
+    {
+      "age_ma": 97.0,
+      "ccd_km": 3.3675,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.17,
+        "van_andel_atlantic_south": 3.29,
+        "van_andel_atlantic_north": 3.29,
+        "van_andel_pacific": 3.72
+      }
+    },
+    {
+      "age_ma": 98.0,
+      "ccd_km": 3.3825,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.18,
+        "van_andel_atlantic_south": 3.31,
+        "van_andel_atlantic_north": 3.31,
+        "van_andel_pacific": 3.73
+      }
+    },
+    {
+      "age_ma": 99.0,
+      "ccd_km": 3.3975,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.19,
+        "van_andel_atlantic_south": 3.33,
+        "van_andel_atlantic_north": 3.33,
+        "van_andel_pacific": 3.74
+      }
+    },
+    {
+      "age_ma": 100.0,
+      "ccd_km": 3.4125,
+      "tier": "digitized",
+      "spread_km": 0.55,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.2,
+        "van_andel_atlantic_south": 3.35,
+        "van_andel_atlantic_north": 3.35,
+        "van_andel_pacific": 3.75
+      }
+    },
+    {
+      "age_ma": 101.0,
+      "ccd_km": 3.4375,
+      "tier": "digitized",
+      "spread_km": 0.54,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.22,
+        "van_andel_atlantic_south": 3.385,
+        "van_andel_atlantic_north": 3.385,
+        "van_andel_pacific": 3.76
+      }
+    },
+    {
+      "age_ma": 102.0,
+      "ccd_km": 3.4625,
+      "tier": "digitized",
+      "spread_km": 0.53,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.24,
+        "van_andel_atlantic_south": 3.42,
+        "van_andel_atlantic_north": 3.42,
+        "van_andel_pacific": 3.77
+      }
+    },
+    {
+      "age_ma": 103.0,
+      "ccd_km": 3.4875,
+      "tier": "digitized",
+      "spread_km": 0.52,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.26,
+        "van_andel_atlantic_south": 3.455,
+        "van_andel_atlantic_north": 3.455,
+        "van_andel_pacific": 3.78
+      }
+    },
+    {
+      "age_ma": 104.0,
+      "ccd_km": 3.5125,
+      "tier": "digitized",
+      "spread_km": 0.51,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.28,
+        "van_andel_atlantic_south": 3.49,
+        "van_andel_atlantic_north": 3.49,
+        "van_andel_pacific": 3.79
+      }
+    },
+    {
+      "age_ma": 105.0,
+      "ccd_km": 3.5375,
+      "tier": "digitized",
+      "spread_km": 0.5,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.3,
+        "van_andel_atlantic_south": 3.525,
+        "van_andel_atlantic_north": 3.525,
+        "van_andel_pacific": 3.8
+      }
+    },
+    {
+      "age_ma": 106.0,
+      "ccd_km": 3.5625,
+      "tier": "digitized",
+      "spread_km": 0.49,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.32,
+        "van_andel_atlantic_south": 3.56,
+        "van_andel_atlantic_north": 3.56,
+        "van_andel_pacific": 3.81
+      }
+    },
+    {
+      "age_ma": 107.0,
+      "ccd_km": 3.5875,
+      "tier": "digitized",
+      "spread_km": 0.48,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.34,
+        "van_andel_atlantic_south": 3.595,
+        "van_andel_atlantic_north": 3.595,
+        "van_andel_pacific": 3.82
+      }
+    },
+    {
+      "age_ma": 108.0,
+      "ccd_km": 3.6125,
+      "tier": "digitized",
+      "spread_km": 0.47,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.36,
+        "van_andel_atlantic_south": 3.63,
+        "van_andel_atlantic_north": 3.63,
+        "van_andel_pacific": 3.83
+      }
+    },
+    {
+      "age_ma": 109.0,
+      "ccd_km": 3.6375,
+      "tier": "digitized",
+      "spread_km": 0.46,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.38,
+        "van_andel_atlantic_south": 3.665,
+        "van_andel_atlantic_north": 3.665,
+        "van_andel_pacific": 3.84
+      }
+    },
+    {
+      "age_ma": 110.0,
+      "ccd_km": 3.6625,
+      "tier": "digitized",
+      "spread_km": 0.45,
+      "n_sources": 4,
+      "per_source_km": {
+        "van_andel_indian": 3.4,
+        "van_andel_atlantic_south": 3.7,
+        "van_andel_atlantic_north": 3.7,
+        "van_andel_pacific": 3.85
+      }
+    },
+    {
+      "age_ma": 111.0,
+      "ccd_km": 3.6375,
+      "tier": "digitized",
+      "spread_km": 0.435,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.42,
+        "van_andel_pacific": 3.855
+      }
+    },
+    {
+      "age_ma": 112.0,
+      "ccd_km": 3.65,
+      "tier": "digitized",
+      "spread_km": 0.42,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.44,
+        "van_andel_pacific": 3.86
+      }
+    },
+    {
+      "age_ma": 113.0,
+      "ccd_km": 3.6625,
+      "tier": "digitized",
+      "spread_km": 0.405,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.46,
+        "van_andel_pacific": 3.865
+      }
+    },
+    {
+      "age_ma": 114.0,
+      "ccd_km": 3.675,
+      "tier": "digitized",
+      "spread_km": 0.39,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.48,
+        "van_andel_pacific": 3.87
+      }
+    },
+    {
+      "age_ma": 115.0,
+      "ccd_km": 3.6875,
+      "tier": "digitized",
+      "spread_km": 0.375,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.5,
+        "van_andel_pacific": 3.875
+      }
+    },
+    {
+      "age_ma": 116.0,
+      "ccd_km": 3.7,
+      "tier": "digitized",
+      "spread_km": 0.36,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.52,
+        "van_andel_pacific": 3.88
+      }
+    },
+    {
+      "age_ma": 117.0,
+      "ccd_km": 3.7125,
+      "tier": "digitized",
+      "spread_km": 0.345,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.54,
+        "van_andel_pacific": 3.885
+      }
+    },
+    {
+      "age_ma": 118.0,
+      "ccd_km": 3.725,
+      "tier": "digitized",
+      "spread_km": 0.33,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.56,
+        "van_andel_pacific": 3.89
+      }
+    },
+    {
+      "age_ma": 119.0,
+      "ccd_km": 3.7375,
+      "tier": "digitized",
+      "spread_km": 0.315,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.58,
+        "van_andel_pacific": 3.895
+      }
+    },
+    {
+      "age_ma": 120.0,
+      "ccd_km": 3.75,
+      "tier": "digitized",
+      "spread_km": 0.3,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.6,
+        "van_andel_pacific": 3.9
+      }
+    },
+    {
+      "age_ma": 121.0,
+      "ccd_km": 3.76,
+      "tier": "digitized",
+      "spread_km": 0.28,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.62,
+        "van_andel_pacific": 3.9
+      }
+    },
+    {
+      "age_ma": 122.0,
+      "ccd_km": 3.77,
+      "tier": "digitized",
+      "spread_km": 0.26,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.64,
+        "van_andel_pacific": 3.9
+      }
+    },
+    {
+      "age_ma": 123.0,
+      "ccd_km": 3.78,
+      "tier": "digitized",
+      "spread_km": 0.24,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.66,
+        "van_andel_pacific": 3.9
+      }
+    },
+    {
+      "age_ma": 124.0,
+      "ccd_km": 3.79,
+      "tier": "digitized",
+      "spread_km": 0.22,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.68,
+        "van_andel_pacific": 3.9
+      }
+    },
+    {
+      "age_ma": 125.0,
+      "ccd_km": 3.8,
+      "tier": "digitized",
+      "spread_km": 0.2,
+      "n_sources": 2,
+      "per_source_km": {
+        "van_andel_indian": 3.7,
+        "van_andel_pacific": 3.9
+      }
+    },
+    {
+      "age_ma": 126.0,
+      "ccd_km": 3.72,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.72
+      }
+    },
+    {
+      "age_ma": 127.0,
+      "ccd_km": 3.74,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.74
+      }
+    },
+    {
+      "age_ma": 128.0,
+      "ccd_km": 3.76,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.76
+      }
+    },
+    {
+      "age_ma": 129.0,
+      "ccd_km": 3.78,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.78
+      }
+    },
+    {
+      "age_ma": 130.0,
+      "ccd_km": 3.8,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.8
+      }
+    },
+    {
+      "age_ma": 131.0,
+      "ccd_km": 3.815,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.815
+      }
+    },
+    {
+      "age_ma": 132.0,
+      "ccd_km": 3.83,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.83
+      }
+    },
+    {
+      "age_ma": 133.0,
+      "ccd_km": 3.845,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.845
+      }
+    },
+    {
+      "age_ma": 134.0,
+      "ccd_km": 3.86,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.86
+      }
+    },
+    {
+      "age_ma": 135.0,
+      "ccd_km": 3.875,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.875
+      }
+    },
+    {
+      "age_ma": 136.0,
+      "ccd_km": 3.89,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.89
+      }
+    },
+    {
+      "age_ma": 137.0,
+      "ccd_km": 3.905,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.905
+      }
+    },
+    {
+      "age_ma": 138.0,
+      "ccd_km": 3.92,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.92
+      }
+    },
+    {
+      "age_ma": 139.0,
+      "ccd_km": 3.935,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.935
+      }
+    },
+    {
+      "age_ma": 140.0,
+      "ccd_km": 3.95,
+      "tier": "digitized",
+      "spread_km": 0.0,
+      "n_sources": 1,
+      "per_source_km": {
+        "van_andel_indian": 3.95
+      }
+    }
+  ]
+}

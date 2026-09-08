@@ -1,0 +1,17 @@
+{
+  "id": "scotese-paleomap",
+  "name": "Scotese PALEOMAP Global Plate Model",
+  "citation": "Scotese, C.R., PALEOMAP Global Plate Model (via GPlates), PALEOMAP_PlatePolygons.gpml + PALEOMAP_PlateModel.rot",
+  "source_fetch": "local files, not gprm-fetched -- see --polygons/--rotations args this was generated with",
+  "age_min": 0.0,
+  "age_max": 340.0,
+  "has_boundaries": false,
+  "has_static_polygons": true,
+  "static_polygons": {
+    "geometry": "staticpolygons/geometry.bin",
+    "rotations": "staticpolygons/rotations.json"
+  },
+  "known_gaps": [
+    "continental/oceanic flag is not meaningful on this source -- every polygon is written continental=False; see this script's module doc."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "baseline (single global, Palike 4.65)": {
+    "Atlantic": {
+      "clay_pct": 63.3,
+      "carbonate_pct": 9.7,
+      "siliceous_pct": 27.1
+    },
+    "Pacific": {
+      "clay_pct": 67.8,
+      "carbonate_pct": 11.7,
+      "siliceous_pct": 20.5
+    },
+    "Indian": {
+      "clay_pct": 58.5,
+      "carbonate_pct": 16.2,
+      "siliceous_pct": 25.3
+    }
+  },
+  "Van Andel per-basin (Pac 4.65 / Atl 5.45 / Ind 5.00)": {
+    "Atlantic": {
+      "clay_pct": 63.3,
+      "carbonate_pct": 26.2,
+      "siliceous_pct": 10.5
+    },
+    "Pacific": {
+      "clay_pct": 67.8,
+      "carbonate_pct": 11.7,
+      "siliceous_pct": 20.5
+    },
+    "Indian": {
+      "clay_pct": 58.5,
+      "carbonate_pct": 19.2,
+      "siliceous_pct": 22.3
+    }
+  },
+  "Dutkiewicz-smoothed Atl (4.55) + Palike Pac (4.65) + Van Andel Ind (5.00)": {
+    "Atlantic": {
+      "clay_pct": 63.3,
+      "carbonate_pct": 8.5,
+      "siliceous_pct": 28.3
+    },
+    "Pacific": {
+      "clay_pct": 67.8,
+      "carbonate_pct": 11.7,
+      "siliceous_pct": 20.5
+    },
+    "Indian": {
+      "clay_pct": 58.5,
+      "carbonate_pct": 19.2,
+      "siliceous_pct": 22.3
+    }
+  },
+  "literature reference (Pac 4.35 / Atl 5.00 / Ind 4.30)": {
+    "Atlantic": {
+      "clay_pct": 63.3,
+      "carbonate_pct": 14.8,
+      "siliceous_pct": 21.9
+    },
+    "Pacific": {
+      "clay_pct": 67.8,
+      "carbonate_pct": 8.7,
+      "siliceous_pct": 23.5
+    },
+    "Indian": {
+      "clay_pct": 58.5,
+      "carbonate_pct": 13.3,
+      "siliceous_pct": 28.2
+    }
+  }
+}

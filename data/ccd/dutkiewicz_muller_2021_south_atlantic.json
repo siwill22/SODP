@@ -1,0 +1,471 @@
+{
+  "source": "Dutkiewicz, A. & M\u00fcller, R.D. (2021): The carbonate compensation depth in the South Atlantic Ocean since the Late Cretaceous. Geology.",
+  "doi": "10.1130/G48404.1",
+  "data_url": "https://www.earthbyte.org/webdav/ftp/Data_Collections/Dutkiewicz_Muller_2021_Geology/CCD_data.xlsx",
+  "region": "South Atlantic (average) and Walvis Ridge / Rio Grande Rise sub-region",
+  "age_range_ma": [
+    0,
+    74
+  ],
+  "units": {
+    "age_ma": "Ma",
+    "ccd_m": "metres, water depth (sign-flipped to positive depth)",
+    "ccd_uncertainty_m": "metres"
+  },
+  "sheets": {
+    "South Atlantic CCD": [
+      {
+        "age_ma": 1,
+        "ccd_m": 4463.68934302,
+        "ccd_uncertainty_m": 112.554094653
+      },
+      {
+        "age_ma": 2,
+        "ccd_m": 4801.79447971,
+        "ccd_uncertainty_m": 97.4719594985
+      },
+      {
+        "age_ma": 3,
+        "ccd_m": 4566.60058545,
+        "ccd_uncertainty_m": 149.056091823
+      },
+      {
+        "age_ma": 4,
+        "ccd_m": 4490.634726,
+        "ccd_uncertainty_m": 280.42054365
+      },
+      {
+        "age_ma": 5,
+        "ccd_m": 4847.02700704,
+        "ccd_uncertainty_m": 653.518780177
+      },
+      {
+        "age_ma": 6,
+        "ccd_m": 4496.37479194,
+        "ccd_uncertainty_m": 367.845154615
+      },
+      {
+        "age_ma": 8,
+        "ccd_m": 4398.2533618,
+        "ccd_uncertainty_m": 272.917486309
+      },
+      {
+        "age_ma": 9,
+        "ccd_m": 4485.90307073,
+        "ccd_uncertainty_m": 589.261321822
+      },
+      {
+        "age_ma": 10,
+        "ccd_m": 4360.20458863,
+        "ccd_uncertainty_m": 704.777186239
+      },
+      {
+        "age_ma": 11,
+        "ccd_m": 4389.53273555,
+        "ccd_uncertainty_m": 1001.53516493
+      },
+      {
+        "age_ma": 12,
+        "ccd_m": 4269.09029354,
+        "ccd_uncertainty_m": 634.566081799
+      },
+      {
+        "age_ma": 15,
+        "ccd_m": 4618.55129122,
+        "ccd_uncertainty_m": 968.960096823
+      },
+      {
+        "age_ma": 16,
+        "ccd_m": 4253.61720495,
+        "ccd_uncertainty_m": 619.342009821
+      },
+      {
+        "age_ma": 17,
+        "ccd_m": 3667.1637228,
+        "ccd_uncertainty_m": 676.864653298
+      },
+      {
+        "age_ma": 19,
+        "ccd_m": 4051.64683834,
+        "ccd_uncertainty_m": 247.708870691
+      },
+      {
+        "age_ma": 20,
+        "ccd_m": 4346.61299585,
+        "ccd_uncertainty_m": 413.877612484
+      },
+      {
+        "age_ma": 22,
+        "ccd_m": 4100.68686939,
+        "ccd_uncertainty_m": 179.050499862
+      },
+      {
+        "age_ma": 23,
+        "ccd_m": 4160.91990335,
+        "ccd_uncertainty_m": 420.884453787
+      },
+      {
+        "age_ma": 24,
+        "ccd_m": 3917.28891587,
+        "ccd_uncertainty_m": 85.3891115664
+      },
+      {
+        "age_ma": 25,
+        "ccd_m": 3806.6568364,
+        "ccd_uncertainty_m": 17.8364800727
+      },
+      {
+        "age_ma": 26,
+        "ccd_m": 4130.63382169,
+        "ccd_uncertainty_m": 154.114838197
+      },
+      {
+        "age_ma": 27,
+        "ccd_m": 4324.19132835,
+        "ccd_uncertainty_m": 320.38539917
+      },
+      {
+        "age_ma": 28,
+        "ccd_m": 3914.54123347,
+        "ccd_uncertainty_m": 106.896132258
+      },
+      {
+        "age_ma": 29,
+        "ccd_m": 4059.1036244,
+        "ccd_uncertainty_m": 299.039992817
+      },
+      {
+        "age_ma": 30,
+        "ccd_m": 3884.15954514,
+        "ccd_uncertainty_m": 66.419705134
+      },
+      {
+        "age_ma": 31,
+        "ccd_m": 4365.06525682,
+        "ccd_uncertainty_m": 331.220299295
+      },
+      {
+        "age_ma": 32,
+        "ccd_m": 3651.37965552,
+        "ccd_uncertainty_m": 422.420268959
+      },
+      {
+        "age_ma": 34,
+        "ccd_m": 4302.81980238,
+        "ccd_uncertainty_m": 225.051618878
+      },
+      {
+        "age_ma": 35,
+        "ccd_m": 4095.44285213,
+        "ccd_uncertainty_m": 156.529898722
+      },
+      {
+        "age_ma": 37,
+        "ccd_m": 4571.15746269,
+        "ccd_uncertainty_m": 701.751457571
+      },
+      {
+        "age_ma": 38,
+        "ccd_m": 4145.17597375,
+        "ccd_uncertainty_m": 106.814245734
+      },
+      {
+        "age_ma": 39,
+        "ccd_m": 4610.33362604,
+        "ccd_uncertainty_m": 837.388030029
+      },
+      {
+        "age_ma": 40,
+        "ccd_m": 4376.68158453,
+        "ccd_uncertainty_m": 962.178278726
+      },
+      {
+        "age_ma": 41,
+        "ccd_m": 3833.52658027,
+        "ccd_uncertainty_m": 282.085754241
+      },
+      {
+        "age_ma": 42,
+        "ccd_m": 4248.88021137,
+        "ccd_uncertainty_m": 242.208675157
+      },
+      {
+        "age_ma": 43,
+        "ccd_m": 3841.64206997,
+        "ccd_uncertainty_m": 392.065327012
+      },
+      {
+        "age_ma": 44,
+        "ccd_m": 4100.72053759,
+        "ccd_uncertainty_m": 781.954002632
+      },
+      {
+        "age_ma": 45,
+        "ccd_m": 4765.20122282,
+        "ccd_uncertainty_m": 209.493062581
+      },
+      {
+        "age_ma": 46,
+        "ccd_m": 4886.65422466,
+        "ccd_uncertainty_m": 698.589059281
+      },
+      {
+        "age_ma": 47,
+        "ccd_m": 4119.73063947,
+        "ccd_uncertainty_m": 814.172284238
+      },
+      {
+        "age_ma": 48,
+        "ccd_m": 4709.45093543,
+        "ccd_uncertainty_m": 404.980289577
+      },
+      {
+        "age_ma": 50,
+        "ccd_m": 4670.35250596,
+        "ccd_uncertainty_m": 301.573060177
+      },
+      {
+        "age_ma": 51,
+        "ccd_m": 4585.43545848,
+        "ccd_uncertainty_m": 193.222484377
+      },
+      {
+        "age_ma": 52,
+        "ccd_m": 4697.30511845,
+        "ccd_uncertainty_m": 74.6898387402
+      },
+      {
+        "age_ma": 53,
+        "ccd_m": 4816.71369319,
+        "ccd_uncertainty_m": 504.540104273
+      },
+      {
+        "age_ma": 55,
+        "ccd_m": 4687.0647565,
+        "ccd_uncertainty_m": 513.429943544
+      },
+      {
+        "age_ma": 58,
+        "ccd_m": 5044.30131324,
+        "ccd_uncertainty_m": 886.568087877
+      },
+      {
+        "age_ma": 59,
+        "ccd_m": 4127.85029345,
+        "ccd_uncertainty_m": 1082.12299369
+      },
+      {
+        "age_ma": 62,
+        "ccd_m": 4586.49004948,
+        "ccd_uncertainty_m": 1552.80976712
+      },
+      {
+        "age_ma": 64,
+        "ccd_m": 3767.74325758,
+        "ccd_uncertainty_m": 240.25565306
+      },
+      {
+        "age_ma": 66,
+        "ccd_m": 4869.3964872,
+        "ccd_uncertainty_m": 342.189305969
+      },
+      {
+        "age_ma": 67,
+        "ccd_m": 5245.93962368,
+        "ccd_uncertainty_m": 535.353681541
+      },
+      {
+        "age_ma": 68,
+        "ccd_m": 4955.71358558,
+        "ccd_uncertainty_m": 287.056437604
+      },
+      {
+        "age_ma": 70,
+        "ccd_m": 2952.61209808,
+        "ccd_uncertainty_m": 503.405921739
+      },
+      {
+        "age_ma": 73,
+        "ccd_m": 2840.54084961,
+        "ccd_uncertainty_m": 288.322197108
+      },
+      {
+        "age_ma": 74,
+        "ccd_m": 3073.30079732,
+        "ccd_uncertainty_m": 383.167915979
+      }
+    ],
+    "Walvis Ridge RioGrande Rise CCD": [
+      {
+        "age_ma": 1,
+        "ccd_m": 4561.09440536,
+        "ccd_uncertainty_m": 83.2645788385
+      },
+      {
+        "age_ma": 5,
+        "ccd_m": 4765.79257067,
+        "ccd_uncertainty_m": 321.80013368
+      },
+      {
+        "age_ma": 6,
+        "ccd_m": 3443.23284696,
+        "ccd_uncertainty_m": 360.140157743
+      },
+      {
+        "age_ma": 7,
+        "ccd_m": 3557.65666055,
+        "ccd_uncertainty_m": 249.825721216
+      },
+      {
+        "age_ma": 9,
+        "ccd_m": 3883.76891097,
+        "ccd_uncertainty_m": 334.261105963
+      },
+      {
+        "age_ma": 11,
+        "ccd_m": 3857.90949609,
+        "ccd_uncertainty_m": 2047.74194442
+      },
+      {
+        "age_ma": 15,
+        "ccd_m": 3654.59248508,
+        "ccd_uncertainty_m": 44.4517592194
+      },
+      {
+        "age_ma": 16,
+        "ccd_m": 3290.2513616,
+        "ccd_uncertainty_m": 370.089444218
+      },
+      {
+        "age_ma": 17,
+        "ccd_m": 3129.42507341,
+        "ccd_uncertainty_m": 13.5728684352
+      },
+      {
+        "age_ma": 19,
+        "ccd_m": 3521.4131659,
+        "ccd_uncertainty_m": 161.892137407
+      },
+      {
+        "age_ma": 21,
+        "ccd_m": 4679.44622103,
+        "ccd_uncertainty_m": 850.292843141
+      },
+      {
+        "age_ma": 22,
+        "ccd_m": 4116.38066087,
+        "ccd_uncertainty_m": 107.805830922
+      },
+      {
+        "age_ma": 23,
+        "ccd_m": 4502.74758172,
+        "ccd_uncertainty_m": 783.430622037
+      },
+      {
+        "age_ma": 24,
+        "ccd_m": 3961.78789499,
+        "ccd_uncertainty_m": 84.2710062113
+      },
+      {
+        "age_ma": 25,
+        "ccd_m": 4190.64305679,
+        "ccd_uncertainty_m": 240.332117901
+      },
+      {
+        "age_ma": 26,
+        "ccd_m": 4035.22109259,
+        "ccd_uncertainty_m": 72.6241893775
+      },
+      {
+        "age_ma": 27,
+        "ccd_m": 3933.05384499,
+        "ccd_uncertainty_m": 628.771514034
+      },
+      {
+        "age_ma": 28,
+        "ccd_m": 3848.59518347,
+        "ccd_uncertainty_m": 85.0692898511
+      },
+      {
+        "age_ma": 29,
+        "ccd_m": 4578.66716816,
+        "ccd_uncertainty_m": 132.039567533
+      },
+      {
+        "age_ma": 30,
+        "ccd_m": 3884.15954514,
+        "ccd_uncertainty_m": 66.419705134
+      },
+      {
+        "age_ma": 32,
+        "ccd_m": 4590.78403342,
+        "ccd_uncertainty_m": 204.131443835
+      },
+      {
+        "age_ma": 33,
+        "ccd_m": 4577.80998622,
+        "ccd_uncertainty_m": 92.3882109809
+      },
+      {
+        "age_ma": 34,
+        "ccd_m": 3858.55789201,
+        "ccd_uncertainty_m": 1074.54474687
+      },
+      {
+        "age_ma": 43,
+        "ccd_m": 3175.20573161,
+        "ccd_uncertainty_m": 353.85366577
+      },
+      {
+        "age_ma": 44,
+        "ccd_m": 3611.76473126,
+        "ccd_uncertainty_m": 261.682953202
+      },
+      {
+        "age_ma": 45,
+        "ccd_m": 3332.79738688,
+        "ccd_uncertainty_m": 842.742598314
+      },
+      {
+        "age_ma": 48,
+        "ccd_m": 3720.67783355,
+        "ccd_uncertainty_m": 730.135534293
+      },
+      {
+        "age_ma": 49,
+        "ccd_m": 3269.34130473,
+        "ccd_uncertainty_m": 71.1973528851
+      },
+      {
+        "age_ma": 51,
+        "ccd_m": 3317.97820465,
+        "ccd_uncertainty_m": 61.8735958645
+      },
+      {
+        "age_ma": 53,
+        "ccd_m": 4250.78062413,
+        "ccd_uncertainty_m": 26.6499145091
+      },
+      {
+        "age_ma": 59,
+        "ccd_m": 4788.89847591,
+        "ccd_uncertainty_m": 101.87794302
+      },
+      {
+        "age_ma": 66,
+        "ccd_m": 4848.65058914,
+        "ccd_uncertainty_m": 485.300169174
+      },
+      {
+        "age_ma": 67,
+        "ccd_m": 4824.20950888,
+        "ccd_uncertainty_m": 198.70372348
+      },
+      {
+        "age_ma": 68,
+        "ccd_m": 4686.7223414,
+        "ccd_uncertainty_m": 205.6963776
+      }
+    ]
+  }
+}

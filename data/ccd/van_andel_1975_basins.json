@@ -1,0 +1,96 @@
+{
+  "source": "Van Andel, T.H. (1975): Mesozoic/Cenozoic calcite compensation depth and the global distribution of calcareous sediments. Earth and Planetary Science Letters, 26, 187-194.",
+  "figure_provenance": "Digitized from a reproduction of Van Andel's three-basin CCD curves supplied by the user in-conversation (2026-09-08), annotated with present-day asterisks after Broecker, W.S. & Clark, E. (2007) marking the early-Holocene carbonate preservation event depth. The reproducing paper itself was not identified -- if you know which one it is, tell me and I'll correct this citation.",
+  "method": "HAND-DIGITIZED BY EYE from a rendered chart image, not pixel-traced (no source image file was available on disk for programmatic digitization). Treat as coarser than a WebPlotDigitizer-style extraction: age values are approximate to roughly +/-3 Ma, depth values to roughly +/-0.15-0.2 km, especially at inflection points. Re-digitize from the original PDF figure if higher fidelity is ever needed.",
+  "units": { "age_ma": "Ma", "ccd_km": "km, water depth" },
+  "present_day_asterisk_note": "Each panel carries a present-day (~0 Ma) asterisk from Broecker & Clark (2007), offset from Van Andel's own t=0 curve value -- per the original caption, today's CCD is interpreted as ~0.75 +/- 0.40 km shallower than the asterisk position (an 11+/-5 umol/kg CO3-- decline since the early-Holocene preservation-event peak the asterisk marks). Not applied here; carried as a separate field per basin for a later prep step to decide how to use.",
+  "basins": {
+    "indian": {
+      "asterisk_ccd_km": 4.65,
+      "curve": [
+        { "age_ma": 0,   "ccd_km": 5.00 },
+        { "age_ma": 5,   "ccd_km": 4.55 },
+        { "age_ma": 10,  "ccd_km": 3.85 },
+        { "age_ma": 15,  "ccd_km": 3.45 },
+        { "age_ma": 20,  "ccd_km": 3.60 },
+        { "age_ma": 25,  "ccd_km": 3.55 },
+        { "age_ma": 30,  "ccd_km": 3.50 },
+        { "age_ma": 40,  "ccd_km": 3.40 },
+        { "age_ma": 50,  "ccd_km": 3.30 },
+        { "age_ma": 60,  "ccd_km": 3.20 },
+        { "age_ma": 70,  "ccd_km": 3.15 },
+        { "age_ma": 80,  "ccd_km": 3.10 },
+        { "age_ma": 90,  "ccd_km": 3.10 },
+        { "age_ma": 100, "ccd_km": 3.20 },
+        { "age_ma": 110, "ccd_km": 3.40 },
+        { "age_ma": 120, "ccd_km": 3.60 },
+        { "age_ma": 130, "ccd_km": 3.80 },
+        { "age_ma": 140, "ccd_km": 3.95 }
+      ]
+    },
+    "atlantic_south": {
+      "asterisk_ccd_km": 5.30,
+      "note": "Eastern-basin asterisk per the original caption.",
+      "curve": [
+        { "age_ma": 0,   "ccd_km": 5.45 },
+        { "age_ma": 5,   "ccd_km": 4.60 },
+        { "age_ma": 10,  "ccd_km": 3.60 },
+        { "age_ma": 15,  "ccd_km": 3.05 },
+        { "age_ma": 20,  "ccd_km": 3.00 },
+        { "age_ma": 25,  "ccd_km": 3.15 },
+        { "age_ma": 30,  "ccd_km": 3.35 },
+        { "age_ma": 40,  "ccd_km": 3.30 },
+        { "age_ma": 50,  "ccd_km": 3.20 },
+        { "age_ma": 60,  "ccd_km": 3.10 },
+        { "age_ma": 70,  "ccd_km": 3.05 },
+        { "age_ma": 80,  "ccd_km": 3.05 },
+        { "age_ma": 90,  "ccd_km": 3.15 },
+        { "age_ma": 100, "ccd_km": 3.35 },
+        { "age_ma": 110, "ccd_km": 3.70 }
+      ]
+    },
+    "atlantic_north": {
+      "asterisk_ccd_km": 5.30,
+      "note": "Same asterisk as atlantic_south -- one present-day marker shared by both Atlantic curves in the figure.",
+      "curve": [
+        { "age_ma": 0,   "ccd_km": 5.45 },
+        { "age_ma": 5,   "ccd_km": 4.70 },
+        { "age_ma": 10,  "ccd_km": 3.90 },
+        { "age_ma": 15,  "ccd_km": 3.55 },
+        { "age_ma": 20,  "ccd_km": 3.65 },
+        { "age_ma": 25,  "ccd_km": 3.85 },
+        { "age_ma": 30,  "ccd_km": 3.75 },
+        { "age_ma": 40,  "ccd_km": 3.45 },
+        { "age_ma": 50,  "ccd_km": 3.25 },
+        { "age_ma": 60,  "ccd_km": 3.10 },
+        { "age_ma": 70,  "ccd_km": 3.05 },
+        { "age_ma": 80,  "ccd_km": 3.05 },
+        { "age_ma": 90,  "ccd_km": 3.15 },
+        { "age_ma": 100, "ccd_km": 3.35 },
+        { "age_ma": 110, "ccd_km": 3.70 }
+      ]
+    },
+    "pacific": {
+      "asterisk_ccd_km": 4.90,
+      "curve": [
+        { "age_ma": 0,   "ccd_km": 4.65 },
+        { "age_ma": 5,   "ccd_km": 4.10 },
+        { "age_ma": 10,  "ccd_km": 3.60 },
+        { "age_ma": 15,  "ccd_km": 3.80 },
+        { "age_ma": 20,  "ccd_km": 4.10 },
+        { "age_ma": 25,  "ccd_km": 4.00 },
+        { "age_ma": 30,  "ccd_km": 3.80 },
+        { "age_ma": 40,  "ccd_km": 3.45 },
+        { "age_ma": 50,  "ccd_km": 3.25 },
+        { "age_ma": 60,  "ccd_km": 3.30 },
+        { "age_ma": 70,  "ccd_km": 3.45 },
+        { "age_ma": 80,  "ccd_km": 3.55 },
+        { "age_ma": 90,  "ccd_km": 3.65 },
+        { "age_ma": 100, "ccd_km": 3.75 },
+        { "age_ma": 110, "ccd_km": 3.85 },
+        { "age_ma": 120, "ccd_km": 3.90 },
+        { "age_ma": 125, "ccd_km": 3.90 }
+      ]
+    }
+  }
+}

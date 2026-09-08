@@ -1,0 +1,41 @@
+{
+  "id": "basement-age",
+  "name": "Basement Age (Seton et al. 2020)",
+  "type": "basement-age",
+  "source": "Seton, M. et al. (2020), A global data set of present-day oceanic crustal age and seafloor spreading parameters, Geochemistry, Geophysics, Geosystems (age.2020.1.GeeK2007 grid)",
+  "lon_min": -180.0,
+  "lon_max": 180.0,
+  "lat_min": -90.0,
+  "lat_max": 90.0,
+  "dtype": "uint8",
+  "no_data_sentinel": 255,
+  "default_resolution": "std",
+  "resolutions": [
+    {
+      "id": "std",
+      "nlon": 360,
+      "nlat": 181,
+      "ndepth": 1
+    }
+  ],
+  "frames": [
+    {
+      "id": "000",
+      "age_ma": 0
+    }
+  ],
+  "path_template": "frames/{variable}/{resolution}/{frame}.bin",
+  "default_variable": "age",
+  "variables": [
+    {
+      "id": "age",
+      "name": "Basement Age",
+      "units": "Ma",
+      "diverging": false,
+      "encode_min": 0.0,
+      "encode_max": 340.0,
+      "value_min": 0.0,
+      "value_max": 338.684
+    }
+  ]
+}

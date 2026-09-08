@@ -1,0 +1,1224 @@
+{
+  "source": "P\u00e4like, H. et al. (2012): Carbonate compensation depth (CCD) of the equatorial Pacific [dataset]. PANGAEA.",
+  "doi": "10.1594/PANGAEA.789572",
+  "in_supplement_to": "P\u00e4like, H. et al. (2012): A Cenozoic record of the equatorial Pacific carbonate compensation depth. Nature, 488, 609-614, https://doi.org/10.1038/nature11360",
+  "license": "CC-BY-3.0",
+  "region": "equatorial Pacific (eq) and off-equatorial Pacific (off-eq)",
+  "age_range_ma": [
+    0,
+    60
+  ],
+  "units": {
+    "age_ma": "Ma (converted from ka BP)",
+    "ccd_eq_m": "metres, water depth",
+    "ccd_offeq_m": "metres, water depth"
+  },
+  "n_points": 241,
+  "data": [
+    {
+      "age_ma": 0.0,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 0.25,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 0.5,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 0.75,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 1.0,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 1.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 1.5,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 1.75,
+      "ccd_eq_m": 4200.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 2.0,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 2.25,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 2.5,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 2.75,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 3.0,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 3.25,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 3.5,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 3.75,
+      "ccd_eq_m": 4100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 4.0,
+      "ccd_eq_m": 4400.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 4.25,
+      "ccd_eq_m": 4400.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 4.5,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 4.75,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 5.0,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 5.25,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 5.5,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 5.75,
+      "ccd_eq_m": 4300.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 6.0,
+      "ccd_eq_m": 4550.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 6.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 6.5,
+      "ccd_eq_m": 4550.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 6.75,
+      "ccd_eq_m": 4550.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 7.0,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 7.25,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 7.5,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 7.75,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 8.0,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 8.25,
+      "ccd_eq_m": 4550.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 8.5,
+      "ccd_eq_m": 4350.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 8.75,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 9.0,
+      "ccd_eq_m": 4550.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 9.25,
+      "ccd_eq_m": 4350.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 9.5,
+      "ccd_eq_m": 4450.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 9.75,
+      "ccd_eq_m": 4350.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 10.0,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 10.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 10.5,
+      "ccd_eq_m": 4800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 10.75,
+      "ccd_eq_m": 4800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 11.0,
+      "ccd_eq_m": 4850.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 11.25,
+      "ccd_eq_m": 4850.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 11.5,
+      "ccd_eq_m": 4850.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 11.75,
+      "ccd_eq_m": 4900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 12.0,
+      "ccd_eq_m": 4800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 12.25,
+      "ccd_eq_m": 4800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 12.5,
+      "ccd_eq_m": 4800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 12.75,
+      "ccd_eq_m": 4800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 13.0,
+      "ccd_eq_m": 4750.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 13.25,
+      "ccd_eq_m": 4750.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 13.5,
+      "ccd_eq_m": 4750.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 13.75,
+      "ccd_eq_m": 4750.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 14.0,
+      "ccd_eq_m": 4750.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 14.25,
+      "ccd_eq_m": 4750.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 14.5,
+      "ccd_eq_m": 4750.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 14.75,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 15.0,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 15.25,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 15.5,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 15.75,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 16.0,
+      "ccd_eq_m": 4300.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 16.25,
+      "ccd_eq_m": 4250.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 16.5,
+      "ccd_eq_m": 4300.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 16.75,
+      "ccd_eq_m": 4250.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 17.0,
+      "ccd_eq_m": 4250.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 17.25,
+      "ccd_eq_m": 4250.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 17.5,
+      "ccd_eq_m": 4150.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 17.75,
+      "ccd_eq_m": 4200.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 18.0,
+      "ccd_eq_m": 4250.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 18.25,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 18.5,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 18.75,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 19.0,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 19.25,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 19.5,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 19.75,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 20.0,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 20.25,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 20.5,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 20.75,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 21.0,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 21.25,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 21.5,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 21.75,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 22.0,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 22.25,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 22.5,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 22.75,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 23.0,
+      "ccd_eq_m": 4700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 23.25,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 23.5,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 23.75,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 24.0,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 24.25,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 24.5,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 24.75,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 25.0,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 25.25,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 25.5,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 25.75,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 26.0,
+      "ccd_eq_m": 4650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 26.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 26.5,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 26.75,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 27.0,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 27.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 27.5,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 27.75,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 28.0,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 28.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 28.5,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 28.75,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 29.0,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 29.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 29.5,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 29.75,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 30.0,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 30.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 30.5,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 30.75,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 31.0,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 31.25,
+      "ccd_eq_m": 4600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 31.5,
+      "ccd_eq_m": 4550.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 31.75,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 32.0,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 32.25,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 32.5,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 32.75,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 33.0,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 33.25,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 33.5,
+      "ccd_eq_m": 4500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 33.75,
+      "ccd_eq_m": 4300.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 34.0,
+      "ccd_eq_m": 4000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 34.25,
+      "ccd_eq_m": 3900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 34.5,
+      "ccd_eq_m": 3500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 34.75,
+      "ccd_eq_m": 3650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 35.0,
+      "ccd_eq_m": 3900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 35.25,
+      "ccd_eq_m": 4050.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 35.5,
+      "ccd_eq_m": 3400.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 35.75,
+      "ccd_eq_m": 3850.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 36.0,
+      "ccd_eq_m": 3900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 36.25,
+      "ccd_eq_m": 3900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 36.5,
+      "ccd_eq_m": 3850.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 36.75,
+      "ccd_eq_m": 3800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 37.0,
+      "ccd_eq_m": 3800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 37.25,
+      "ccd_eq_m": 3600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 37.5,
+      "ccd_eq_m": 3800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 37.75,
+      "ccd_eq_m": 3800.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 38.0,
+      "ccd_eq_m": 3550.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 38.25,
+      "ccd_eq_m": 3700.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 38.5,
+      "ccd_eq_m": 4100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 38.75,
+      "ccd_eq_m": 4100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 39.0,
+      "ccd_eq_m": 4100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 39.25,
+      "ccd_eq_m": 4100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 39.5,
+      "ccd_eq_m": 3600.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 39.75,
+      "ccd_eq_m": 3450.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 40.0,
+      "ccd_eq_m": 3250.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 40.25,
+      "ccd_eq_m": 3350.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 40.5,
+      "ccd_eq_m": 4050.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 40.75,
+      "ccd_eq_m": 4150.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 41.0,
+      "ccd_eq_m": 4050.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 41.25,
+      "ccd_eq_m": 4050.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 41.5,
+      "ccd_eq_m": 4000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 41.75,
+      "ccd_eq_m": 3950.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 42.0,
+      "ccd_eq_m": 3950.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 42.25,
+      "ccd_eq_m": 3650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 42.5,
+      "ccd_eq_m": 3750.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 42.75,
+      "ccd_eq_m": 3650.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 43.0,
+      "ccd_eq_m": 3500.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 43.25,
+      "ccd_eq_m": 3900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 43.5,
+      "ccd_eq_m": 3900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 43.75,
+      "ccd_eq_m": 3900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 44.0,
+      "ccd_eq_m": 3900.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 44.25,
+      "ccd_eq_m": 3400.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 44.5,
+      "ccd_eq_m": 3400.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 44.75,
+      "ccd_eq_m": 3350.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 45.0,
+      "ccd_eq_m": 3350.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 45.25,
+      "ccd_eq_m": 3300.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 45.5,
+      "ccd_eq_m": 3400.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 45.75,
+      "ccd_eq_m": 3350.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 46.0,
+      "ccd_eq_m": 3300.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 46.25,
+      "ccd_eq_m": 3250.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 46.5,
+      "ccd_eq_m": 3400.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 46.75,
+      "ccd_eq_m": 3400.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 47.0,
+      "ccd_eq_m": 3200.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 47.25,
+      "ccd_eq_m": 3100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 47.5,
+      "ccd_eq_m": 3100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 47.75,
+      "ccd_eq_m": 3100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 48.0,
+      "ccd_eq_m": 3100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 48.25,
+      "ccd_eq_m": 3100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 48.5,
+      "ccd_eq_m": 3100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 48.75,
+      "ccd_eq_m": 3100.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 49.0,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 49.25,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 49.5,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 49.75,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 50.0,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 50.25,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 50.5,
+      "ccd_eq_m": 2950.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 50.75,
+      "ccd_eq_m": 2950.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 51.0,
+      "ccd_eq_m": 2950.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 51.25,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 51.5,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": 3000.0
+    },
+    {
+      "age_ma": 51.75,
+      "ccd_eq_m": 3000.0,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 52.0,
+      "ccd_eq_m": 2800.0,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 52.25,
+      "ccd_eq_m": 2800.0,
+      "ccd_offeq_m": 3300.0
+    },
+    {
+      "age_ma": 52.5,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 52.75,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 53.0,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3100.0
+    },
+    {
+      "age_ma": 53.25,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 53.5,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 53.75,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 54.0,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 54.25,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 54.5,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 54.75,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3500.0
+    },
+    {
+      "age_ma": 55.0,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3000.0
+    },
+    {
+      "age_ma": 55.25,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3250.0
+    },
+    {
+      "age_ma": 55.5,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3250.0
+    },
+    {
+      "age_ma": 55.75,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": 3250.0
+    },
+    {
+      "age_ma": 56.0,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 56.25,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 56.5,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 56.75,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 57.0,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 57.25,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 57.5,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 57.75,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 58.0,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 58.25,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 58.5,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 58.75,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 59.0,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 59.25,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 59.5,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 59.75,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    },
+    {
+      "age_ma": 60.0,
+      "ccd_eq_m": null,
+      "ccd_offeq_m": null
+    }
+  ]
+}

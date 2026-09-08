@@ -1,0 +1,4740 @@
+[
+  {
+    "point": {
+      "name": "N Pacific old crust A",
+      "lon": -170,
+      "lat": 25
+    },
+    "basementAgeMa": 102.66666666666666,
+    "plateId": 901,
+    "log": [
+      {
+        "ageMa": 97,
+        "position": {
+          "lat": -9.307273897658142,
+          "lon": -129.59345384358235
+        },
+        "crustalAgeMa": 5.666666666666657,
+        "oceanDepthKm": 3.4688737921393793,
+        "ovelCmS": -0.00004705882352941176,
+        "ccdPublishedKm": 3.3675,
+        "ccdCo2LinkedKm": 3.9744577000000003,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 92,
+        "position": {
+          "lat": -6.3422567404694705,
+          "lon": -127.47448749085008
+        },
+        "crustalAgeMa": 10.666666666666657,
+        "oceanDepthKm": 3.7920850081544795,
+        "ovelCmS": -0.00019137254901960786,
+        "ccdPublishedKm": 3.2925,
+        "ccdCo2LinkedKm": 4.36746912,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 87,
+        "position": {
+          "lat": -1.8472269056241752,
+          "lon": -125.82449668284319
+        },
+        "crustalAgeMa": 15.666666666666657,
+        "oceanDepthKm": 4.044711620589613,
+        "ovelCmS": 0.00034823529411764714,
+        "ccdPublishedKm": 3.24,
+        "ccdCo2LinkedKm": 4.1753404199999995,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "carbonate-ooze",
+        "divergent": true,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 81,
+        "position": {
+          "lat": 4.4278380293643975,
+          "lon": -127.17019096858837
+        },
+        "crustalAgeMa": 21.666666666666657,
+        "oceanDepthKm": 4.296951958258449,
+        "ovelCmS": -0.00011607843137254905,
+        "ccdPublishedKm": 3.195,
+        "ccdCo2LinkedKm": 4.0283582,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 75,
+        "position": {
+          "lat": 8.423885828273367,
+          "lon": -131.43658427918646
+        },
+        "crustalAgeMa": 27.666666666666657,
+        "oceanDepthKm": 4.504975891443662,
+        "ovelCmS": -0.00007843137254901964,
+        "ccdPublishedKm": 3.1812,
+        "ccdCo2LinkedKm": 4.20178734,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 69,
+        "position": {
+          "lat": 11.016472316401602,
+          "lon": -136.46789419351512
+        },
+        "crustalAgeMa": 33.66666666666666,
+        "oceanDepthKm": 4.681040872328934,
+        "ovelCmS": -0.00000313725490196082,
+        "ccdPublishedKm": 3.9542,
+        "ccdCo2LinkedKm": 4.71178642,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 66,
+        "position": {
+          "lat": 12.135477423685613,
+          "lon": -139.45644340221241
+        },
+        "crustalAgeMa": 36.66666666666666,
+        "oceanDepthKm": 4.758654013882948,
+        "ovelCmS": 0.000015686274509803884,
+        "ccdPublishedKm": 4.8694,
+        "ccdCo2LinkedKm": 4.76781186,
+        "classPublished": "carbonate-ooze",
+        "classCo2Linked": "carbonate-ooze",
+        "divergent": false,
+        "classPrimary": "carbonate-ooze"
+      },
+      {
+        "ageMa": 61,
+        "position": {
+          "lat": 13.650309594197855,
+          "lon": -141.3764012136779
+        },
+        "crustalAgeMa": 41.66666666666666,
+        "oceanDepthKm": 4.874455511798724,
+        "ovelCmS": 0.00000313725490196082,
+        "ccdPublishedKm": 4.4336,
+        "ccdCo2LinkedKm": 4.59659704,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 56,
+        "position": {
+          "lat": 14.6274820668332,
+          "lon": -142.1329577225324
+        },
+        "crustalAgeMa": 46.66666666666666,
+        "oceanDepthKm": 4.975229221022482,
+        "ovelCmS": -0.00000313725490196082,
+        "ccdPublishedKm": 4.8061,
+        "ccdCo2LinkedKm": 4.1903401,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 52,
+        "position": {
+          "lat": 15.245849302845137,
+          "lon": -142.6540860929284
+        },
+        "crustalAgeMa": 50.66666666666666,
+        "oceanDepthKm": 5.0463474870955,
+        "ovelCmS": -0.000015686274509803992,
+        "ccdPublishedKm": 3.7487,
+        "ccdCo2LinkedKm": 3.90766148,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 45,
+        "position": {
+          "lat": 15.871516529201287,
+          "lon": -144.9709166384553
+        },
+        "crustalAgeMa": 57.66666666666666,
+        "oceanDepthKm": 5.153271904876403,
+        "ovelCmS": -0.000021960784313725524,
+        "ccdPublishedKm": 4.0576,
+        "ccdCo2LinkedKm": 3.8424301,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 40,
+        "position": {
+          "lat": 16.11767858342755,
+          "lon": -147.00848302918644
+        },
+        "crustalAgeMa": 62.66666666666666,
+        "oceanDepthKm": 5.217863061072311,
+        "ovelCmS": -0.000021960784313725524,
+        "ccdPublishedKm": 3.8133,
+        "ccdCo2LinkedKm": 3.84253418,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 36,
+        "position": {
+          "lat": 16.71779739079831,
+          "lon": -148.14209852693511
+        },
+        "crustalAgeMa": 66.66666666666666,
+        "oceanDepthKm": 5.263446488215048,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 4.1167,
+        "ccdCo2LinkedKm": 3.61565164,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 31,
+        "position": {
+          "lat": 17.465685380794678,
+          "lon": -150.95592610255153
+        },
+        "crustalAgeMa": 71.66666666666666,
+        "oceanDepthKm": 5.3137400715173095,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdPublishedKm": 4.4825,
+        "ccdCo2LinkedKm": 3.85070732,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 26,
+        "position": {
+          "lat": 18.149992312683235,
+          "lon": -153.75708176599443
+        },
+        "crustalAgeMa": 76.66666666666666,
+        "oceanDepthKm": 5.357506957358537,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 4.3903,
+        "ccdCo2LinkedKm": 4.270681580000001,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 20,
+        "position": {
+          "lat": 19.081278453410516,
+          "lon": -156.8592572130872
+        },
+        "crustalAgeMa": 82.66666666666666,
+        "oceanDepthKm": 5.4025966256794975,
+        "ovelCmS": -0.000021960784313725524,
+        "ccdPublishedKm": 4.5233,
+        "ccdCo2LinkedKm": 4.565317,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 15,
+        "position": {
+          "lat": 20.007639767194235,
+          "lon": -159.66502463016937
+        },
+        "crustalAgeMa": 87.66666666666666,
+        "oceanDepthKm": 5.4348324213026915,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 4.6593,
+        "ccdCo2LinkedKm": 4.62686084,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 11,
+        "position": {
+          "lat": 20.74411638595927,
+          "lon": -161.92424557651506
+        },
+        "crustalAgeMa": 91.66666666666666,
+        "oceanDepthKm": 5.457581945041224,
+        "ovelCmS": -0.000021960784313725524,
+        "ccdPublishedKm": 4.6198,
+        "ccdCo2LinkedKm": 4.641939,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 3,
+        "position": {
+          "lat": 23.6190772082775,
+          "lon": -167.84863839679227
+        },
+        "crustalAgeMa": 99.66666666666666,
+        "oceanDepthKm": 5.496150460249306,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdPublishedKm": 4.5833,
+        "ccdCo2LinkedKm": 4.64701716,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 0,
+        "position": {
+          "lat": 25,
+          "lon": -170
+        },
+        "crustalAgeMa": 102.66666666666666,
+        "oceanDepthKm": 5.508541043424807,
+        "ovelCmS": -0.00004078431372549023,
+        "ccdPublishedKm": 4.65,
+        "classPublished": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      }
+    ],
+    "trajectory": [
+      {
+        "ageMa": 0,
+        "position": {
+          "lat": 25,
+          "lon": -170
+        },
+        "crustalAgeMa": 102.66666666666666,
+        "oceanDepthKm": 5.508541043424807
+      },
+      {
+        "ageMa": 1,
+        "position": {
+          "lat": 24.539655023037426,
+          "lon": -169.27945173049656
+        },
+        "crustalAgeMa": 101.66666666666666,
+        "oceanDepthKm": 5.504525121756234
+      },
+      {
+        "ageMa": 2,
+        "position": {
+          "lat": 24.079310250470538,
+          "lon": -168.56238965689323
+        },
+        "crustalAgeMa": 100.66666666666666,
+        "oceanDepthKm": 5.500395991152008
+      },
+      {
+        "ageMa": 3,
+        "position": {
+          "lat": 23.6190772082775,
+          "lon": -167.84863839679227
+        },
+        "crustalAgeMa": 99.66666666666666,
+        "oceanDepthKm": 5.496150460249306
+      },
+      {
+        "ageMa": 4,
+        "position": {
+          "lat": 23.15910473437923,
+          "lon": -167.13802858281036
+        },
+        "crustalAgeMa": 98.66666666666666,
+        "oceanDepthKm": 5.491785247720706
+      },
+      {
+        "ageMa": 5,
+        "position": {
+          "lat": 22.72056571483321,
+          "lon": -166.41727642837705
+        },
+        "crustalAgeMa": 97.66666666666666,
+        "oceanDepthKm": 5.487296979738078
+      },
+      {
+        "ageMa": 6,
+        "position": {
+          "lat": 22.366371160612985,
+          "lon": -165.64677956216906
+        },
+        "crustalAgeMa": 96.66666666666666,
+        "oceanDepthKm": 5.482682187364995
+      },
+      {
+        "ageMa": 7,
+        "position": {
+          "lat": 22.012090177109794,
+          "lon": -164.8789981098896
+        },
+        "crustalAgeMa": 95.66666666666666,
+        "oceanDepthKm": 5.477937303875617
+      },
+      {
+        "ageMa": 8,
+        "position": {
+          "lat": 21.657870038986463,
+          "lon": -164.1138531413398
+        },
+        "crustalAgeMa": 94.66666666666666,
+        "oceanDepthKm": 5.473058661998011
+      },
+      {
+        "ageMa": 9,
+        "position": {
+          "lat": 21.303818471556866,
+          "lon": -163.3512254425748
+        },
+        "crustalAgeMa": 93.66666666666666,
+        "oceanDepthKm": 5.46804249107976
+      },
+      {
+        "ageMa": 10,
+        "position": {
+          "lat": 20.97032790446348,
+          "lon": -162.58932060179103
+        },
+        "crustalAgeMa": 92.66666666666666,
+        "oceanDepthKm": 5.462884914173649
+      },
+      {
+        "ageMa": 11,
+        "position": {
+          "lat": 20.74411638595927,
+          "lon": -161.92424557651506
+        },
+        "crustalAgeMa": 91.66666666666666,
+        "oceanDepthKm": 5.457581945041224
+      },
+      {
+        "ageMa": 12,
+        "position": {
+          "lat": 20.56031282779588,
+          "lon": -161.3580631944931
+        },
+        "crustalAgeMa": 90.66666666666666,
+        "oceanDepthKm": 5.45212948507187
+      },
+      {
+        "ageMa": 13,
+        "position": {
+          "lat": 20.376276389241042,
+          "lon": -160.79279617476922
+        },
+        "crustalAgeMa": 89.66666666666666,
+        "oceanDepthKm": 5.446523320115028
+      },
+      {
+        "ageMa": 14,
+        "position": {
+          "lat": 20.19203447226149,
+          "lon": -160.2284667663535
+        },
+        "crustalAgeMa": 88.66666666666666,
+        "oceanDepthKm": 5.440759117223127
+      },
+      {
+        "ageMa": 15,
+        "position": {
+          "lat": 20.007639767194235,
+          "lon": -159.66502463016937
+        },
+        "crustalAgeMa": 87.66666666666666,
+        "oceanDepthKm": 5.4348324213026915
+      },
+      {
+        "ageMa": 16,
+        "position": {
+          "lat": 19.822516524203316,
+          "lon": -159.10216094368707
+        },
+        "crustalAgeMa": 86.66666666666666,
+        "oceanDepthKm": 5.428738651671049
+      },
+      {
+        "ageMa": 17,
+        "position": {
+          "lat": 19.637286653183583,
+          "lon": -158.540178019644
+        },
+        "crustalAgeMa": 85.66666666666666,
+        "oceanDepthKm": 5.422473098515959
+      },
+      {
+        "ageMa": 18,
+        "position": {
+          "lat": 19.4519850325039,
+          "lon": -157.97904457297344
+        },
+        "crustalAgeMa": 84.66666666666666,
+        "oceanDepthKm": 5.416030919255456
+      },
+      {
+        "ageMa": 19,
+        "position": {
+          "lat": 19.26663445912217,
+          "lon": -157.41874175246465
+        },
+        "crustalAgeMa": 83.66666666666666,
+        "oceanDepthKm": 5.409407134795062
+      },
+      {
+        "ageMa": 20,
+        "position": {
+          "lat": 19.081278453410516,
+          "lon": -156.8592572130872
+        },
+        "crustalAgeMa": 82.66666666666666,
+        "oceanDepthKm": 5.4025966256794975
+      },
+      {
+        "ageMa": 21,
+        "position": {
+          "lat": 18.936485003406908,
+          "lon": -156.34312174901046
+        },
+        "crustalAgeMa": 81.66666666666666,
+        "oceanDepthKm": 5.395594128135906
+      },
+      {
+        "ageMa": 22,
+        "position": {
+          "lat": 18.782014114756006,
+          "lon": -155.82342225584952
+        },
+        "crustalAgeMa": 80.66666666666666,
+        "oceanDepthKm": 5.388394230005539
+      },
+      {
+        "ageMa": 23,
+        "position": {
+          "lat": 18.626124010037092,
+          "lon": -155.30498470586713
+        },
+        "crustalAgeMa": 79.66666666666666,
+        "oceanDepthKm": 5.380991366560752
+      },
+      {
+        "ageMa": 24,
+        "position": {
+          "lat": 18.468857813894026,
+          "lon": -154.78780607510402
+        },
+        "crustalAgeMa": 78.66666666666666,
+        "oceanDepthKm": 5.373379816204083
+      },
+      {
+        "ageMa": 25,
+        "position": {
+          "lat": 18.310247331905686,
+          "lon": -154.27187832965896
+        },
+        "crustalAgeMa": 77.66666666666666,
+        "oceanDepthKm": 5.365553696046094
+      },
+      {
+        "ageMa": 26,
+        "position": {
+          "lat": 18.149992312683235,
+          "lon": -153.75708176599443
+        },
+        "crustalAgeMa": 76.66666666666666,
+        "oceanDepthKm": 5.357506957358537
+      },
+      {
+        "ageMa": 27,
+        "position": {
+          "lat": 18.008976506993953,
+          "lon": -153.1952759821666
+        },
+        "crustalAgeMa": 75.66666666666666,
+        "oceanDepthKm": 5.349233380899362
+      },
+      {
+        "ageMa": 28,
+        "position": {
+          "lat": 17.866015292776332,
+          "lon": -152.6347933075773
+        },
+        "crustalAgeMa": 74.66666666666666,
+        "oceanDepthKm": 5.34072657210592
+      },
+      {
+        "ageMa": 29,
+        "position": {
+          "lat": 17.721140252423375,
+          "lon": -152.07562796553313
+        },
+        "crustalAgeMa": 73.66666666666666,
+        "oceanDepthKm": 5.331979956152682
+      },
+      {
+        "ageMa": 30,
+        "position": {
+          "lat": 17.574407487122247,
+          "lon": -151.51775900932165
+        },
+        "crustalAgeMa": 72.66666666666666,
+        "oceanDepthKm": 5.322986772869613
+      },
+      {
+        "ageMa": 31,
+        "position": {
+          "lat": 17.465685380794678,
+          "lon": -150.95592610255153
+        },
+        "crustalAgeMa": 71.66666666666666,
+        "oceanDepthKm": 5.3137400715173095
+      },
+      {
+        "ageMa": 32,
+        "position": {
+          "lat": 17.338154157599295,
+          "lon": -150.38481589059455
+        },
+        "crustalAgeMa": 70.66666666666666,
+        "oceanDepthKm": 5.304232705414848
+      },
+      {
+        "ageMa": 33,
+        "position": {
+          "lat": 17.209449448013373,
+          "lon": -149.81460881254498
+        },
+        "crustalAgeMa": 69.66666666666666,
+        "oceanDepthKm": 5.294457326416182
+      },
+      {
+        "ageMa": 34,
+        "position": {
+          "lat": 17.05801605237904,
+          "lon": -149.24699934660592
+        },
+        "crustalAgeMa": 68.66666666666666,
+        "oceanDepthKm": 5.284406379230839
+      },
+      {
+        "ageMa": 35,
+        "position": {
+          "lat": 16.88621737200808,
+          "lon": -148.68109350944002
+        },
+        "crustalAgeMa": 67.66666666666666,
+        "oceanDepthKm": 5.274072095584516
+      },
+      {
+        "ageMa": 36,
+        "position": {
+          "lat": 16.71779739079831,
+          "lon": -148.14209852693511
+        },
+        "crustalAgeMa": 66.66666666666666,
+        "oceanDepthKm": 5.263446488215048
+      },
+      {
+        "ageMa": 37,
+        "position": {
+          "lat": 16.565740452738595,
+          "lon": -147.8595769050171
+        },
+        "crustalAgeMa": 65.66666666666666,
+        "oceanDepthKm": 5.252521344699152
+      },
+      {
+        "ageMa": 38,
+        "position": {
+          "lat": 16.415030087379847,
+          "lon": -147.57647495580034
+        },
+        "crustalAgeMa": 64.66666666666666,
+        "oceanDepthKm": 5.241288221105116
+      },
+      {
+        "ageMa": 39,
+        "position": {
+          "lat": 16.265669036802066,
+          "lon": -147.29277877736615
+        },
+        "crustalAgeMa": 63.66666666666666,
+        "oceanDepthKm": 5.229738435466577
+      },
+      {
+        "ageMa": 40,
+        "position": {
+          "lat": 16.11767858342755,
+          "lon": -147.00848302918644
+        },
+        "crustalAgeMa": 62.66666666666666,
+        "oceanDepthKm": 5.217863061072311
+      },
+      {
+        "ageMa": 41,
+        "position": {
+          "lat": 16.069414088352964,
+          "lon": -146.62058405387333
+        },
+        "crustalAgeMa": 61.66666666666666,
+        "oceanDepthKm": 5.205652919566881
+      },
+      {
+        "ageMa": 42,
+        "position": {
+          "lat": 16.023098823282794,
+          "lon": -146.23175361249295
+        },
+        "crustalAgeMa": 60.66666666666666,
+        "oceanDepthKm": 5.193098573856766
+      },
+      {
+        "ageMa": 43,
+        "position": {
+          "lat": 15.976037712707878,
+          "lon": -145.82437636897987
+        },
+        "crustalAgeMa": 59.66666666666666,
+        "oceanDepthKm": 5.18019032081654
+      },
+      {
+        "ageMa": 44,
+        "position": {
+          "lat": 15.9243638177017,
+          "lon": -145.38292476283183
+        },
+        "crustalAgeMa": 58.66666666666666,
+        "oceanDepthKm": 5.166918183789418
+      },
+      {
+        "ageMa": 45,
+        "position": {
+          "lat": 15.871516529201287,
+          "lon": -144.9709166384553
+        },
+        "crustalAgeMa": 57.66666666666666,
+        "oceanDepthKm": 5.153271904876403
+      },
+      {
+        "ageMa": 46,
+        "position": {
+          "lat": 15.821261914448272,
+          "lon": -144.55523826187854
+        },
+        "crustalAgeMa": 56.66666666666666,
+        "oceanDepthKm": 5.139240937008059
+      },
+      {
+        "ageMa": 47,
+        "position": {
+          "lat": 15.771428824529314,
+          "lon": -144.1393441211355
+        },
+        "crustalAgeMa": 55.66666666666666,
+        "oceanDepthKm": 5.124814435792789
+      },
+      {
+        "ageMa": 48,
+        "position": {
+          "lat": 15.722575766197012,
+          "lon": -143.7305678566578
+        },
+        "crustalAgeMa": 54.66666666666666,
+        "oceanDepthKm": 5.109981251135321
+      },
+      {
+        "ageMa": 49,
+        "position": {
+          "lat": 15.678831508260256,
+          "lon": -143.38796754241093
+        },
+        "crustalAgeMa": 53.66666666666666,
+        "oceanDepthKm": 5.094729918618905
+      },
+      {
+        "ageMa": 50,
+        "position": {
+          "lat": 15.63473414770542,
+          "lon": -143.04578695497835
+        },
+        "crustalAgeMa": 52.66666666666666,
+        "oceanDepthKm": 5.079048650644587
+      },
+      {
+        "ageMa": 51,
+        "position": {
+          "lat": 15.442635724014501,
+          "lon": -142.81484144644153
+        },
+        "crustalAgeMa": 51.66666666666666,
+        "oceanDepthKm": 5.062925327320697
+      },
+      {
+        "ageMa": 52,
+        "position": {
+          "lat": 15.245849302845137,
+          "lon": -142.6540860929284
+        },
+        "crustalAgeMa": 50.66666666666666,
+        "oceanDepthKm": 5.0463474870955
+      },
+      {
+        "ageMa": 53,
+        "position": {
+          "lat": 15.04871359992219,
+          "lon": -142.49414571512983
+        },
+        "crustalAgeMa": 49.66666666666666,
+        "oceanDepthKm": 5.029302317125799
+      },
+      {
+        "ageMa": 54,
+        "position": {
+          "lat": 14.90764398741698,
+          "lon": -142.35780874117194
+        },
+        "crustalAgeMa": 48.66666666666666,
+        "oceanDepthKm": 5.011776643374017
+      },
+      {
+        "ageMa": 55,
+        "position": {
+          "lat": 14.790656055761753,
+          "lon": -142.23157356637014
+        },
+        "crustalAgeMa": 47.66666666666666,
+        "oceanDepthKm": 4.993756920426114
+      },
+      {
+        "ageMa": 56,
+        "position": {
+          "lat": 14.6274820668332,
+          "lon": -142.1329577225324
+        },
+        "crustalAgeMa": 46.66666666666666,
+        "oceanDepthKm": 4.975229221022482
+      },
+      {
+        "ageMa": 57,
+        "position": {
+          "lat": 14.46404607199629,
+          "lon": -142.03509664763982
+        },
+        "crustalAgeMa": 45.66666666666666,
+        "oceanDepthKm": 4.956179225293698
+      },
+      {
+        "ageMa": 58,
+        "position": {
+          "lat": 14.30304446249149,
+          "lon": -141.9386045644711
+        },
+        "crustalAgeMa": 44.66666666666666,
+        "oceanDepthKm": 4.936592209692858
+      },
+      {
+        "ageMa": 59,
+        "position": {
+          "lat": 14.165898644281137,
+          "lon": -141.84829284119488
+        },
+        "crustalAgeMa": 43.66666666666666,
+        "oceanDepthKm": 4.916453035615884
+      },
+      {
+        "ageMa": 60,
+        "position": {
+          "lat": 13.922432020047363,
+          "lon": -141.6259078819698
+        },
+        "crustalAgeMa": 42.66666666666666,
+        "oceanDepthKm": 4.895746137701061
+      },
+      {
+        "ageMa": 61,
+        "position": {
+          "lat": 13.650309594197855,
+          "lon": -141.3764012136779
+        },
+        "crustalAgeMa": 41.66666666666666,
+        "oceanDepthKm": 4.874455511798724
+      },
+      {
+        "ageMa": 62,
+        "position": {
+          "lat": 13.378190699239223,
+          "lon": -141.12755987095048
+        },
+        "crustalAgeMa": 40.66666666666666,
+        "oceanDepthKm": 4.852564702601813
+      },
+      {
+        "ageMa": 63,
+        "position": {
+          "lat": 13.106095877270066,
+          "lon": -140.87936161977674
+        },
+        "crustalAgeMa": 39.66666666666666,
+        "oceanDepthKm": 4.830056790927741
+      },
+      {
+        "ageMa": 64,
+        "position": {
+          "lat": 12.784121519018795,
+          "lon": -140.66498809000856
+        },
+        "crustalAgeMa": 38.66666666666666,
+        "oceanDepthKm": 4.8069143806417225
+      },
+      {
+        "ageMa": 65,
+        "position": {
+          "lat": 12.442801060200429,
+          "lon": -140.42471367107993
+        },
+        "crustalAgeMa": 37.66666666666666,
+        "oceanDepthKm": 4.783119585211486
+      },
+      {
+        "ageMa": 66,
+        "position": {
+          "lat": 12.135477423685613,
+          "lon": -139.45644340221241
+        },
+        "crustalAgeMa": 36.66666666666666,
+        "oceanDepthKm": 4.758654013882948
+      },
+      {
+        "ageMa": 67,
+        "position": {
+          "lat": 11.809791792378112,
+          "lon": -138.43434290930844
+        },
+        "crustalAgeMa": 35.66666666666666,
+        "oceanDepthKm": 4.733498757466198
+      },
+      {
+        "ageMa": 68,
+        "position": {
+          "lat": 11.493854784531004,
+          "lon": -137.40613761540632
+        },
+        "crustalAgeMa": 34.66666666666666,
+        "oceanDepthKm": 4.707634373720769
+      },
+      {
+        "ageMa": 69,
+        "position": {
+          "lat": 11.016472316401602,
+          "lon": -136.46789419351512
+        },
+        "crustalAgeMa": 33.66666666666666,
+        "oceanDepthKm": 4.681040872328934
+      },
+      {
+        "ageMa": 70,
+        "position": {
+          "lat": 10.211265551817366,
+          "lon": -135.81831179312704
+        },
+        "crustalAgeMa": 32.66666666666666,
+        "oceanDepthKm": 4.6536976994453925
+      },
+      {
+        "ageMa": 71,
+        "position": {
+          "lat": 9.615283379806902,
+          "lon": -135.05232455688605
+        },
+        "crustalAgeMa": 31.666666666666657,
+        "oceanDepthKm": 4.625583721811413
+      },
+      {
+        "ageMa": 72,
+        "position": {
+          "lat": 9.238419652989707,
+          "lon": -134.18576984497793
+        },
+        "crustalAgeMa": 30.666666666666657,
+        "oceanDepthKm": 4.596677210421155
+      },
+      {
+        "ageMa": 73,
+        "position": {
+          "lat": 8.959550102723568,
+          "lon": -133.27439723410356
+        },
+        "crustalAgeMa": 29.666666666666657,
+        "oceanDepthKm": 4.566955823727541
+      },
+      {
+        "ageMa": 74,
+        "position": {
+          "lat": 8.688054971586666,
+          "lon": -132.3579883255139
+        },
+        "crustalAgeMa": 28.666666666666657,
+        "oceanDepthKm": 4.5363965903747046
+      },
+      {
+        "ageMa": 75,
+        "position": {
+          "lat": 8.423885828273367,
+          "lon": -131.43658427918646
+        },
+        "crustalAgeMa": 27.666666666666657,
+        "oceanDepthKm": 4.504975891443662
+      },
+      {
+        "ageMa": 76,
+        "position": {
+          "lat": 7.843428366023342,
+          "lon": -130.77852872007267
+        },
+        "crustalAgeMa": 26.666666666666657,
+        "oceanDepthKm": 4.4726694421974935
+      },
+      {
+        "ageMa": 77,
+        "position": {
+          "lat": 7.256709985869304,
+          "lon": -130.12825486218233
+        },
+        "crustalAgeMa": 25.666666666666657,
+        "oceanDepthKm": 4.439452273311919
+      },
+      {
+        "ageMa": 78,
+        "position": {
+          "lat": 6.663955136372764,
+          "lon": -129.4855987388427
+        },
+        "crustalAgeMa": 24.666666666666657,
+        "oceanDepthKm": 4.405298711576762
+      },
+      {
+        "ageMa": 79,
+        "position": {
+          "lat": 6.065407432632524,
+          "lon": -128.85035654499796
+        },
+        "crustalAgeMa": 23.666666666666657,
+        "oceanDepthKm": 4.3701823600533825
+      },
+      {
+        "ageMa": 80,
+        "position": {
+          "lat": 5.327924055979593,
+          "lon": -127.95839803017991
+        },
+        "crustalAgeMa": 22.666666666666657,
+        "oceanDepthKm": 4.334076077672764
+      },
+      {
+        "ageMa": 81,
+        "position": {
+          "lat": 4.4278380293643975,
+          "lon": -127.17019096858837
+        },
+        "crustalAgeMa": 21.666666666666657,
+        "oceanDepthKm": 4.296951958258449
+      },
+      {
+        "ageMa": 82,
+        "position": {
+          "lat": 3.5271431883482993,
+          "lon": -126.38426471325961
+        },
+        "crustalAgeMa": 20.666666666666657,
+        "oceanDepthKm": 4.258781308958146
+      },
+      {
+        "ageMa": 83,
+        "position": {
+          "lat": 2.6262194911843437,
+          "lon": -125.60002135254742
+        },
+        "crustalAgeMa": 19.666666666666657,
+        "oceanDepthKm": 4.218669721304091
+      },
+      {
+        "ageMa": 84,
+        "position": {
+          "lat": 1.1426064968376117,
+          "lon": -125.06378798609278
+        },
+        "crustalAgeMa": 18.666666666666657,
+        "oceanDepthKm": 4.176980236612579
+      },
+      {
+        "ageMa": 85,
+        "position": {
+          "lat": 0.14627566457398247,
+          "lon": -125.31437989886705
+        },
+        "crustalAgeMa": 17.666666666666657,
+        "oceanDepthKm": 4.134158292571749
+      },
+      {
+        "ageMa": 86,
+        "position": {
+          "lat": -0.850343240906675,
+          "lon": -125.56798556229222
+        },
+        "crustalAgeMa": 16.666666666666657,
+        "oceanDepthKm": 4.0901062601930995
+      },
+      {
+        "ageMa": 87,
+        "position": {
+          "lat": -1.8472269056241752,
+          "lon": -125.82449668284319
+        },
+        "crustalAgeMa": 15.666666666666657,
+        "oceanDepthKm": 4.044711620589613
+      },
+      {
+        "ageMa": 88,
+        "position": {
+          "lat": -2.8443731278709796,
+          "lon": -126.08377276969019
+        },
+        "crustalAgeMa": 14.666666666666657,
+        "oceanDepthKm": 3.9978435773242533
+      },
+      {
+        "ageMa": 89,
+        "position": {
+          "lat": -3.84175102469492,
+          "lon": -126.34566182126619
+        },
+        "crustalAgeMa": 13.666666666666657,
+        "oceanDepthKm": 3.949348608279812
+      },
+      {
+        "ageMa": 90,
+        "position": {
+          "lat": -4.8393530165142025,
+          "lon": -126.61007212073018
+        },
+        "crustalAgeMa": 12.666666666666657,
+        "oceanDepthKm": 3.899044520663809
+      },
+      {
+        "ageMa": 91,
+        "position": {
+          "lat": -5.591228961112728,
+          "lon": -127.04138735011378
+        },
+        "crustalAgeMa": 11.666666666666657,
+        "oceanDepthKm": 3.8467123431917507
+      },
+      {
+        "ageMa": 92,
+        "position": {
+          "lat": -6.3422567404694705,
+          "lon": -127.47448749085008
+        },
+        "crustalAgeMa": 10.666666666666657,
+        "oceanDepthKm": 3.7920850081544795
+      },
+      {
+        "ageMa": 93,
+        "position": {
+          "lat": -7.092454008758476,
+          "lon": -127.90932528806684
+        },
+        "crustalAgeMa": 9.666666666666657,
+        "oceanDepthKm": 3.734831118125805
+      },
+      {
+        "ageMa": 94,
+        "position": {
+          "lat": -7.841840707032054,
+          "lon": -128.34579610535255
+        },
+        "crustalAgeMa": 8.666666666666657,
+        "oceanDepthKm": 3.6745309054032207
+      },
+      {
+        "ageMa": 95,
+        "position": {
+          "lat": -8.590403110258842,
+          "lon": -128.78387807081918
+        },
+        "crustalAgeMa": 7.666666666666657,
+        "oceanDepthKm": 3.6106392366550315
+      },
+      {
+        "ageMa": 96,
+        "position": {
+          "lat": -9.285198431248274,
+          "lon": -129.08171661451485
+        },
+        "crustalAgeMa": 6.666666666666657,
+        "oceanDepthKm": 3.5424259475771374
+      },
+      {
+        "ageMa": 97,
+        "position": {
+          "lat": -9.307273897658142,
+          "lon": -129.59345384358235
+        },
+        "crustalAgeMa": 5.666666666666657,
+        "oceanDepthKm": 3.4688737921393793
+      },
+      {
+        "ageMa": 98,
+        "position": {
+          "lat": -9.327474857706921,
+          "lon": -130.10597863477403
+        },
+        "crustalAgeMa": 4.666666666666657,
+        "oceanDepthKm": 3.3884901183062888
+      },
+      {
+        "ageMa": 99,
+        "position": {
+          "lat": -9.345812905830767,
+          "lon": -130.61927084615184
+        },
+        "crustalAgeMa": 3.666666666666657,
+        "oceanDepthKm": 3.298921788662126
+      },
+      {
+        "ageMa": 100,
+        "position": {
+          "lat": -9.362340708168395,
+          "lon": -131.13330879526254
+        },
+        "crustalAgeMa": 2.666666666666657,
+        "oceanDepthKm": 3.196042504077239
+      },
+      {
+        "ageMa": 101,
+        "position": {
+          "lat": -9.445935331302007,
+          "lon": -131.53675496675856
+        },
+        "crustalAgeMa": 1.6666666666666572,
+        "oceanDepthKm": 3.071212973788568
+      },
+      {
+        "ageMa": 102,
+        "position": {
+          "lat": -9.53621160155491,
+          "lon": -131.93657687935666
+        },
+        "crustalAgeMa": 0.6666666666666572,
+        "oceanDepthKm": 2.898021252038618
+      },
+      {
+        "ageMa": 102.66666666666666,
+        "position": {
+          "lat": -9.600580546902746,
+          "lon": -132.2007205303023
+        },
+        "crustalAgeMa": 0,
+        "oceanDepthKm": 2.6
+      }
+    ]
+  },
+  {
+    "point": {
+      "name": "NW Pacific (Emperor-ish)",
+      "lon": 170,
+      "lat": 40
+    },
+    "basementAgeMa": 118.66666666666666,
+    "plateId": 901,
+    "log": [
+      {
+        "ageMa": 116,
+        "position": {
+          "lat": 2.8153759790491346,
+          "lon": -152.99503076808597
+        },
+        "crustalAgeMa": 2.666666666666657,
+        "oceanDepthKm": 3.196042504077239,
+        "ovelCmS": 0.00013490196078431375,
+        "ccdPublishedKm": 3.7,
+        "ccdCo2LinkedKm": 3.26831014,
+        "classPublished": "carbonate-ooze",
+        "classCo2Linked": "carbonate-ooze",
+        "divergent": false,
+        "classPrimary": "carbonate-ooze"
+      },
+      {
+        "ageMa": 111,
+        "position": {
+          "lat": 5.112810823224588,
+          "lon": -151.55780965412038
+        },
+        "crustalAgeMa": 7.666666666666657,
+        "oceanDepthKm": 3.6106392366550315,
+        "ovelCmS": -0.000247843137254902,
+        "ccdPublishedKm": 3.6375,
+        "ccdCo2LinkedKm": 3.19197736,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 107,
+        "position": {
+          "lat": 6.031668004502607,
+          "lon": -149.60206164842435
+        },
+        "crustalAgeMa": 11.666666666666657,
+        "oceanDepthKm": 3.8467123431917507,
+        "ovelCmS": -0.0001976470588235294,
+        "ccdPublishedKm": 3.5875,
+        "ccdCo2LinkedKm": 3.39703214,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 103,
+        "position": {
+          "lat": 6.821708434721005,
+          "lon": -147.6972818241919
+        },
+        "crustalAgeMa": 15.666666666666657,
+        "oceanDepthKm": 4.044711620589613,
+        "ovelCmS": -0.0001098039215686274,
+        "ccdPublishedKm": 3.4875,
+        "ccdCo2LinkedKm": 3.42160218,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 97,
+        "position": {
+          "lat": 7.246682353073941,
+          "lon": -144.848839610953
+        },
+        "crustalAgeMa": 21.666666666666657,
+        "oceanDepthKm": 4.296951958258449,
+        "ovelCmS": -0.0001098039215686274,
+        "ccdPublishedKm": 3.3675,
+        "ccdCo2LinkedKm": 3.9744577000000003,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 92,
+        "position": {
+          "lat": 9.873053060016277,
+          "lon": -143.0947643316655
+        },
+        "crustalAgeMa": 26.666666666666657,
+        "oceanDepthKm": 4.4726694421974935,
+        "ovelCmS": -0.00000313725490196082,
+        "ccdPublishedKm": 3.2925,
+        "ccdCo2LinkedKm": 4.36746912,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 87,
+        "position": {
+          "lat": 13.96605859513342,
+          "lon": -141.93665098562983
+        },
+        "crustalAgeMa": 31.666666666666657,
+        "oceanDepthKm": 4.625583721811413,
+        "ovelCmS": 0.00000313725490196082,
+        "ccdPublishedKm": 3.24,
+        "ccdCo2LinkedKm": 4.1753404199999995,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 81,
+        "position": {
+          "lat": 19.795304077882708,
+          "lon": -144.00214358463546
+        },
+        "crustalAgeMa": 37.66666666666666,
+        "oceanDepthKm": 4.783119585211486,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 3.195,
+        "ccdCo2LinkedKm": 4.0283582,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 75,
+        "position": {
+          "lat": 23.20882326748117,
+          "lon": -149.0942842757344
+        },
+        "crustalAgeMa": 43.66666666666666,
+        "oceanDepthKm": 4.916453035615884,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdPublishedKm": 3.1812,
+        "ccdCo2LinkedKm": 4.20178734,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 69,
+        "position": {
+          "lat": 26.125716711872734,
+          "lon": -154.09413342798285
+        },
+        "crustalAgeMa": 49.66666666666666,
+        "oceanDepthKm": 5.029302317125799,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 3.9542,
+        "ccdCo2LinkedKm": 4.71178642,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 66,
+        "position": {
+          "lat": 27.48748745836047,
+          "lon": -156.98293619974913
+        },
+        "crustalAgeMa": 52.66666666666666,
+        "oceanDepthKm": 5.079048650644587,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 4.8694,
+        "ccdCo2LinkedKm": 4.76781186,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 61,
+        "position": {
+          "lat": 29.08504341238075,
+          "lon": -159.0047060614294
+        },
+        "crustalAgeMa": 57.66666666666666,
+        "oceanDepthKm": 5.153271904876403,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 4.4336,
+        "ccdCo2LinkedKm": 4.59659704,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 56,
+        "position": {
+          "lat": 30.00447463705587,
+          "lon": -159.94060901897052
+        },
+        "crustalAgeMa": 62.66666666666666,
+        "oceanDepthKm": 5.217863061072311,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 4.8061,
+        "ccdCo2LinkedKm": 4.1903401,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 52,
+        "position": {
+          "lat": 30.58214698155305,
+          "lon": -160.5828260172211
+        },
+        "crustalAgeMa": 66.66666666666666,
+        "oceanDepthKm": 5.263446488215048,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 3.7487,
+        "ccdCo2LinkedKm": 3.90766148,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 45,
+        "position": {
+          "lat": 31.186928766734475,
+          "lon": -163.00608359729873
+        },
+        "crustalAgeMa": 73.66666666666666,
+        "oceanDepthKm": 5.331979956152682,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdPublishedKm": 4.0576,
+        "ccdCo2LinkedKm": 3.8424301,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 40,
+        "position": {
+          "lat": 31.57719576044089,
+          "lon": -164.9415771116345
+        },
+        "crustalAgeMa": 78.66666666666666,
+        "oceanDepthKm": 5.373379816204083,
+        "ovelCmS": -0.00004078431372549023,
+        "ccdPublishedKm": 3.8133,
+        "ccdCo2LinkedKm": 3.84253418,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 36,
+        "position": {
+          "lat": 32.263738379938,
+          "lon": -166.07844480196755
+        },
+        "crustalAgeMa": 82.66666666666666,
+        "oceanDepthKm": 5.4025966256794975,
+        "ovelCmS": -0.00004078431372549023,
+        "ccdPublishedKm": 4.1167,
+        "ccdCo2LinkedKm": 3.61565164,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 31,
+        "position": {
+          "lat": 32.99325762525466,
+          "lon": -169.0224589802417
+        },
+        "crustalAgeMa": 87.66666666666666,
+        "oceanDepthKm": 5.4348324213026915,
+        "ovelCmS": -0.00004078431372549023,
+        "ccdPublishedKm": 4.4825,
+        "ccdCo2LinkedKm": 3.85070732,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 26,
+        "position": {
+          "lat": 33.52881486209996,
+          "lon": -172.0745182340401
+        },
+        "crustalAgeMa": 92.66666666666666,
+        "oceanDepthKm": 5.462884914173649,
+        "ovelCmS": -0.00004078431372549023,
+        "ccdPublishedKm": 4.3903,
+        "ccdCo2LinkedKm": 4.270681580000001,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 20,
+        "position": {
+          "lat": 34.339155460550884,
+          "lon": -175.44461173297154
+        },
+        "crustalAgeMa": 98.66666666666666,
+        "oceanDepthKm": 5.491785247720706,
+        "ovelCmS": -0.00004078431372549023,
+        "ccdPublishedKm": 4.5233,
+        "ccdCo2LinkedKm": 4.565317,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 15,
+        "position": {
+          "lat": 35.229491495342295,
+          "lon": -178.44440545662158
+        },
+        "crustalAgeMa": 103.66666666666666,
+        "oceanDepthKm": 5.5124468600225205,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdPublishedKm": 4.6593,
+        "ccdCo2LinkedKm": 4.62686084,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 11,
+        "position": {
+          "lat": 35.92303345255176,
+          "lon": 179.12284068463876
+        },
+        "crustalAgeMa": 107.66666666666666,
+        "oceanDepthKm": 5.52702822308335,
+        "ovelCmS": -0.000028235294117647056,
+        "ccdPublishedKm": 4.6198,
+        "ccdCo2LinkedKm": 4.641939,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 3,
+        "position": {
+          "lat": 38.68076280583401,
+          "lon": 172.51619999198124
+        },
+        "crustalAgeMa": 115.66666666666666,
+        "oceanDepthKm": 5.551748807541724,
+        "ovelCmS": -0.000021960784313725524,
+        "ccdPublishedKm": 4.5833,
+        "ccdCo2LinkedKm": 4.64701716,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 0,
+        "position": {
+          "lat": 39.99999999999999,
+          "lon": 170
+        },
+        "crustalAgeMa": 118.66666666666666,
+        "oceanDepthKm": 5.559690582230895,
+        "ovelCmS": -0.000015686274509803992,
+        "ccdPublishedKm": 4.65,
+        "classPublished": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      }
+    ],
+    "trajectory": [
+      {
+        "ageMa": 0,
+        "position": {
+          "lat": 39.99999999999999,
+          "lon": 170
+        },
+        "crustalAgeMa": 118.66666666666666,
+        "oceanDepthKm": 5.559690582230895
+      },
+      {
+        "ageMa": 1,
+        "position": {
+          "lat": 39.56319303211189,
+          "lon": 170.84742862057084
+        },
+        "crustalAgeMa": 117.66666666666666,
+        "oceanDepthKm": 5.557116567383536
+      },
+      {
+        "ageMa": 2,
+        "position": {
+          "lat": 39.123396083715804,
+          "lon": 171.68608046222985
+        },
+        "crustalAgeMa": 116.66666666666666,
+        "oceanDepthKm": 5.55446999099109
+      },
+      {
+        "ageMa": 3,
+        "position": {
+          "lat": 38.68076280583401,
+          "lon": 172.51619999198124
+        },
+        "crustalAgeMa": 115.66666666666666,
+        "oceanDepthKm": 5.551748807541724
+      },
+      {
+        "ageMa": 4,
+        "position": {
+          "lat": 38.235494121778004,
+          "lon": 173.33803057886217
+        },
+        "crustalAgeMa": 114.66666666666666,
+        "oceanDepthKm": 5.548950913860574
+      },
+      {
+        "ageMa": 5,
+        "position": {
+          "lat": 37.811052526319045,
+          "lon": 174.16274460783842
+        },
+        "crustalAgeMa": 113.66666666666666,
+        "oceanDepthKm": 5.546074147484225
+      },
+      {
+        "ageMa": 6,
+        "position": {
+          "lat": 37.47732724986058,
+          "lon": 175.02426186853933
+        },
+        "crustalAgeMa": 112.66666666666666,
+        "oceanDepthKm": 5.543116284989358
+      },
+      {
+        "ageMa": 7,
+        "position": {
+          "lat": 37.14107137288985,
+          "lon": 175.87946126388908
+        },
+        "crustalAgeMa": 111.66666666666666,
+        "oceanDepthKm": 5.540075040274297
+      },
+      {
+        "ageMa": 8,
+        "position": {
+          "lat": 36.802453583355174,
+          "lon": 176.72842981420337
+        },
+        "crustalAgeMa": 110.66666666666666,
+        "oceanDepthKm": 5.536948062792098
+      },
+      {
+        "ageMa": 9,
+        "position": {
+          "lat": 36.46160909313351,
+          "lon": 177.57131175820604
+        },
+        "crustalAgeMa": 109.66666666666666,
+        "oceanDepthKm": 5.533732935733842
+      },
+      {
+        "ageMa": 10,
+        "position": {
+          "lat": 36.13979871077018,
+          "lon": 178.4069439812512
+        },
+        "crustalAgeMa": 108.66666666666666,
+        "oceanDepthKm": 5.530427174160698
+      },
+      {
+        "ageMa": 11,
+        "position": {
+          "lat": 35.92303345255176,
+          "lon": 179.12284068463876
+        },
+        "crustalAgeMa": 107.66666666666666,
+        "oceanDepthKm": 5.52702822308335
+      },
+      {
+        "ageMa": 12,
+        "position": {
+          "lat": 35.75118935643646,
+          "lon": 179.73399300653097
+        },
+        "crustalAgeMa": 106.66666666666666,
+        "oceanDepthKm": 5.523533455487265
+      },
+      {
+        "ageMa": 13,
+        "position": {
+          "lat": 35.57829552595572,
+          "lon": -179.65682356287283
+        },
+        "crustalAgeMa": 105.66666666666666,
+        "oceanDepthKm": 5.519940170302303
+      },
+      {
+        "ageMa": 14,
+        "position": {
+          "lat": 35.40437596576636,
+          "lon": -179.0496394016881
+        },
+        "crustalAgeMa": 104.66666666666666,
+        "oceanDepthKm": 5.516245590315086
+      },
+      {
+        "ageMa": 15,
+        "position": {
+          "lat": 35.229491495342295,
+          "lon": -178.44440545662158
+        },
+        "crustalAgeMa": 103.66666666666666,
+        "oceanDepthKm": 5.5124468600225205
+      },
+      {
+        "ageMa": 16,
+        "position": {
+          "lat": 35.05319906920934,
+          "lon": -177.8405855954179
+        },
+        "crustalAgeMa": 102.66666666666666,
+        "oceanDepthKm": 5.508541043424807
+      },
+      {
+        "ageMa": 17,
+        "position": {
+          "lat": 34.8759854933111,
+          "lon": -177.23871972330667
+        },
+        "crustalAgeMa": 101.66666666666666,
+        "oceanDepthKm": 5.504525121756234
+      },
+      {
+        "ageMa": 18,
+        "position": {
+          "lat": 34.697885825029054,
+          "lon": -176.6387808575851
+        },
+        "crustalAgeMa": 100.66666666666666,
+        "oceanDepthKm": 5.500395991152008
+      },
+      {
+        "ageMa": 19,
+        "position": {
+          "lat": 34.51892643580918,
+          "lon": -176.0407487320811
+        },
+        "crustalAgeMa": 99.66666666666666,
+        "oceanDepthKm": 5.496150460249306
+      },
+      {
+        "ageMa": 20,
+        "position": {
+          "lat": 34.339155460550884,
+          "lon": -175.44461173297154
+        },
+        "crustalAgeMa": 98.66666666666666,
+        "oceanDepthKm": 5.491785247720706
+      },
+      {
+        "ageMa": 21,
+        "position": {
+          "lat": 34.213983459050404,
+          "lon": -174.88560777367258
+        },
+        "crustalAgeMa": 97.66666666666666,
+        "oceanDepthKm": 5.487296979738078
+      },
+      {
+        "ageMa": 22,
+        "position": {
+          "lat": 34.08108082531836,
+          "lon": -174.3197473744754
+        },
+        "crustalAgeMa": 96.66666666666666,
+        "oceanDepthKm": 5.482682187364995
+      },
+      {
+        "ageMa": 23,
+        "position": {
+          "lat": 33.9460806130261,
+          "lon": -173.75574033336497
+        },
+        "crustalAgeMa": 95.66666666666666,
+        "oceanDepthKm": 5.477937303875617
+      },
+      {
+        "ageMa": 24,
+        "position": {
+          "lat": 33.80901405307371,
+          "lon": -173.19361085039802
+        },
+        "crustalAgeMa": 94.66666666666666,
+        "oceanDepthKm": 5.473058661998011
+      },
+      {
+        "ageMa": 25,
+        "position": {
+          "lat": 33.66991237700116,
+          "lon": -172.6333651044144
+        },
+        "crustalAgeMa": 93.66666666666666,
+        "oceanDepthKm": 5.46804249107976
+      },
+      {
+        "ageMa": 26,
+        "position": {
+          "lat": 33.52881486209996,
+          "lon": -172.0745182340401
+        },
+        "crustalAgeMa": 92.66666666666666,
+        "oceanDepthKm": 5.462884914173649
+      },
+      {
+        "ageMa": 27,
+        "position": {
+          "lat": 33.42098580613349,
+          "lon": -171.45841879389474
+        },
+        "crustalAgeMa": 91.66666666666666,
+        "oceanDepthKm": 5.457581945041224
+      },
+      {
+        "ageMa": 28,
+        "position": {
+          "lat": 33.31051256788074,
+          "lon": -170.84407369692377
+        },
+        "crustalAgeMa": 90.66666666666666,
+        "oceanDepthKm": 5.45212948507187
+      },
+      {
+        "ageMa": 29,
+        "position": {
+          "lat": 33.1974162328763,
+          "lon": -170.23150642612762
+        },
+        "crustalAgeMa": 89.66666666666666,
+        "oceanDepthKm": 5.446523320115028
+      },
+      {
+        "ageMa": 30,
+        "position": {
+          "lat": 33.081751695614436,
+          "lon": -169.6207198531408
+        },
+        "crustalAgeMa": 88.66666666666666,
+        "oceanDepthKm": 5.440759117223127
+      },
+      {
+        "ageMa": 31,
+        "position": {
+          "lat": 32.99325762525466,
+          "lon": -169.0224589802417
+        },
+        "crustalAgeMa": 87.66666666666666,
+        "oceanDepthKm": 5.4348324213026915
+      },
+      {
+        "ageMa": 32,
+        "position": {
+          "lat": 32.88769108995817,
+          "lon": -168.41042157955107
+        },
+        "crustalAgeMa": 86.66666666666666,
+        "oceanDepthKm": 5.428738651671049
+      },
+      {
+        "ageMa": 33,
+        "position": {
+          "lat": 32.780549915347294,
+          "lon": -167.79959629690921
+        },
+        "crustalAgeMa": 85.66666666666666,
+        "oceanDepthKm": 5.422473098515959
+      },
+      {
+        "ageMa": 34,
+        "position": {
+          "lat": 32.6329866140574,
+          "lon": -167.20543247938642
+        },
+        "crustalAgeMa": 84.66666666666666,
+        "oceanDepthKm": 5.416030919255456
+      },
+      {
+        "ageMa": 35,
+        "position": {
+          "lat": 32.44710270879257,
+          "lon": -166.62772030940297
+        },
+        "crustalAgeMa": 83.66666666666666,
+        "oceanDepthKm": 5.409407134795062
+      },
+      {
+        "ageMa": 36,
+        "position": {
+          "lat": 32.263738379938,
+          "lon": -166.07844480196755
+        },
+        "crustalAgeMa": 82.66666666666666,
+        "oceanDepthKm": 5.4025966256794975
+      },
+      {
+        "ageMa": 37,
+        "position": {
+          "lat": 32.09077060184065,
+          "lon": -165.79400406505115
+        },
+        "crustalAgeMa": 81.66666666666666,
+        "oceanDepthKm": 5.395594128135906
+      },
+      {
+        "ageMa": 38,
+        "position": {
+          "lat": 31.918682284476237,
+          "lon": -165.50972956550436
+        },
+        "crustalAgeMa": 80.66666666666666,
+        "oceanDepthKm": 5.388394230005539
+      },
+      {
+        "ageMa": 39,
+        "position": {
+          "lat": 31.74748041039671,
+          "lon": -165.22559419063225
+        },
+        "crustalAgeMa": 79.66666666666666,
+        "oceanDepthKm": 5.380991366560752
+      },
+      {
+        "ageMa": 40,
+        "position": {
+          "lat": 31.57719576044089,
+          "lon": -164.9415771116345
+        },
+        "crustalAgeMa": 78.66666666666666,
+        "oceanDepthKm": 5.373379816204083
+      },
+      {
+        "ageMa": 41,
+        "position": {
+          "lat": 31.493494072099296,
+          "lon": -164.58076156534625
+        },
+        "crustalAgeMa": 77.66666666666666,
+        "oceanDepthKm": 5.365553696046094
+      },
+      {
+        "ageMa": 42,
+        "position": {
+          "lat": 31.412254978515218,
+          "lon": -164.21864084033868
+        },
+        "crustalAgeMa": 76.66666666666666,
+        "oceanDepthKm": 5.357506957358537
+      },
+      {
+        "ageMa": 43,
+        "position": {
+          "lat": 31.33024942247424,
+          "lon": -163.8377298835404
+        },
+        "crustalAgeMa": 75.66666666666666,
+        "oceanDepthKm": 5.349233380899362
+      },
+      {
+        "ageMa": 44,
+        "position": {
+          "lat": 31.248646824061414,
+          "lon": -163.417212094687
+        },
+        "crustalAgeMa": 74.66666666666666,
+        "oceanDepthKm": 5.34072657210592
+      },
+      {
+        "ageMa": 45,
+        "position": {
+          "lat": 31.186928766734475,
+          "lon": -163.00608359729873
+        },
+        "crustalAgeMa": 73.66666666666666,
+        "oceanDepthKm": 5.331979956152682
+      },
+      {
+        "ageMa": 46,
+        "position": {
+          "lat": 31.128401641470436,
+          "lon": -162.59109622308102
+        },
+        "crustalAgeMa": 72.66666666666666,
+        "oceanDepthKm": 5.322986772869613
+      },
+      {
+        "ageMa": 47,
+        "position": {
+          "lat": 31.070397707692056,
+          "lon": -162.17586485333243
+        },
+        "crustalAgeMa": 71.66666666666666,
+        "oceanDepthKm": 5.3137400715173095
+      },
+      {
+        "ageMa": 48,
+        "position": {
+          "lat": 31.014681781170452,
+          "lon": -161.76667091443082
+        },
+        "crustalAgeMa": 70.66666666666666,
+        "oceanDepthKm": 5.304232705414848
+      },
+      {
+        "ageMa": 49,
+        "position": {
+          "lat": 30.97495783057026,
+          "lon": -161.41418178018804
+        },
+        "crustalAgeMa": 69.66666666666666,
+        "oceanDepthKm": 5.294457326416182
+      },
+      {
+        "ageMa": 50,
+        "position": {
+          "lat": 30.934797174067892,
+          "lon": -161.0621557699101
+        },
+        "crustalAgeMa": 68.66666666666666,
+        "oceanDepthKm": 5.284406379230839
+      },
+      {
+        "ageMa": 51,
+        "position": {
+          "lat": 30.761258542330726,
+          "lon": -160.78716471271323
+        },
+        "crustalAgeMa": 67.66666666666666,
+        "oceanDepthKm": 5.274072095584516
+      },
+      {
+        "ageMa": 52,
+        "position": {
+          "lat": 30.58214698155305,
+          "lon": -160.5828260172211
+        },
+        "crustalAgeMa": 66.66666666666666,
+        "oceanDepthKm": 5.263446488215048
+      },
+      {
+        "ageMa": 53,
+        "position": {
+          "lat": 30.40221488027055,
+          "lon": -160.3799827116885
+        },
+        "crustalAgeMa": 65.66666666666666,
+        "oceanDepthKm": 5.252521344699152
+      },
+      {
+        "ageMa": 54,
+        "position": {
+          "lat": 30.266912322906872,
+          "lon": -160.21929202477688
+        },
+        "crustalAgeMa": 64.66666666666666,
+        "oceanDepthKm": 5.241288221105116
+      },
+      {
+        "ageMa": 55,
+        "position": {
+          "lat": 30.150694102071835,
+          "lon": -160.0767605852037
+        },
+        "crustalAgeMa": 63.66666666666666,
+        "oceanDepthKm": 5.229738435466577
+      },
+      {
+        "ageMa": 56,
+        "position": {
+          "lat": 30.00447463705587,
+          "lon": -159.94060901897052
+        },
+        "crustalAgeMa": 62.66666666666666,
+        "oceanDepthKm": 5.217863061072311
+      },
+      {
+        "ageMa": 57,
+        "position": {
+          "lat": 29.857569160963514,
+          "lon": -159.8057617942708
+        },
+        "crustalAgeMa": 61.66666666666666,
+        "oceanDepthKm": 5.205652919566881
+      },
+      {
+        "ageMa": 58,
+        "position": {
+          "lat": 29.711957652606976,
+          "lon": -159.67386080509974
+        },
+        "crustalAgeMa": 60.66666666666666,
+        "oceanDepthKm": 5.193098573856766
+      },
+      {
+        "ageMa": 59,
+        "position": {
+          "lat": 29.58335748069125,
+          "lon": -159.5578564287168
+        },
+        "crustalAgeMa": 59.66666666666666,
+        "oceanDepthKm": 5.18019032081654
+      },
+      {
+        "ageMa": 60,
+        "position": {
+          "lat": 29.349032409114667,
+          "lon": -159.29592066431135
+        },
+        "crustalAgeMa": 58.66666666666666,
+        "oceanDepthKm": 5.166918183789418
+      },
+      {
+        "ageMa": 61,
+        "position": {
+          "lat": 29.08504341238075,
+          "lon": -159.0047060614294
+        },
+        "crustalAgeMa": 57.66666666666666,
+        "oceanDepthKm": 5.153271904876403
+      },
+      {
+        "ageMa": 62,
+        "position": {
+          "lat": 28.82032280245634,
+          "lon": -158.71540051307124
+        },
+        "crustalAgeMa": 56.66666666666666,
+        "oceanDepthKm": 5.139240937008059
+      },
+      {
+        "ageMa": 63,
+        "position": {
+          "lat": 28.554897286030428,
+          "lon": -158.42797344563596
+        },
+        "crustalAgeMa": 55.66666666666666,
+        "oceanDepthKm": 5.124814435792789
+      },
+      {
+        "ageMa": 64,
+        "position": {
+          "lat": 28.23470893103677,
+          "lon": -158.17366221002024
+        },
+        "crustalAgeMa": 54.66666666666666,
+        "oceanDepthKm": 5.109981251135321
+      },
+      {
+        "ageMa": 65,
+        "position": {
+          "lat": 27.88033577196762,
+          "lon": -157.90599871091416
+        },
+        "crustalAgeMa": 53.66666666666666,
+        "oceanDepthKm": 5.094729918618905
+      },
+      {
+        "ageMa": 66,
+        "position": {
+          "lat": 27.48748745836047,
+          "lon": -156.98293619974913
+        },
+        "crustalAgeMa": 52.66666666666666,
+        "oceanDepthKm": 5.079048650644587
+      },
+      {
+        "ageMa": 67,
+        "position": {
+          "lat": 27.076626494089417,
+          "lon": -156.00326486973225
+        },
+        "crustalAgeMa": 51.66666666666666,
+        "oceanDepthKm": 5.062925327320697
+      },
+      {
+        "ageMa": 68,
+        "position": {
+          "lat": 26.675344540246876,
+          "lon": -155.01839964830336
+        },
+        "crustalAgeMa": 50.66666666666666,
+        "oceanDepthKm": 5.0463474870955
+      },
+      {
+        "ageMa": 69,
+        "position": {
+          "lat": 26.125716711872734,
+          "lon": -154.09413342798285
+        },
+        "crustalAgeMa": 49.66666666666666,
+        "oceanDepthKm": 5.029302317125799
+      },
+      {
+        "ageMa": 70,
+        "position": {
+          "lat": 25.30373856562869,
+          "lon": -153.37627330433787
+        },
+        "crustalAgeMa": 48.66666666666666,
+        "oceanDepthKm": 5.011776643374017
+      },
+      {
+        "ageMa": 71,
+        "position": {
+          "lat": 24.640280891103767,
+          "lon": -152.6115574719345
+        },
+        "crustalAgeMa": 47.66666666666666,
+        "oceanDepthKm": 4.993756920426114
+      },
+      {
+        "ageMa": 72,
+        "position": {
+          "lat": 24.20147457119986,
+          "lon": -151.76365278194268
+        },
+        "crustalAgeMa": 46.66666666666666,
+        "oceanDepthKm": 4.975229221022482
+      },
+      {
+        "ageMa": 73,
+        "position": {
+          "lat": 23.86352676423751,
+          "lon": -150.87791403161546
+        },
+        "crustalAgeMa": 45.66666666666666,
+        "oceanDepthKm": 4.956179225293698
+      },
+      {
+        "ageMa": 74,
+        "position": {
+          "lat": 23.532645249010642,
+          "lon": -149.9881366452373
+        },
+        "crustalAgeMa": 44.66666666666666,
+        "oceanDepthKm": 4.936592209692858
+      },
+      {
+        "ageMa": 75,
+        "position": {
+          "lat": 23.20882326748117,
+          "lon": -149.0942842757344
+        },
+        "crustalAgeMa": 43.66666666666666,
+        "oceanDepthKm": 4.916453035615884
+      },
+      {
+        "ageMa": 76,
+        "position": {
+          "lat": 22.741500748316906,
+          "lon": -148.28750123516477
+        },
+        "crustalAgeMa": 42.66666666666666,
+        "oceanDepthKm": 4.895746137701061
+      },
+      {
+        "ageMa": 77,
+        "position": {
+          "lat": 22.263933005930305,
+          "lon": -147.49233822898867
+        },
+        "crustalAgeMa": 41.66666666666666,
+        "oceanDepthKm": 4.874455511798724
+      },
+      {
+        "ageMa": 78,
+        "position": {
+          "lat": 21.776393675799945,
+          "lon": -146.70875267657277
+        },
+        "crustalAgeMa": 40.66666666666666,
+        "oceanDepthKm": 4.852564702601813
+      },
+      {
+        "ageMa": 79,
+        "position": {
+          "lat": 21.279180699121888,
+          "lon": -145.93665077011457
+        },
+        "crustalAgeMa": 39.66666666666666,
+        "oceanDepthKm": 4.830056790927741
+      },
+      {
+        "ageMa": 80,
+        "position": {
+          "lat": 20.65073250083246,
+          "lon": -144.89204492355913
+        },
+        "crustalAgeMa": 38.66666666666666,
+        "oceanDepthKm": 4.8069143806417225
+      },
+      {
+        "ageMa": 81,
+        "position": {
+          "lat": 19.795304077882708,
+          "lon": -144.00214358463546
+        },
+        "crustalAgeMa": 37.66666666666666,
+        "oceanDepthKm": 4.783119585211486
+      },
+      {
+        "ageMa": 82,
+        "position": {
+          "lat": 18.93327693680521,
+          "lon": -143.12452629503645
+        },
+        "crustalAgeMa": 36.66666666666666,
+        "oceanDepthKm": 4.758654013882948
+      },
+      {
+        "ageMa": 83,
+        "position": {
+          "lat": 18.06512909581122,
+          "lon": -142.25850891330987
+        },
+        "crustalAgeMa": 35.66666666666666,
+        "oceanDepthKm": 4.733498757466198
+      },
+      {
+        "ageMa": 84,
+        "position": {
+          "lat": 16.686638559221244,
+          "lon": -141.5491200142264
+        },
+        "crustalAgeMa": 34.66666666666666,
+        "oceanDepthKm": 4.707634373720769
+      },
+      {
+        "ageMa": 85,
+        "position": {
+          "lat": 15.782003230391323,
+          "lon": -141.6692788241785
+        },
+        "crustalAgeMa": 33.66666666666666,
+        "oceanDepthKm": 4.681040872328934
+      },
+      {
+        "ageMa": 86,
+        "position": {
+          "lat": 14.875107094081896,
+          "lon": -141.79854137651665
+        },
+        "crustalAgeMa": 32.66666666666666,
+        "oceanDepthKm": 4.6536976994453925
+      },
+      {
+        "ageMa": 87,
+        "position": {
+          "lat": 13.96605859513342,
+          "lon": -141.93665098562983
+        },
+        "crustalAgeMa": 31.666666666666657,
+        "oceanDepthKm": 4.625583721811413
+      },
+      {
+        "ageMa": 88,
+        "position": {
+          "lat": 13.054928807846604,
+          "lon": -142.0833386376361
+        },
+        "crustalAgeMa": 30.666666666666657,
+        "oceanDepthKm": 4.596677210421155
+      },
+      {
+        "ageMa": 89,
+        "position": {
+          "lat": 12.14183092227539,
+          "lon": -142.23831622870597
+        },
+        "crustalAgeMa": 29.666666666666657,
+        "oceanDepthKm": 4.566955823727541
+      },
+      {
+        "ageMa": 90,
+        "position": {
+          "lat": 11.226833699576762,
+          "lon": -142.4013808023382
+        },
+        "crustalAgeMa": 28.666666666666657,
+        "oceanDepthKm": 4.5363965903747046
+      },
+      {
+        "ageMa": 91,
+        "position": {
+          "lat": 10.549591256441824,
+          "lon": -142.74617236047095
+        },
+        "crustalAgeMa": 27.666666666666657,
+        "oceanDepthKm": 4.504975891443662
+      },
+      {
+        "ageMa": 92,
+        "position": {
+          "lat": 9.873053060016277,
+          "lon": -143.0947643316655
+        },
+        "crustalAgeMa": 26.666666666666657,
+        "oceanDepthKm": 4.4726694421974935
+      },
+      {
+        "ageMa": 93,
+        "position": {
+          "lat": 9.197215658115823,
+          "lon": -143.44703820276868
+        },
+        "crustalAgeMa": 25.666666666666657,
+        "oceanDepthKm": 4.439452273311919
+      },
+      {
+        "ageMa": 94,
+        "position": {
+          "lat": 8.522077424032634,
+          "lon": -143.80281483343492
+        },
+        "crustalAgeMa": 24.666666666666657,
+        "oceanDepthKm": 4.405298711576762
+      },
+      {
+        "ageMa": 95,
+        "position": {
+          "lat": 7.847664998730895,
+          "lon": -144.1620043722893
+        },
+        "crustalAgeMa": 23.666666666666657,
+        "oceanDepthKm": 4.3701823600533825
+      },
+      {
+        "ageMa": 96,
+        "position": {
+          "lat": 7.217217170761656,
+          "lon": -144.39293451834945
+        },
+        "crustalAgeMa": 22.666666666666657,
+        "oceanDepthKm": 4.334076077672764
+      },
+      {
+        "ageMa": 97,
+        "position": {
+          "lat": 7.246682353073941,
+          "lon": -144.848839610953
+        },
+        "crustalAgeMa": 21.666666666666657,
+        "oceanDepthKm": 4.296951958258449
+      },
+      {
+        "ageMa": 98,
+        "position": {
+          "lat": 7.27734613836463,
+          "lon": -145.3058795701256
+        },
+        "crustalAgeMa": 20.666666666666657,
+        "oceanDepthKm": 4.258781308958146
+      },
+      {
+        "ageMa": 99,
+        "position": {
+          "lat": 7.309194860964877,
+          "lon": -145.76404765116905
+        },
+        "crustalAgeMa": 19.666666666666657,
+        "oceanDepthKm": 4.218669721304091
+      },
+      {
+        "ageMa": 100,
+        "position": {
+          "lat": 7.342177420432879,
+          "lon": -146.22333185501543
+        },
+        "crustalAgeMa": 18.666666666666657,
+        "oceanDepthKm": 4.176980236612579
+      },
+      {
+        "ageMa": 101,
+        "position": {
+          "lat": 7.175696308178968,
+          "lon": -146.71880852908987
+        },
+        "crustalAgeMa": 17.666666666666657,
+        "oceanDepthKm": 4.134158292571749
+      },
+      {
+        "ageMa": 102,
+        "position": {
+          "lat": 7.002188411438774,
+          "lon": -147.2101486224536
+        },
+        "crustalAgeMa": 16.666666666666657,
+        "oceanDepthKm": 4.0901062601930995
+      },
+      {
+        "ageMa": 103,
+        "position": {
+          "lat": 6.821708434721005,
+          "lon": -147.6972818241919
+        },
+        "crustalAgeMa": 15.666666666666657,
+        "oceanDepthKm": 4.044711620589613
+      },
+      {
+        "ageMa": 104,
+        "position": {
+          "lat": 6.634354159518678,
+          "lon": -148.1801254248804
+        },
+        "crustalAgeMa": 14.666666666666657,
+        "oceanDepthKm": 3.9978435773242533
+      },
+      {
+        "ageMa": 105,
+        "position": {
+          "lat": 6.440168085756109,
+          "lon": -148.65858436034233
+        },
+        "crustalAgeMa": 13.666666666666657,
+        "oceanDepthKm": 3.949348608279812
+      },
+      {
+        "ageMa": 106,
+        "position": {
+          "lat": 6.239248219394954,
+          "lon": -149.13258616520986
+        },
+        "crustalAgeMa": 12.666666666666657,
+        "oceanDepthKm": 3.899044520663809
+      },
+      {
+        "ageMa": 107,
+        "position": {
+          "lat": 6.031668004502607,
+          "lon": -149.60206164842435
+        },
+        "crustalAgeMa": 11.666666666666657,
+        "oceanDepthKm": 3.8467123431917507
+      },
+      {
+        "ageMa": 108,
+        "position": {
+          "lat": 5.817484335471842,
+          "lon": -150.0669327459439
+        },
+        "crustalAgeMa": 10.666666666666657,
+        "oceanDepthKm": 3.7920850081544795
+      },
+      {
+        "ageMa": 109,
+        "position": {
+          "lat": 5.596804964732182,
+          "lon": -150.52712962858152
+        },
+        "crustalAgeMa": 9.666666666666657,
+        "oceanDepthKm": 3.734831118125805
+      },
+      {
+        "ageMa": 110,
+        "position": {
+          "lat": 5.369693201076702,
+          "lon": -150.98259742370195
+        },
+        "crustalAgeMa": 8.666666666666657,
+        "oceanDepthKm": 3.6745309054032207
+      },
+      {
+        "ageMa": 111,
+        "position": {
+          "lat": 5.112810823224588,
+          "lon": -151.55780965412038
+        },
+        "crustalAgeMa": 7.666666666666657,
+        "oceanDepthKm": 3.6106392366550315
+      },
+      {
+        "ageMa": 112,
+        "position": {
+          "lat": 4.849671584010087,
+          "lon": -152.12964344333528
+        },
+        "crustalAgeMa": 6.666666666666657,
+        "oceanDepthKm": 3.5424259475771374
+      },
+      {
+        "ageMa": 113,
+        "position": {
+          "lat": 4.347585502166277,
+          "lon": -152.36802059274595
+        },
+        "crustalAgeMa": 5.666666666666657,
+        "oceanDepthKm": 3.4688737921393793
+      },
+      {
+        "ageMa": 114,
+        "position": {
+          "lat": 3.8409391354493687,
+          "lon": -152.59168554263104
+        },
+        "crustalAgeMa": 4.666666666666657,
+        "oceanDepthKm": 3.3884901183062888
+      },
+      {
+        "ageMa": 115,
+        "position": {
+          "lat": 3.3300927582638526,
+          "lon": -152.80067950914608
+        },
+        "crustalAgeMa": 3.666666666666657,
+        "oceanDepthKm": 3.298921788662126
+      },
+      {
+        "ageMa": 116,
+        "position": {
+          "lat": 2.8153759790491346,
+          "lon": -152.99503076808597
+        },
+        "crustalAgeMa": 2.666666666666657,
+        "oceanDepthKm": 3.196042504077239
+      },
+      {
+        "ageMa": 117,
+        "position": {
+          "lat": 2.297141843220418,
+          "lon": -153.174797927561
+        },
+        "crustalAgeMa": 1.6666666666666572,
+        "oceanDepthKm": 3.071212973788568
+      },
+      {
+        "ageMa": 118,
+        "position": {
+          "lat": 1.7757565037000378,
+          "lon": -153.34002154552607
+        },
+        "crustalAgeMa": 0.6666666666666572,
+        "oceanDepthKm": 2.898021252038618
+      },
+      {
+        "ageMa": 118.66666666666666,
+        "position": {
+          "lat": 1.4965073595500267,
+          "lon": -153.44563230900022
+        },
+        "crustalAgeMa": 0,
+        "oceanDepthKm": 2.6
+      }
+    ]
+  },
+  {
+    "point": {
+      "name": "W Pacific old crust",
+      "lon": 150,
+      "lat": 10
+    },
+    "basementAgeMa": 161.33333333333331,
+    "plateId": 901,
+    "log": [
+      {
+        "ageMa": 160,
+        "position": {
+          "lat": -38.585719541753015,
+          "lon": 171.22347594087776
+        },
+        "crustalAgeMa": 1.3333333333333144,
+        "oceanDepthKm": 3.0214656965084234,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdCo2LinkedKm": 3.7963844000000004,
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 155,
+        "position": {
+          "lat": -37.506642351011195,
+          "lon": 173.92548040532296
+        },
+        "crustalAgeMa": 6.333333333333314,
+        "oceanDepthKm": 3.518563189624607,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdCo2LinkedKm": 3.7979284000000004,
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 149,
+        "position": {
+          "lat": -36.071267675992196,
+          "lon": 177.06737058862777
+        },
+        "crustalAgeMa": 12.333333333333314,
+        "oceanDepthKm": 3.881837873263749,
+        "ovelCmS": -0.00004705882352941176,
+        "ccdCo2LinkedKm": 3.894880019999999,
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 145,
+        "position": {
+          "lat": -35.034356897615005,
+          "lon": 179.09839937412437
+        },
+        "crustalAgeMa": 16.333333333333314,
+        "oceanDepthKm": 4.075129937779493,
+        "ovelCmS": -0.00005333333333333329,
+        "ccdCo2LinkedKm": 3.9384275799999977,
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 142,
+        "position": {
+          "lat": -34.217066513359576,
+          "lon": -179.41225785581454
+        },
+        "crustalAgeMa": 19.333333333333314,
+        "oceanDepthKm": 4.204893558256537,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdCo2LinkedKm": 3.7336728600000004,
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 136,
+        "position": {
+          "lat": -32.486770198923374,
+          "lon": -176.5206706345954
+        },
+        "crustalAgeMa": 25.333333333333314,
+        "oceanDepthKm": 4.428173084850996,
+        "ovelCmS": -0.000015686274509803992,
+        "ccdPublishedKm": 3.89,
+        "ccdCo2LinkedKm": 3.4393372799999997,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 131,
+        "position": {
+          "lat": -29.843363238419453,
+          "lon": -177.92712218864955
+        },
+        "crustalAgeMa": 30.333333333333314,
+        "oceanDepthKm": 4.586861744484197,
+        "ovelCmS": -0.000009411764705882352,
+        "ccdPublishedKm": 3.815,
+        "ccdCo2LinkedKm": 3.604415780000002,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 127,
+        "position": {
+          "lat": -27.698120972656277,
+          "lon": -178.1679387063023
+        },
+        "crustalAgeMa": 34.333333333333314,
+        "oceanDepthKm": 4.69885188958748,
+        "ovelCmS": -0.000015686274509803992,
+        "ccdPublishedKm": 3.74,
+        "ccdCo2LinkedKm": 3.5724713,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 122,
+        "position": {
+          "lat": -25.496227328434422,
+          "lon": -177.63875433991865
+        },
+        "crustalAgeMa": 39.333333333333314,
+        "oceanDepthKm": 4.822414027075462,
+        "ovelCmS": -0.000015686274509803992,
+        "ccdPublishedKm": 3.77,
+        "ccdCo2LinkedKm": 3.47409938,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 116,
+        "position": {
+          "lat": -22.23699320611542,
+          "lon": -177.81444327725384
+        },
+        "crustalAgeMa": 45.333333333333314,
+        "oceanDepthKm": 4.949710627902243,
+        "ovelCmS": -0.000021960784313725524,
+        "ccdPublishedKm": 3.7,
+        "ccdCo2LinkedKm": 3.26831014,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 111,
+        "position": {
+          "lat": -19.206674738641734,
+          "lon": -176.9312671324626
+        },
+        "crustalAgeMa": 50.333333333333314,
+        "oceanDepthKm": 5.040718332340644,
+        "ovelCmS": -0.000015686274509803992,
+        "ccdPublishedKm": 3.6375,
+        "ccdCo2LinkedKm": 3.19197736,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 107,
+        "position": {
+          "lat": -17.966994796113564,
+          "lon": -175.22483190381925
+        },
+        "crustalAgeMa": 54.333333333333314,
+        "oceanDepthKm": 5.104944509870477,
+        "ovelCmS": -0.000009411764705882352,
+        "ccdPublishedKm": 3.5875,
+        "ccdCo2LinkedKm": 3.39703214,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 103,
+        "position": {
+          "lat": -16.755796421199783,
+          "lon": -173.66534375467555
+        },
+        "crustalAgeMa": 58.333333333333314,
+        "oceanDepthKm": 5.1624115102880195,
+        "ovelCmS": -0.00000313725490196082,
+        "ccdPublishedKm": 3.4875,
+        "ccdCo2LinkedKm": 3.42160218,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 97,
+        "position": {
+          "lat": -16.234332022279805,
+          "lon": -170.88568797554518
+        },
+        "crustalAgeMa": 64.33333333333331,
+        "oceanDepthKm": 5.237473912954459,
+        "ovelCmS": -0.00000313725490196082,
+        "ccdPublishedKm": 3.3675,
+        "ccdCo2LinkedKm": 3.9744577000000003,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 92,
+        "position": {
+          "lat": -14.567320415583279,
+          "lon": -168.16943567702637
+        },
+        "crustalAgeMa": 69.33333333333331,
+        "oceanDepthKm": 5.291138008554304,
+        "ovelCmS": 0.000009411764705882352,
+        "ccdPublishedKm": 3.2925,
+        "ccdCo2LinkedKm": 4.36746912,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 87,
+        "position": {
+          "lat": -11.685710113640322,
+          "lon": -165.7510914064701
+        },
+        "crustalAgeMa": 74.33333333333331,
+        "oceanDepthKm": 5.337838008667151,
+        "ovelCmS": 0.00000313725490196082,
+        "ccdPublishedKm": 3.24,
+        "ccdCo2LinkedKm": 4.1753404199999995,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 81,
+        "position": {
+          "lat": -7.269143936732687,
+          "lon": -166.3281671938723
+        },
+        "crustalAgeMa": 80.33333333333331,
+        "oceanDepthKm": 5.385949439837189,
+        "ovelCmS": -0.00009098039215686281,
+        "ccdPublishedKm": 3.195,
+        "ccdCo2LinkedKm": 4.0283582,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 75,
+        "position": {
+          "lat": -5.012421156928879,
+          "lon": -170.05722428282044
+        },
+        "crustalAgeMa": 86.33333333333331,
+        "oceanDepthKm": 5.426669457383314,
+        "ovelCmS": -0.00014117647058823528,
+        "ccdPublishedKm": 3.1812,
+        "ccdCo2LinkedKm": 4.20178734,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 69,
+        "position": {
+          "lat": -2.0686254018212127,
+          "lon": -175.3115840858588
+        },
+        "crustalAgeMa": 92.33333333333331,
+        "oceanDepthKm": 5.461133612546284,
+        "ovelCmS": 0.0001788235294117648,
+        "ccdPublishedKm": 3.9542,
+        "ccdCo2LinkedKm": 4.71178642,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 66,
+        "position": {
+          "lat": -0.5842557571396675,
+          "lon": -178.5015650033272
+        },
+        "crustalAgeMa": 95.33333333333331,
+        "oceanDepthKm": 5.4763261360098,
+        "ovelCmS": 0.00029803921568627445,
+        "ccdPublishedKm": 4.8694,
+        "ccdCo2LinkedKm": 4.76781186,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 61,
+        "position": {
+          "lat": 0.9117731184738141,
+          "lon": 179.46054759675368
+        },
+        "crustalAgeMa": 100.33333333333331,
+        "oceanDepthKm": 5.498993907716623,
+        "ovelCmS": 0.00029803921568627445,
+        "ccdPublishedKm": 4.4336,
+        "ccdCo2LinkedKm": 4.59659704,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 56,
+        "position": {
+          "lat": 1.6457614321331213,
+          "lon": 178.69899786929608
+        },
+        "crustalAgeMa": 105.33333333333331,
+        "oceanDepthKm": 5.518720037998595,
+        "ovelCmS": 0.00016627450980392152,
+        "ccdPublishedKm": 4.8061,
+        "ccdCo2LinkedKm": 4.1903401,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 52,
+        "position": {
+          "lat": 2.102792782281956,
+          "lon": 178.1736392993541
+        },
+        "crustalAgeMa": 109.33333333333331,
+        "oceanDepthKm": 5.532641210423331,
+        "ovelCmS": 0.00014117647058823528,
+        "ccdPublishedKm": 3.7487,
+        "ccdCo2LinkedKm": 3.90766148,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 45,
+        "position": {
+          "lat": 2.6075620236561794,
+          "lon": 175.83282304455665
+        },
+        "crustalAgeMa": 116.33333333333331,
+        "oceanDepthKm": 5.553571322172882,
+        "ovelCmS": 0.00009098039215686281,
+        "ccdPublishedKm": 4.0576,
+        "ccdCo2LinkedKm": 3.8424301,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 40,
+        "position": {
+          "lat": 3.1181879108011534,
+          "lon": 173.66209388602618
+        },
+        "crustalAgeMa": 121.33333333333331,
+        "oceanDepthKm": 5.566214833779212,
+        "ovelCmS": 0.00006588235294117646,
+        "ccdPublishedKm": 3.8133,
+        "ccdCo2LinkedKm": 3.84253418,
+        "classPublished": "siliceous-ooze",
+        "classCo2Linked": "siliceous-ooze",
+        "divergent": false,
+        "classPrimary": "siliceous-ooze"
+      },
+      {
+        "ageMa": 36,
+        "position": {
+          "lat": 3.8201914132666417,
+          "lon": 172.41237694463786
+        },
+        "crustalAgeMa": 125.33333333333331,
+        "oceanDepthKm": 5.575137643403297,
+        "ovelCmS": -0.00004078431372549023,
+        "ccdPublishedKm": 4.1167,
+        "ccdCo2LinkedKm": 3.61565164,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 31,
+        "position": {
+          "lat": 4.435050477598964,
+          "lon": 169.54937979106595
+        },
+        "crustalAgeMa": 130.33333333333331,
+        "oceanDepthKm": 5.584982450984654,
+        "ovelCmS": -0.00004078431372549023,
+        "ccdPublishedKm": 4.4825,
+        "ccdCo2LinkedKm": 3.85070732,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 26,
+        "position": {
+          "lat": 4.730142193078968,
+          "lon": 166.80851613966914
+        },
+        "crustalAgeMa": 135.33333333333331,
+        "oceanDepthKm": 5.593549678476729,
+        "ovelCmS": -0.0001286274509803921,
+        "ccdPublishedKm": 4.3903,
+        "ccdCo2LinkedKm": 4.270681580000001,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 20,
+        "position": {
+          "lat": 5.302836367084326,
+          "lon": 163.71654124456077
+        },
+        "crustalAgeMa": 141.33333333333331,
+        "oceanDepthKm": 5.60237583639551,
+        "ovelCmS": -0.00013490196078431375,
+        "ccdPublishedKm": 4.5233,
+        "ccdCo2LinkedKm": 4.565317,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 15,
+        "position": {
+          "lat": 6.043429017572276,
+          "lon": 160.84118244574543
+        },
+        "crustalAgeMa": 146.33333333333331,
+        "oceanDepthKm": 5.608685889971032,
+        "ovelCmS": -0.00007843137254901964,
+        "ccdPublishedKm": 4.6593,
+        "ccdCo2LinkedKm": 4.62686084,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 11,
+        "position": {
+          "lat": 6.6049336220559445,
+          "lon": 158.533002819361
+        },
+        "crustalAgeMa": 150.33333333333331,
+        "oceanDepthKm": 5.613139036258649,
+        "ovelCmS": -0.00007843137254901964,
+        "ccdPublishedKm": 4.6198,
+        "ccdCo2LinkedKm": 4.641939,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 3,
+        "position": {
+          "lat": 8.902824901101184,
+          "lon": 152.31807744821893
+        },
+        "crustalAgeMa": 158.33333333333331,
+        "oceanDepthKm": 5.620688699376511,
+        "ovelCmS": -0.00003450980392156859,
+        "ccdPublishedKm": 4.5833,
+        "ccdCo2LinkedKm": 4.64701716,
+        "classPublished": "clay",
+        "classCo2Linked": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      },
+      {
+        "ageMa": 0,
+        "position": {
+          "lat": 10,
+          "lon": 150
+        },
+        "crustalAgeMa": 161.33333333333331,
+        "oceanDepthKm": 5.6231141162820935,
+        "ovelCmS": -0.000021960784313725524,
+        "ccdPublishedKm": 4.65,
+        "classPublished": "clay",
+        "divergent": false,
+        "classPrimary": "clay"
+      }
+    ],
+    "trajectory": [
+      {
+        "ageMa": 0,
+        "position": {
+          "lat": 10,
+          "lon": 150
+        },
+        "crustalAgeMa": 161.33333333333331,
+        "oceanDepthKm": 5.6231141162820935
+      },
+      {
+        "ageMa": 1,
+        "position": {
+          "lat": 9.639582587213583,
+          "lon": 150.77564075909243
+        },
+        "crustalAgeMa": 160.33333333333331,
+        "oceanDepthKm": 5.622328012499205
+      },
+      {
+        "ageMa": 2,
+        "position": {
+          "lat": 9.273824129857793,
+          "lon": 151.54831008397548
+        },
+        "crustalAgeMa": 159.33333333333331,
+        "oceanDepthKm": 5.621519748430355
+      },
+      {
+        "ageMa": 3,
+        "position": {
+          "lat": 8.902824901101184,
+          "lon": 152.31807744821893
+        },
+        "crustalAgeMa": 158.33333333333331,
+        "oceanDepthKm": 5.620688699376511
+      },
+      {
+        "ageMa": 4,
+        "position": {
+          "lat": 8.526742131884703,
+          "lon": 153.0849949888015
+        },
+        "crustalAgeMa": 157.33333333333331,
+        "oceanDepthKm": 5.619834223028355
+      },
+      {
+        "ageMa": 5,
+        "position": {
+          "lat": 8.168508813020326,
+          "lon": 153.85712461465212
+        },
+        "crustalAgeMa": 156.33333333333331,
+        "oceanDepthKm": 5.618955658969855
+      },
+      {
+        "ageMa": 6,
+        "position": {
+          "lat": 7.896822936342236,
+          "lon": 154.6591764206237
+        },
+        "crustalAgeMa": 155.33333333333331,
+        "oceanDepthKm": 5.618052328167834
+      },
+      {
+        "ageMa": 7,
+        "position": {
+          "lat": 7.620565557984907,
+          "lon": 155.45947878948732
+        },
+        "crustalAgeMa": 154.33333333333331,
+        "oceanDepthKm": 5.6171235324471525
+      },
+      {
+        "ageMa": 8,
+        "position": {
+          "lat": 7.33985666596571,
+          "lon": 156.25803282478583
+        },
+        "crustalAgeMa": 153.33333333333331,
+        "oceanDepthKm": 5.616168553951095
+      },
+      {
+        "ageMa": 9,
+        "position": {
+          "lat": 7.054796281962852,
+          "lon": 157.054882608185
+        },
+        "crustalAgeMa": 152.33333333333331,
+        "oceanDepthKm": 5.615186654586545
+      },
+      {
+        "ageMa": 10,
+        "position": {
+          "lat": 6.784933060368309,
+          "lon": 157.84847295386678
+        },
+        "crustalAgeMa": 151.33333333333331,
+        "oceanDepthKm": 5.614177075453527
+      },
+      {
+        "ageMa": 11,
+        "position": {
+          "lat": 6.6049336220559445,
+          "lon": 158.533002819361
+        },
+        "crustalAgeMa": 150.33333333333331,
+        "oceanDepthKm": 5.613139036258649
+      },
+      {
+        "ageMa": 12,
+        "position": {
+          "lat": 6.467141650327884,
+          "lon": 159.11079574200488
+        },
+        "crustalAgeMa": 149.33333333333331,
+        "oceanDepthKm": 5.612071734712033
+      },
+      {
+        "ageMa": 13,
+        "position": {
+          "lat": 6.32761401322996,
+          "lon": 159.6881007768326
+        },
+        "crustalAgeMa": 148.33333333333331,
+        "oceanDepthKm": 5.610974345907227
+      },
+      {
+        "ageMa": 14,
+        "position": {
+          "lat": 6.186358745101589,
+          "lon": 160.2648867934445
+        },
+        "crustalAgeMa": 147.33333333333331,
+        "oceanDepthKm": 5.609846021683645
+      },
+      {
+        "ageMa": 15,
+        "position": {
+          "lat": 6.043429017572276,
+          "lon": 160.84118244574543
+        },
+        "crustalAgeMa": 146.33333333333331,
+        "oceanDepthKm": 5.608685889971032
+      },
+      {
+        "ageMa": 16,
+        "position": {
+          "lat": 5.898573932349433,
+          "lon": 161.41723696293442
+        },
+        "crustalAgeMa": 145.33333333333331,
+        "oceanDepthKm": 5.60749305411545
+      },
+      {
+        "ageMa": 17,
+        "position": {
+          "lat": 5.752063891777226,
+          "lon": 161.9927869915319
+        },
+        "crustalAgeMa": 144.33333333333331,
+        "oceanDepthKm": 5.606266592186263
+      },
+      {
+        "ageMa": 18,
+        "position": {
+          "lat": 5.603921500738403,
+          "lon": 162.56785207288843
+        },
+        "crustalAgeMa": 143.33333333333331,
+        "oceanDepthKm": 5.605005556263587
+      },
+      {
+        "ageMa": 19,
+        "position": {
+          "lat": 5.454165795998572,
+          "lon": 163.14243798798697
+        },
+        "crustalAgeMa": 142.33333333333331,
+        "oceanDepthKm": 5.603708971705651
+      },
+      {
+        "ageMa": 20,
+        "position": {
+          "lat": 5.302836367084326,
+          "lon": 163.71654124456077
+        },
+        "crustalAgeMa": 141.33333333333331,
+        "oceanDepthKm": 5.60237583639551
+      },
+      {
+        "ageMa": 21,
+        "position": {
+          "lat": 5.215102589496479,
+          "lon": 164.23076000154512
+        },
+        "crustalAgeMa": 140.33333333333331,
+        "oceanDepthKm": 5.601005119966511
+      },
+      {
+        "ageMa": 22,
+        "position": {
+          "lat": 5.122916714659719,
+          "lon": 164.74772671284765
+        },
+        "crustalAgeMa": 139.33333333333331,
+        "oceanDepthKm": 5.599595763005945
+      },
+      {
+        "ageMa": 23,
+        "position": {
+          "lat": 5.02827755546913,
+          "lon": 165.26400470555757
+        },
+        "crustalAgeMa": 138.33333333333331,
+        "oceanDepthKm": 5.598146676236228
+      },
+      {
+        "ageMa": 24,
+        "position": {
+          "lat": 4.931190510735928,
+          "lon": 165.77959057758747
+        },
+        "crustalAgeMa": 137.33333333333331,
+        "oceanDepthKm": 5.596656739673011
+      },
+      {
+        "ageMa": 25,
+        "position": {
+          "lat": 4.831673701853448,
+          "lon": 166.29447744502482
+        },
+        "crustalAgeMa": 136.33333333333331,
+        "oceanDepthKm": 5.595124801759562
+      },
+      {
+        "ageMa": 26,
+        "position": {
+          "lat": 4.730142193078968,
+          "lon": 166.80851613966914
+        },
+        "crustalAgeMa": 135.33333333333331,
+        "oceanDepthKm": 5.593549678476729
+      },
+      {
+        "ageMa": 27,
+        "position": {
+          "lat": 4.673998118965116,
+          "lon": 167.35585487845435
+        },
+        "crustalAgeMa": 134.33333333333331,
+        "oceanDepthKm": 5.591930152427835
+      },
+      {
+        "ageMa": 28,
+        "position": {
+          "lat": 4.615008211558317,
+          "lon": 167.90261153690244
+        },
+        "crustalAgeMa": 133.33333333333331,
+        "oceanDepthKm": 5.590264971897756
+      },
+      {
+        "ageMa": 29,
+        "position": {
+          "lat": 4.553168797537489,
+          "lon": 168.4487847842085
+        },
+        "crustalAgeMa": 132.33333333333331,
+        "oceanDepthKm": 5.588552849885487
+      },
+      {
+        "ageMa": 30,
+        "position": {
+          "lat": 4.488516286630617,
+          "lon": 168.99437831982533
+        },
+        "crustalAgeMa": 131.33333333333331,
+        "oceanDepthKm": 5.586792463109433
+      },
+      {
+        "ageMa": 31,
+        "position": {
+          "lat": 4.435050477598964,
+          "lon": 169.54937979106595
+        },
+        "crustalAgeMa": 130.33333333333331,
+        "oceanDepthKm": 5.584982450984654
+      },
+      {
+        "ageMa": 32,
+        "position": {
+          "lat": 4.368858899535712,
+          "lon": 170.11386782813943
+        },
+        "crustalAgeMa": 129.33333333333331,
+        "oceanDepthKm": 5.583121414571286
+      },
+      {
+        "ageMa": 33,
+        "position": {
+          "lat": 4.300959892151594,
+          "lon": 170.67781637294001
+        },
+        "crustalAgeMa": 128.33333333333331,
+        "oceanDepthKm": 5.581207915493315
+      },
+      {
+        "ageMa": 34,
+        "position": {
+          "lat": 4.176860615008487,
+          "lon": 171.2554289000306
+        },
+        "crustalAgeMa": 127.33333333333331,
+        "oceanDepthKm": 5.579240474826871
+      },
+      {
+        "ageMa": 35,
+        "position": {
+          "lat": 3.9979537101778106,
+          "lon": 171.84735318637942
+        },
+        "crustalAgeMa": 126.33333333333331,
+        "oceanDepthKm": 5.577217571957179
+      },
+      {
+        "ageMa": 36,
+        "position": {
+          "lat": 3.8201914132666417,
+          "lon": 172.41237694463786
+        },
+        "crustalAgeMa": 125.33333333333331,
+        "oceanDepthKm": 5.575137643403297
+      },
+      {
+        "ageMa": 37,
+        "position": {
+          "lat": 3.6443738342479715,
+          "lon": 172.72403790006277
+        },
+        "crustalAgeMa": 124.33333333333331,
+        "oceanDepthKm": 5.57299908160971
+      },
+      {
+        "ageMa": 38,
+        "position": {
+          "lat": 3.468753484201364,
+          "lon": 173.03620179783843
+        },
+        "crustalAgeMa": 123.33333333333331,
+        "oceanDepthKm": 5.5708002337038804
+      },
+      {
+        "ageMa": 39,
+        "position": {
+          "lat": 3.293344447032111,
+          "lon": 173.34888602083987
+        },
+        "crustalAgeMa": 122.33333333333331,
+        "oceanDepthKm": 5.568539400218742
+      },
+      {
+        "ageMa": 40,
+        "position": {
+          "lat": 3.1181879108011534,
+          "lon": 173.66209388602618
+        },
+        "crustalAgeMa": 121.33333333333331,
+        "oceanDepthKm": 5.566214833779212
+      },
+      {
+        "ageMa": 41,
+        "position": {
+          "lat": 3.003153489021493,
+          "lon": 174.08193472745887
+        },
+        "crustalAgeMa": 120.33333333333331,
+        "oceanDepthKm": 5.56382473775166
+      },
+      {
+        "ageMa": 42,
+        "position": {
+          "lat": 2.8910099010032706,
+          "lon": 174.50213149618187
+        },
+        "crustalAgeMa": 119.33333333333331,
+        "oceanDepthKm": 5.5613672648553045
+      },
+      {
+        "ageMa": 43,
+        "position": {
+          "lat": 2.778302143525965,
+          "lon": 174.9409234014519
+        },
+        "crustalAgeMa": 118.33333333333331,
+        "oceanDepthKm": 5.558840515734472
+      },
+      {
+        "ageMa": 44,
+        "position": {
+          "lat": 2.6719257002585883,
+          "lon": 175.4100486987905
+        },
+        "crustalAgeMa": 117.33333333333331,
+        "oceanDepthKm": 5.556242537490604
+      },
+      {
+        "ageMa": 45,
+        "position": {
+          "lat": 2.6075620236561794,
+          "lon": 175.83282304455665
+        },
+        "crustalAgeMa": 116.33333333333331,
+        "oceanDepthKm": 5.553571322172882
+      },
+      {
+        "ageMa": 46,
+        "position": {
+          "lat": 2.5466885111244877,
+          "lon": 176.2585684880234
+        },
+        "crustalAgeMa": 115.33333333333331,
+        "oceanDepthKm": 5.550824805226298
+      },
+      {
+        "ageMa": 47,
+        "position": {
+          "lat": 2.4863910330157344,
+          "lon": 176.68438111145585
+        },
+        "crustalAgeMa": 114.33333333333331,
+        "oceanDepthKm": 5.54800086389599
+      },
+      {
+        "ageMa": 48,
+        "position": {
+          "lat": 2.429619228477164,
+          "lon": 177.10192264945263
+        },
+        "crustalAgeMa": 113.33333333333331,
+        "oceanDepthKm": 5.545097315586578
+      },
+      {
+        "ageMa": 49,
+        "position": {
+          "lat": 2.3995239122205354,
+          "lon": 177.44418569446572
+        },
+        "crustalAgeMa": 112.33333333333331,
+        "oceanDepthKm": 5.542111916175266
+      },
+      {
+        "ageMa": 50,
+        "position": {
+          "lat": 2.36895574084864,
+          "lon": 177.78610440777177
+        },
+        "crustalAgeMa": 111.33333333333331,
+        "oceanDepthKm": 5.539042358277371
+      },
+      {
+        "ageMa": 51,
+        "position": {
+          "lat": 2.238760959484961,
+          "lon": 178.0146085494635
+        },
+        "crustalAgeMa": 110.33333333333331,
+        "oceanDepthKm": 5.535886269462984
+      },
+      {
+        "ageMa": 52,
+        "position": {
+          "lat": 2.102792782281956,
+          "lon": 178.1736392993541
+        },
+        "crustalAgeMa": 109.33333333333331,
+        "oceanDepthKm": 5.532641210423331
+      },
+      {
+        "ageMa": 53,
+        "position": {
+          "lat": 1.96568784729922,
+          "lon": 178.33194986540056
+        },
+        "crustalAgeMa": 108.33333333333331,
+        "oceanDepthKm": 5.529304673085462
+      },
+      {
+        "ageMa": 54,
+        "position": {
+          "lat": 1.8541795595082975,
+          "lon": 178.47207848862257
+        },
+        "crustalAgeMa": 107.33333333333331,
+        "oceanDepthKm": 5.525874078673786
+      },
+      {
+        "ageMa": 55,
+        "position": {
+          "lat": 1.753457817547982,
+          "lon": 178.6044595082312
+        },
+        "crustalAgeMa": 106.33333333333331,
+        "oceanDepthKm": 5.522346775716958
+      },
+      {
+        "ageMa": 56,
+        "position": {
+          "lat": 1.6457614321331213,
+          "lon": 178.69899786929608
+        },
+        "crustalAgeMa": 105.33333333333331,
+        "oceanDepthKm": 5.518720037998595
+      },
+      {
+        "ageMa": 57,
+        "position": {
+          "lat": 1.537073463039709,
+          "lon": 178.7929388769583
+        },
+        "crustalAgeMa": 104.33333333333331,
+        "oceanDepthKm": 5.5149910624501945
+      },
+      {
+        "ageMa": 58,
+        "position": {
+          "lat": 1.4282591289687572,
+          "lon": 178.88607583288257
+        },
+        "crustalAgeMa": 103.33333333333331,
+        "oceanDepthKm": 5.511156966984687
+      },
+      {
+        "ageMa": 59,
+        "position": {
+          "lat": 1.326168230955427,
+          "lon": 178.97689748886546
+        },
+        "crustalAgeMa": 102.33333333333331,
+        "oceanDepthKm": 5.507214788268891
+      },
+      {
+        "ageMa": 60,
+        "position": {
+          "lat": 1.1324926909446653,
+          "lon": 179.20440430544002
+        },
+        "crustalAgeMa": 101.33333333333331,
+        "oceanDepthKm": 5.503161479433188
+      },
+      {
+        "ageMa": 61,
+        "position": {
+          "lat": 0.9117731184738141,
+          "lon": 179.46054759675368
+        },
+        "crustalAgeMa": 100.33333333333331,
+        "oceanDepthKm": 5.498993907716623
+      },
+      {
+        "ageMa": 62,
+        "position": {
+          "lat": 0.6896050802809007,
+          "lon": 179.71585020566712
+        },
+        "crustalAgeMa": 99.33333333333331,
+        "oceanDepthKm": 5.494708852045632
+      },
+      {
+        "ageMa": 63,
+        "position": {
+          "lat": 0.46601067730620377,
+          "lon": 179.97031970886312
+        },
+        "crustalAgeMa": 98.33333333333331,
+        "oceanDepthKm": 5.490303000544503
+      },
+      {
+        "ageMa": 64,
+        "position": {
+          "lat": 0.18870963961597903,
+          "lon": -179.80429218220038
+        },
+        "crustalAgeMa": 97.33333333333331,
+        "oceanDepthKm": 5.485772947975661
+      },
+      {
+        "ageMa": 65,
+        "position": {
+          "lat": -0.13660666747826047,
+          "lon": -179.54248521243875
+        },
+        "crustalAgeMa": 96.33333333333331,
+        "oceanDepthKm": 5.481115193107797
+      },
+      {
+        "ageMa": 66,
+        "position": {
+          "lat": -0.5842557571396675,
+          "lon": -178.5015650033272
+        },
+        "crustalAgeMa": 95.33333333333331,
+        "oceanDepthKm": 5.4763261360098
+      },
+      {
+        "ageMa": 67,
+        "position": {
+          "lat": -1.0467898764218806,
+          "lon": -177.4081345291854
+        },
+        "crustalAgeMa": 94.33333333333331,
+        "oceanDepthKm": 5.471402075268407
+      },
+      {
+        "ageMa": 68,
+        "position": {
+          "lat": -1.5007390521694772,
+          "lon": -176.31029941684005
+        },
+        "crustalAgeMa": 93.33333333333331,
+        "oceanDepthKm": 5.466339205127423
+      },
+      {
+        "ageMa": 69,
+        "position": {
+          "lat": -2.0686254018212127,
+          "lon": -175.3115840858588
+        },
+        "crustalAgeMa": 92.33333333333331,
+        "oceanDepthKm": 5.461133612546284
+      },
+      {
+        "ageMa": 70,
+        "position": {
+          "lat": -2.8087794696682695,
+          "lon": -174.64378348998284
+        },
+        "crustalAgeMa": 91.33333333333331,
+        "oceanDepthKm": 5.4557812741757115
+      },
+      {
+        "ageMa": 71,
+        "position": {
+          "lat": -3.4710729409378422,
+          "lon": -173.82960939632252
+        },
+        "crustalAgeMa": 90.33333333333331,
+        "oceanDepthKm": 5.450278053248109
+      },
+      {
+        "ageMa": 72,
+        "position": {
+          "lat": -3.929878114535224,
+          "lon": -172.9212851304586
+        },
+        "crustalAgeMa": 89.33333333333331,
+        "oceanDepthKm": 5.444619696380294
+      },
+      {
+        "ageMa": 73,
+        "position": {
+          "lat": -4.296722749083265,
+          "lon": -171.97084729480068
+        },
+        "crustalAgeMa": 88.33333333333331,
+        "oceanDepthKm": 5.4388018302861
+      },
+      {
+        "ageMa": 74,
+        "position": {
+          "lat": -4.657589621584822,
+          "lon": -171.0161660038246
+        },
+        "crustalAgeMa": 87.33333333333331,
+        "oceanDepthKm": 5.432819958396312
+      },
+      {
+        "ageMa": 75,
+        "position": {
+          "lat": -5.012421156928879,
+          "lon": -170.05722428282044
+        },
+        "crustalAgeMa": 86.33333333333331,
+        "oceanDepthKm": 5.426669457383314
+      },
+      {
+        "ageMa": 76,
+        "position": {
+          "lat": -5.28773291993033,
+          "lon": -169.49258853068937
+        },
+        "crustalAgeMa": 85.33333333333331,
+        "oceanDepthKm": 5.420345573587762
+      },
+      {
+        "ageMa": 77,
+        "position": {
+          "lat": -5.573518904807655,
+          "lon": -168.93392505754397
+        },
+        "crustalAgeMa": 84.33333333333331,
+        "oceanDepthKm": 5.413843419344534
+      },
+      {
+        "ageMa": 78,
+        "position": {
+          "lat": -5.869664544821169,
+          "lon": -168.3813155369388
+        },
+        "crustalAgeMa": 83.33333333333331,
+        "oceanDepthKm": 5.407157969205102
+      },
+      {
+        "ageMa": 79,
+        "position": {
+          "lat": -6.176025425453015,
+          "lon": -167.83480382271966
+        },
+        "crustalAgeMa": 82.33333333333331,
+        "oceanDepthKm": 5.4002840560534136
+      },
+      {
+        "ageMa": 80,
+        "position": {
+          "lat": -6.583590278962012,
+          "lon": -167.04375305952732
+        },
+        "crustalAgeMa": 81.33333333333331,
+        "oceanDepthKm": 5.39321636711228
+      },
+      {
+        "ageMa": 81,
+        "position": {
+          "lat": -7.269143936732687,
+          "lon": -166.3281671938723
+        },
+        "crustalAgeMa": 80.33333333333331,
+        "oceanDepthKm": 5.385949439837189
+      },
+      {
+        "ageMa": 82,
+        "position": {
+          "lat": -7.9665411960237105,
+          "lon": -165.6185470646499
+        },
+        "crustalAgeMa": 79.33333333333331,
+        "oceanDepthKm": 5.378477657694355
+      },
+      {
+        "ageMa": 83,
+        "position": {
+          "lat": -8.675468583173618,
+          "lon": -164.9146868251273
+        },
+        "crustalAgeMa": 78.33333333333331,
+        "oceanDepthKm": 5.370795245819761
+      },
+      {
+        "ageMa": 84,
+        "position": {
+          "lat": -9.725055287540872,
+          "lon": -164.55510946054264
+        },
+        "crustalAgeMa": 77.33333333333331,
+        "oceanDepthKm": 5.362896266555825
+      },
+      {
+        "ageMa": 85,
+        "position": {
+          "lat": -10.378131405983813,
+          "lon": -164.9449024746986
+        },
+        "crustalAgeMa": 76.33333333333331,
+        "oceanDepthKm": 5.354774614862239
+      },
+      {
+        "ageMa": 86,
+        "position": {
+          "lat": -11.031728459648242,
+          "lon": -165.34354383244437
+        },
+        "crustalAgeMa": 75.33333333333331,
+        "oceanDepthKm": 5.346424013597459
+      },
+      {
+        "ageMa": 87,
+        "position": {
+          "lat": -11.685710113640322,
+          "lon": -165.7510914064701
+        },
+        "crustalAgeMa": 74.33333333333331,
+        "oceanDepthKm": 5.337838008667151
+      },
+      {
+        "ageMa": 88,
+        "position": {
+          "lat": -12.339986462934318,
+          "lon": -166.16756753805277
+        },
+        "crustalAgeMa": 73.33333333333331,
+        "oceanDepthKm": 5.329009964035902
+      },
+      {
+        "ageMa": 89,
+        "position": {
+          "lat": -12.994403141605527,
+          "lon": -166.59298792857325
+        },
+        "crustalAgeMa": 72.33333333333331,
+        "oceanDepthKm": 5.319933056598282
+      },
+      {
+        "ageMa": 90,
+        "position": {
+          "lat": -13.6488666422863,
+          "lon": -167.02742459617022
+        },
+        "crustalAgeMa": 71.33333333333331,
+        "oceanDepthKm": 5.310600270905349
+      },
+      {
+        "ageMa": 91,
+        "position": {
+          "lat": -14.109691892156487,
+          "lon": -167.595891455802
+        },
+        "crustalAgeMa": 70.33333333333331,
+        "oceanDepthKm": 5.30100439374247
+      },
+      {
+        "ageMa": 92,
+        "position": {
+          "lat": -14.567320415583279,
+          "lon": -168.16943567702637
+        },
+        "crustalAgeMa": 69.33333333333331,
+        "oceanDepthKm": 5.291138008554304
+      },
+      {
+        "ageMa": 93,
+        "position": {
+          "lat": -15.02171610432668,
+          "lon": -168.74798612417428
+        },
+        "crustalAgeMa": 68.33333333333331,
+        "oceanDepthKm": 5.280993489712627
+      },
+      {
+        "ageMa": 94,
+        "position": {
+          "lat": -15.472833278424734,
+          "lon": -169.33141492843535
+        },
+        "crustalAgeMa": 67.33333333333331,
+        "oceanDepthKm": 5.270562996622558
+      },
+      {
+        "ageMa": 95,
+        "position": {
+          "lat": -15.920609573747202,
+          "lon": -169.91966826994576
+        },
+        "crustalAgeMa": 66.33333333333331,
+        "oceanDepthKm": 5.259838467662639
+      },
+      {
+        "ageMa": 96,
+        "position": {
+          "lat": -16.34480164035092,
+          "lon": -170.35892989914691
+        },
+        "crustalAgeMa": 65.33333333333331,
+        "oceanDepthKm": 5.248811613954099
+      },
+      {
+        "ageMa": 97,
+        "position": {
+          "lat": -16.234332022279805,
+          "lon": -170.88568797554518
+        },
+        "crustalAgeMa": 64.33333333333331,
+        "oceanDepthKm": 5.237473912954459
+      },
+      {
+        "ageMa": 98,
+        "position": {
+          "lat": -16.123478930798477,
+          "lon": -171.4123728675201
+        },
+        "crustalAgeMa": 63.333333333333314,
+        "oceanDepthKm": 5.225816601870549
+      },
+      {
+        "ageMa": 99,
+        "position": {
+          "lat": -16.012273762302367,
+          "lon": -171.93898278494103
+        },
+        "crustalAgeMa": 62.333333333333314,
+        "oceanDepthKm": 5.213830670885828
+      },
+      {
+        "ageMa": 100,
+        "position": {
+          "lat": -15.900773158682385,
+          "lon": -172.46552256130238
+        },
+        "crustalAgeMa": 61.333333333333314,
+        "oceanDepthKm": 5.201506856196798
+      },
+      {
+        "ageMa": 101,
+        "position": {
+          "lat": -16.180520292752906,
+          "lon": -172.86832586358366
+        },
+        "crustalAgeMa": 60.333333333333314,
+        "oceanDepthKm": 5.188835632853102
+      },
+      {
+        "ageMa": 102,
+        "position": {
+          "lat": -16.465552630006815,
+          "lon": -173.26826436926592
+        },
+        "crustalAgeMa": 59.333333333333314,
+        "oceanDepthKm": 5.175807207395781
+      },
+      {
+        "ageMa": 103,
+        "position": {
+          "lat": -16.755796421199783,
+          "lon": -173.66534375467555
+        },
+        "crustalAgeMa": 58.333333333333314,
+        "oceanDepthKm": 5.1624115102880195
+      },
+      {
+        "ageMa": 104,
+        "position": {
+          "lat": -17.05114450778975,
+          "lon": -174.05954770640315
+        },
+        "crustalAgeMa": 57.333333333333314,
+        "oceanDepthKm": 5.148638188132497
+      },
+      {
+        "ageMa": 105,
+        "position": {
+          "lat": -17.35152913295431,
+          "lon": -174.45086481532636
+        },
+        "crustalAgeMa": 56.333333333333314,
+        "oceanDepthKm": 5.134476595669356
+      },
+      {
+        "ageMa": 106,
+        "position": {
+          "lat": -17.65683942285064,
+          "lon": -174.83929352689228
+        },
+        "crustalAgeMa": 55.333333333333314,
+        "oceanDepthKm": 5.119915787548584
+      },
+      {
+        "ageMa": 107,
+        "position": {
+          "lat": -17.966994796113564,
+          "lon": -175.22483190381925
+        },
+        "crustalAgeMa": 54.333333333333314,
+        "oceanDepthKm": 5.104944509870477
+      },
+      {
+        "ageMa": 108,
+        "position": {
+          "lat": -18.2819178473806,
+          "lon": -175.60748280672726
+        },
+        "crustalAgeMa": 53.333333333333314,
+        "oceanDepthKm": 5.089551191487599
+      },
+      {
+        "ageMa": 109,
+        "position": {
+          "lat": -18.601496370304286,
+          "lon": -175.9872404955593
+        },
+        "crustalAgeMa": 52.333333333333314,
+        "oceanDepthKm": 5.073723935061576
+      },
+      {
+        "ageMa": 110,
+        "position": {
+          "lat": -18.92565717455629,
+          "lon": -176.36412180112927
+        },
+        "crustalAgeMa": 51.333333333333314,
+        "oceanDepthKm": 5.057450507867749
+      },
+      {
+        "ageMa": 111,
+        "position": {
+          "lat": -19.206674738641734,
+          "lon": -176.9312671324626
+        },
+        "crustalAgeMa": 50.333333333333314,
+        "oceanDepthKm": 5.040718332340644
+      },
+      {
+        "ageMa": 112,
+        "position": {
+          "lat": -19.49232537832349,
+          "lon": -177.4974883736289
+        },
+        "crustalAgeMa": 49.333333333333314,
+        "oceanDepthKm": 5.023514476352884
+      },
+      {
+        "ageMa": 113,
+        "position": {
+          "lat": -20.177448013751118,
+          "lon": -177.59329214385318
+        },
+        "crustalAgeMa": 48.333333333333314,
+        "oceanDepthKm": 5.005825643220091
+      },
+      {
+        "ageMa": 114,
+        "position": {
+          "lat": -20.863416996000872,
+          "lon": -177.67805512626725
+        },
+        "crustalAgeMa": 47.333333333333314,
+        "oceanDepthKm": 4.98763816142401
+      },
+      {
+        "ageMa": 115,
+        "position": {
+          "lat": -21.550000797425405,
+          "lon": -177.75177731417438
+        },
+        "crustalAgeMa": 46.333333333333314,
+        "oceanDepthKm": 4.9689379740459305
+      },
+      {
+        "ageMa": 116,
+        "position": {
+          "lat": -22.23699320611542,
+          "lon": -177.81444327725384
+        },
+        "crustalAgeMa": 45.333333333333314,
+        "oceanDepthKm": 4.949710627902243
+      },
+      {
+        "ageMa": 117,
+        "position": {
+          "lat": -22.924169465076815,
+          "lon": -177.86605153877142
+        },
+        "crustalAgeMa": 44.333333333333314,
+        "oceanDepthKm": 4.929941262373717
+      },
+      {
+        "ageMa": 118,
+        "position": {
+          "lat": -23.611288561445235,
+          "lon": -177.90657441026812
+        },
+        "crustalAgeMa": 43.333333333333314,
+        "oceanDepthKm": 4.909614597919884
+      },
+      {
+        "ageMa": 119,
+        "position": {
+          "lat": -24.219398971024496,
+          "lon": -177.90568658415424
+        },
+        "crustalAgeMa": 42.333333333333314,
+        "oceanDepthKm": 4.888714924269629
+      },
+      {
+        "ageMa": 120,
+        "position": {
+          "lat": -24.644201514772558,
+          "lon": -177.8249144934062
+        },
+        "crustalAgeMa": 41.333333333333314,
+        "oceanDepthKm": 4.867226088278895
+      },
+      {
+        "ageMa": 121,
+        "position": {
+          "lat": -25.069870826261173,
+          "lon": -177.73595839770974
+        },
+        "crustalAgeMa": 40.333333333333314,
+        "oceanDepthKm": 4.845131481446072
+      },
+      {
+        "ageMa": 122,
+        "position": {
+          "lat": -25.496227328434422,
+          "lon": -177.63875433991865
+        },
+        "crustalAgeMa": 39.333333333333314,
+        "oceanDepthKm": 4.822414027075462
+      },
+      {
+        "ageMa": 123,
+        "position": {
+          "lat": -25.92310733163358,
+          "lon": -177.53323282882067
+        },
+        "crustalAgeMa": 38.333333333333314,
+        "oceanDepthKm": 4.7990561670788745
+      },
+      {
+        "ageMa": 124,
+        "position": {
+          "lat": -26.281177674807605,
+          "lon": -177.82342790993278
+        },
+        "crustalAgeMa": 37.333333333333314,
+        "oceanDepthKm": 4.775039848405157
+      },
+      {
+        "ageMa": 125,
+        "position": {
+          "lat": -26.638126206252917,
+          "lon": -178.1144589963948
+        },
+        "crustalAgeMa": 36.333333333333314,
+        "oceanDepthKm": 4.75034650908718
+      },
+      {
+        "ageMa": 126,
+        "position": {
+          "lat": -27.159317172076815,
+          "lon": -178.1558756968228
+        },
+        "crustalAgeMa": 35.333333333333314,
+        "oceanDepthKm": 4.724957063895479
+      },
+      {
+        "ageMa": 127,
+        "position": {
+          "lat": -27.698120972656277,
+          "lon": -178.1679387063023
+        },
+        "crustalAgeMa": 34.333333333333314,
+        "oceanDepthKm": 4.69885188958748
+      },
+      {
+        "ageMa": 128,
+        "position": {
+          "lat": -28.2361361687673,
+          "lon": -178.17835778413993
+        },
+        "crustalAgeMa": 33.333333333333314,
+        "oceanDepthKm": 4.672010809740891
+      },
+      {
+        "ageMa": 129,
+        "position": {
+          "lat": -28.773302946580266,
+          "lon": -178.1871137750675
+        },
+        "crustalAgeMa": 32.333333333333314,
+        "oceanDepthKm": 4.644413079159555
+      },
+      {
+        "ageMa": 130,
+        "position": {
+          "lat": -29.309576517447613,
+          "lon": -178.19424160694786
+        },
+        "crustalAgeMa": 31.333333333333314,
+        "oceanDepthKm": 4.616037367839701
+      },
+      {
+        "ageMa": 131,
+        "position": {
+          "lat": -29.843363238419453,
+          "lon": -177.92712218864955
+        },
+        "crustalAgeMa": 30.333333333333314,
+        "oceanDepthKm": 4.586861744484197
+      },
+      {
+        "ageMa": 132,
+        "position": {
+          "lat": -30.375515664652553,
+          "lon": -177.65542254321662
+        },
+        "crustalAgeMa": 29.333333333333314,
+        "oceanDepthKm": 4.5568636595520795
+      },
+      {
+        "ageMa": 133,
+        "position": {
+          "lat": -30.905982676641784,
+          "lon": -177.3790299139618
+        },
+        "crustalAgeMa": 28.333333333333314,
+        "oceanDepthKm": 4.526019927830243
+      },
+      {
+        "ageMa": 134,
+        "position": {
+          "lat": -31.434721854050323,
+          "lon": -177.0978435390722
+        },
+        "crustalAgeMa": 27.333333333333314,
+        "oceanDepthKm": 4.494306710513824
+      },
+      {
+        "ageMa": 135,
+        "position": {
+          "lat": -31.961661414727995,
+          "lon": -176.81176354321838
+        },
+        "crustalAgeMa": 26.333333333333314,
+        "oceanDepthKm": 4.461699496781433
+      },
+      {
+        "ageMa": 136,
+        "position": {
+          "lat": -32.486770198923374,
+          "lon": -176.5206706345954
+        },
+        "crustalAgeMa": 25.333333333333314,
+        "oceanDepthKm": 4.428173084850996
+      },
+      {
+        "ageMa": 137,
+        "position": {
+          "lat": -32.78366214047155,
+          "lon": -176.99458904720012
+        },
+        "crustalAgeMa": 24.333333333333314,
+        "oceanDepthKm": 4.393701562501545
+      },
+      {
+        "ageMa": 138,
+        "position": {
+          "lat": -33.077211077304305,
+          "lon": -177.471698543643
+        },
+        "crustalAgeMa": 23.333333333333314,
+        "oceanDepthKm": 4.358258287045937
+      },
+      {
+        "ageMa": 139,
+        "position": {
+          "lat": -33.36738682708488,
+          "lon": -177.9520092589298
+        },
+        "crustalAgeMa": 22.333333333333314,
+        "oceanDepthKm": 4.321815864738988
+      },
+      {
+        "ageMa": 140,
+        "position": {
+          "lat": -33.654118610493455,
+          "lon": -178.43552551450472
+        },
+        "crustalAgeMa": 21.333333333333314,
+        "oceanDepthKm": 4.28434612960513
+      },
+      {
+        "ageMa": 141,
+        "position": {
+          "lat": -33.937368128336644,
+          "lon": -178.9222716531598
+        },
+        "crustalAgeMa": 20.333333333333314,
+        "oceanDepthKm": 4.245820121669216
+      },
+      {
+        "ageMa": 142,
+        "position": {
+          "lat": -34.217066513359576,
+          "lon": -179.41225785581454
+        },
+        "crustalAgeMa": 19.333333333333314,
+        "oceanDepthKm": 4.204893558256537
+      },
+      {
+        "ageMa": 143,
+        "position": {
+          "lat": -34.493162370675975,
+          "lon": -179.9054645889726
+        },
+        "crustalAgeMa": 18.333333333333314,
+        "oceanDepthKm": 4.162836630404256
+      },
+      {
+        "ageMa": 144,
+        "position": {
+          "lat": -34.76560936390267,
+          "lon": 179.59808236445974
+        },
+        "crustalAgeMa": 17.333333333333314,
+        "oceanDepthKm": 4.119616179610276
+      },
+      {
+        "ageMa": 145,
+        "position": {
+          "lat": -35.034356897615005,
+          "lon": 179.09839937412437
+        },
+        "crustalAgeMa": 16.333333333333314,
+        "oceanDepthKm": 4.075129937779493
+      },
+      {
+        "ageMa": 146,
+        "position": {
+          "lat": -35.299351263208955,
+          "lon": 178.5954739558935
+        },
+        "crustalAgeMa": 15.333333333333314,
+        "oceanDepthKm": 4.029259715143938
+      },
+      {
+        "ageMa": 147,
+        "position": {
+          "lat": -35.560538539770036,
+          "lon": 178.08933047075527
+        },
+        "crustalAgeMa": 14.333333333333314,
+        "oceanDepthKm": 3.9818676974780653
+      },
+      {
+        "ageMa": 148,
+        "position": {
+          "lat": -35.8178640834691,
+          "lon": 177.57995406116007
+        },
+        "crustalAgeMa": 13.333333333333314,
+        "oceanDepthKm": 3.9327915565959035
+      },
+      {
+        "ageMa": 149,
+        "position": {
+          "lat": -36.071267675992196,
+          "lon": 177.06737058862777
+        },
+        "crustalAgeMa": 12.333333333333314,
+        "oceanDepthKm": 3.881837873263749
+      },
+      {
+        "ageMa": 150,
+        "position": {
+          "lat": -36.32072312772517,
+          "lon": 176.55159009099887
+        },
+        "crustalAgeMa": 11.333333333333314,
+        "oceanDepthKm": 3.8287731008340518
+      },
+      {
+        "ageMa": 151,
+        "position": {
+          "lat": -36.56615026927024,
+          "lon": 176.0326299848619
+        },
+        "crustalAgeMa": 10.333333333333314,
+        "oceanDepthKm": 3.7733108425874753
+      },
+      {
+        "ageMa": 152,
+        "position": {
+          "lat": -36.80750648188859,
+          "lon": 175.5105191558155
+        },
+        "crustalAgeMa": 9.333333333333314,
+        "oceanDepthKm": 3.71509341910592
+      },
+      {
+        "ageMa": 153,
+        "position": {
+          "lat": -37.044737397195014,
+          "lon": 174.98527342619295
+        },
+        "crustalAgeMa": 8.333333333333314,
+        "oceanDepthKm": 3.653664241271066
+      },
+      {
+        "ageMa": 154,
+        "position": {
+          "lat": -37.277805941439446,
+          "lon": 174.45692260726977
+        },
+        "crustalAgeMa": 7.333333333333314,
+        "oceanDepthKm": 3.5884246725640407
+      },
+      {
+        "ageMa": 155,
+        "position": {
+          "lat": -37.506642351011195,
+          "lon": 173.92548040532296
+        },
+        "crustalAgeMa": 6.333333333333314,
+        "oceanDepthKm": 3.518563189624607
+      },
+      {
+        "ageMa": 156,
+        "position": {
+          "lat": -37.73120481485136,
+          "lon": 173.39101111921332
+        },
+        "crustalAgeMa": 5.333333333333314,
+        "oceanDepthKm": 3.4429313930168517
+      },
+      {
+        "ageMa": 157,
+        "position": {
+          "lat": -37.95144491522743,
+          "lon": 172.8535240827213
+        },
+        "crustalAgeMa": 4.333333333333314,
+        "oceanDepthKm": 3.359808089805137
+      },
+      {
+        "ageMa": 158,
+        "position": {
+          "lat": -38.167307073918295,
+          "lon": 172.3130815879086
+        },
+        "crustalAgeMa": 3.3333333333333144,
+        "oceanDepthKm": 3.2663957782979502
+      },
+      {
+        "ageMa": 159,
+        "position": {
+          "lat": -38.378747446815886,
+          "lon": 171.7697101188943
+        },
+        "crustalAgeMa": 2.3333333333333144,
+        "oceanDepthKm": 3.1575467095529586
+      },
+      {
+        "ageMa": 160,
+        "position": {
+          "lat": -38.585719541753015,
+          "lon": 171.22347594087776
+        },
+        "crustalAgeMa": 1.3333333333333144,
+        "oceanDepthKm": 3.0214656965084234
+      },
+      {
+        "ageMa": 161,
+        "position": {
+          "lat": -38.636724759241396,
+          "lon": 170.6924339462132
+        },
+        "crustalAgeMa": 0.3333333333333144,
+        "oceanDepthKm": 2.8107328482542075
+      },
+      {
+        "ageMa": 161.33333333333331,
+        "position": {
+          "lat": -38.65232280019555,
+          "lon": 170.51529019540237
+        },
+        "crustalAgeMa": 0,
+        "oceanDepthKm": 2.6
+      }
+    ]
+  }
+]

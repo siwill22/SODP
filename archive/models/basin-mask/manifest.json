@@ -1,0 +1,46 @@
+{
+  "id": "basin-mask",
+  "name": "Ocean Basin Mask (NOAA WOA13)",
+  "type": "basin-mask",
+  "source": "NOAA World Ocean Atlas 2013 basin mask (basinmask_01.msk), 1-degree objective-analysis basin classification, surface (Basin_0m) column. Re-coded to keep only Atlantic(1)/Pacific(2)/Indian(3); all other codes (Southern Ocean sectors, marginal seas, Arctic, Hudson Bay, etc.) are no-data. See ADR-0008.",
+  "lon_min": -180.0,
+  "lon_max": 180.0,
+  "lat_min": -90.0,
+  "lat_max": 90.0,
+  "dtype": "uint8",
+  "no_data_sentinel": 255,
+  "default_resolution": "std",
+  "resolutions": [
+    {
+      "id": "std",
+      "nlon": 360,
+      "nlat": 181,
+      "ndepth": 1
+    }
+  ],
+  "frames": [
+    {
+      "id": "000",
+      "age_ma": 0
+    }
+  ],
+  "path_template": "frames/{variable}/{resolution}/{frame}.bin",
+  "default_variable": "basin",
+  "variables": [
+    {
+      "id": "basin",
+      "name": "Ocean Basin",
+      "units": "code",
+      "diverging": false,
+      "encode_min": 0.0,
+      "encode_max": 3.0,
+      "value_min": 1.0,
+      "value_max": 3.0,
+      "classes": {
+        "1": "Atlantic",
+        "2": "Pacific",
+        "3": "Indian"
+      }
+    }
+  ]
+}

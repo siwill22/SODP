@@ -1,0 +1,41 @@
+{
+  "id": "bathymetry",
+  "name": "Present-Day Bathymetry (SRTM15 / Tozer et al. 2019, via PyGMT earth_relief)",
+  "type": "bathymetry",
+  "source": "Tozer, B. et al. (2019), Global Bathymetry and Topography at 15 Arc Sec: SRTM15+, Earth and Space Science -- fetched via pygmt.datasets.load_earth_relief (resolution=01d, registration=gridline), resampled with grdsample. See ADR-0008: replaces GDH1-synthetic depth for the Present-Day Lithology Map (ADR-0006); GDH1 (ageToDepthKm in src/lithology.ts) remains the depth model for Phase 2's through-time reconstruction, where no observed depth exists.",
+  "lon_min": -180.0,
+  "lon_max": 180.0,
+  "lat_min": -90.0,
+  "lat_max": 90.0,
+  "dtype": "uint8",
+  "no_data_sentinel": 255,
+  "default_resolution": "std",
+  "resolutions": [
+    {
+      "id": "std",
+      "nlon": 360,
+      "nlat": 181,
+      "ndepth": 1
+    }
+  ],
+  "frames": [
+    {
+      "id": "000",
+      "age_ma": 0
+    }
+  ],
+  "path_template": "frames/{variable}/{resolution}/{frame}.bin",
+  "default_variable": "depth",
+  "variables": [
+    {
+      "id": "depth",
+      "name": "Ocean Depth",
+      "units": "km",
+      "diverging": false,
+      "encode_min": 0.0,
+      "encode_max": 11.5,
+      "value_min": 0.0,
+      "value_max": 7.174
+    }
+  ]
+}
