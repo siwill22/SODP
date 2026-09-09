@@ -1,6 +1,7 @@
 /**
  * Proxy Tracers -- CONTEXT.md's "later increment" over the v1
- * Lithology-Class-only Synthetic Core. First one: delta18O, ADR-0014.
+ * Lithology-Class-only Synthetic Core. First: delta18O, ADR-0014. Second:
+ * Mg/Ca, ADR-0018.
  */
 
 /**
@@ -37,4 +38,35 @@ export function delta18OFromTemperature(otempC: number, seawaterD18OSmow = 0): n
   const discriminant = b * b - 4 * a * c;
   const x = (-b - Math.sqrt(discriminant)) / (2 * a); // minus root -- see doc comment
   return x + seawaterD18OPdb;
+}
+
+/**
+ * Anand, Elderfield & Wilson (2003), Paleoceanography -- Mg/Ca thermometry
+ * calibrated against a 6-year sediment trap time series (Sargasso Sea),
+ * POOLED across multiple planktonic foraminifer species, not one specific
+ * species (ADR-0018 -- deliberately: this project has no basis to assert
+ * which real foraminifer would be present at a synthetic point, and a
+ * pooled calibration doesn't pretend otherwise the way picking one named
+ * species's calibration would):
+ *
+ *   Mg/Ca (mmol/mol) = 0.38 * exp(0.090 * T)
+ *
+ * Confirmed against the real published source, not assumed from memory
+ * (https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2002PA000846).
+ * Unlike delta18OFromTemperature(), this is already expressed directly as
+ * Mg/Ca(T) -- no inversion needed. Sanity-checked across a realistic ocean
+ * temperature range: 0degC -> 0.38 mmol/mol, 25degC -> 3.6 mmol/mol,
+ * matching real published planktic foram ranges (cool ~0.4-1, warm
+ * tropical ~3-6 mmol/mol).
+ *
+ * No dissolution correction (ADR-0018's explicit, flagged simplification,
+ * matching delta18OFromTemperature()'s fixed-seawater-d18O simplification)
+ * -- real Mg/Ca is also depressed by carbonate dissolution at depth (e.g.
+ * Dekens et al. 2002), which this project could in principle add later
+ * using the same depth-relative-to-CCD margin already computed everywhere
+ * else, but that is a second, separately-sourced relationship, deliberately
+ * not bundled into landing this proxy.
+ */
+export function mgCaFromTemperature(otempC: number): number {
+  return 0.38 * Math.exp(0.090 * otempC);
 }

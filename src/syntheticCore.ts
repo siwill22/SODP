@@ -49,7 +49,7 @@ import {
   type LithologyClass, type LithologyProbabilities,
 } from './lithology';
 import { ccdKmAt, type CcdCurve } from './ccdCurve';
-import { delta18OFromTemperature } from './proxies';
+import { delta18OFromTemperature, mgCaFromTemperature } from './proxies';
 
 /**
  * SODP's rule for a Plate-Frame Point is different from Geode's own (ADR-
@@ -205,6 +205,12 @@ export interface LithologyLogStep {
    *  `probsPrimary['carbonate-ooze']` (never this field alone) to judge
    *  how plausible actually recovering it would be. */
   delta18O: number | undefined;
+  /** Mg/Ca, mmol/mol -- ADR-0018's second Proxy Tracer, computed from OTEMP
+   *  alone via the same real, pooled multi-species calibration
+   *  (mgCaFromTemperature()). Same gating as delta18O (ADR-0016): NOT tied
+   *  to classPrimary, pair with probsPrimary['carbonate-ooze'] to judge
+   *  plausibility. */
+  mgCa: number | undefined;
   /** The full probability distribution behind classPublished/classCo2Linked
    *  -- ADR-0011's classifier is probabilistic throughout; argmax picks a
    *  single label but this project's own real point data is a mixture, not
@@ -280,11 +286,12 @@ export function buildLithologyLog(
     const classPrimary = classPublished ?? classCo2Linked;
     const probsPrimary = probsPublished ?? probsCo2Linked;
     const delta18O = validInputs ? delta18OFromTemperature(otempC) : undefined;
+    const mgCa = validInputs ? mgCaFromTemperature(otempC) : undefined;
 
     steps.push({
       ageMa: sample.age, position, crustalAgeMa, oceanDepthKm, otempC,
       ccdPublishedKm, ccdCo2LinkedKm, classPublished, classCo2Linked, divergent,
-      classPrimary, delta18O, probsPublished, probsCo2Linked, probsPrimary,
+      classPrimary, delta18O, mgCa, probsPublished, probsCo2Linked, probsPrimary,
     });
   }
 

@@ -244,7 +244,7 @@ function drawProbPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basem
  *  on the argmax class) -- marker radius encodes `probsPrimary['carbonate-
  *  ooze']`, the confidence a carbonate signal is actually plausible there,
  *  since the table this replaced showed that as its own column. Panel 3
- *  of 4. */
+ *  of 5. */
 function drawDelta18OPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basementAgeMa: number): void {
   const W = canvas.width, H = canvas.height;
   const ctx = canvas.getContext('2d')!;
@@ -273,13 +273,50 @@ function drawDelta18OPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], b
   }
 }
 
+/** ADR-0018: Mg/Ca vs age, same treatment as the delta18O panel (not gated
+ *  on argmax class, marker radius encodes P(carbonate-ooze)) -- a second,
+ *  independently-sourced calcite paleothermometer alongside delta18O, both
+ *  derived from the same OTEMP but via different real equations, so a
+ *  divergence between the two panels at a given age is a real signal
+ *  (analogous to the CCD curves' own Published-vs-CO2-Linked divergence
+ *  flag) rather than something this project resolves to one number. Panel
+ *  4 of 5. */
+function drawMgCaPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basementAgeMa: number): void {
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.clearRect(0, 0, W, H);
+  const withValue = log.filter((s) => s.mgCa !== undefined);
+  if (withValue.length === 0) return;
+  const ageMax = basementAgeMa || 1;
+  const values = withValue.map((s) => s.mgCa!);
+  const { xFor, yFor } = drawAxisFrame(
+    ctx, W, H, ageMax, Math.max(0, Math.min(...values) - 0.3), Math.max(...values) + 0.3,
+    (v) => `${v.toFixed(1)}`, true,
+  );
+
+  ctx.strokeStyle = '#55bb99';
+  ctx.beginPath();
+  withValue.forEach((s, i) => {
+    const x = xFor(s.ageMa), y = yFor(s.mgCa!);
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  for (const s of withValue) {
+    const x = xFor(s.ageMa), y = yFor(s.mgCa!);
+    const pCarb = s.probsPrimary?.['carbonate-ooze'] ?? 0;
+    ctx.fillStyle = `rgba(85, 187, 153, ${0.25 + 0.75 * pCarb})`;
+    ctx.beginPath(); ctx.arc(x, y, 2 + 3 * pCarb, 0, 2 * Math.PI); ctx.fill();
+  }
+}
+
 /** Requested directly: this point's own OTEMP against a real GLOBAL
  *  reference -- global-mean sea-surface and "bottom water" temperature,
  *  precomputed across all 109 real BRIDGE-Valdes frames
  *  (prep/prep_global_climate_curve.mjs, archive/climate/
  *  bridge_valdes_global_mean_otemp.json). Lets a click be read as "warmer/
  *  colder than the contemporaneous global mean," not just an absolute
- *  number. Panel 4 of 4. */
+ *  number. Panel 5 of 5. */
 function drawTemperaturePanel(
   canvas: HTMLCanvasElement, log: LithologyLogStep[], basementAgeMa: number, globalCurve: GlobalClimateCurve | undefined,
 ): void {
@@ -347,6 +384,8 @@ function renderSidePanel(
     <canvas id="chart-probs" width="380" height="90"></canvas>
     <div class="chart-title">d18O, permil VPDB (ADR-0014/0016) -- marker size/opacity = P(carbonate-ooze)</div>
     <canvas id="chart-d18o" width="380" height="90"></canvas>
+    <div class="chart-title">Mg/Ca, mmol/mol (ADR-0018) -- marker size/opacity = P(carbonate-ooze)</div>
+    <canvas id="chart-mgca" width="380" height="90"></canvas>
     <div class="chart-title">Ocean temperature -- this point (white) vs global mean SST (orange dash) / global mean
       bottom water at ${globalCurve?.bottom_layer_depth_km.toFixed(2) ?? '?'} km (blue dot)</div>
     <canvas id="chart-temp" width="380" height="110"></canvas>
@@ -354,6 +393,7 @@ function renderSidePanel(
   drawDepthPanel(document.getElementById('chart-depth') as HTMLCanvasElement, log, basementAgeMa);
   drawProbPanel(document.getElementById('chart-probs') as HTMLCanvasElement, log, basementAgeMa);
   drawDelta18OPanel(document.getElementById('chart-d18o') as HTMLCanvasElement, log, basementAgeMa);
+  drawMgCaPanel(document.getElementById('chart-mgca') as HTMLCanvasElement, log, basementAgeMa);
   drawTemperaturePanel(document.getElementById('chart-temp') as HTMLCanvasElement, log, basementAgeMa, globalCurve);
 }
 
