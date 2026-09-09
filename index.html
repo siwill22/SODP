@@ -4,9 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SODP -- Synthetic Core</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #111;
+        color: #eee;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      header {
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #333;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      header h1 { font-size: 1rem; margin: 0; font-weight: 600; }
+      header p { margin: 0; font-size: 0.8rem; color: #999; }
+      main {
+        flex: 1;
+        display: flex;
+        min-height: 0;
+      }
+      #map-pane {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        padding: 1rem;
+      }
+      #map-canvas {
+        image-rendering: pixelated;
+        cursor: crosshair;
+        border: 1px solid #444;
+        max-width: 100%;
+      }
+      #side-panel {
+        width: 420px;
+        flex-shrink: 0;
+        border-left: 1px solid #333;
+        padding: 1rem;
+        overflow-y: auto;
+        font-size: 0.85rem;
+      }
+      #side-panel h2 { font-size: 0.95rem; margin-top: 0; }
+      #side-panel canvas { background: #1a1a1a; border: 1px solid #333; display: block; width: 100%; }
+      .chart-title { font-size: 0.72rem; color: #999; margin: 0.6rem 0 0.15rem; }
+      #status { font-size: 0.8rem; color: #999; white-space: pre-wrap; }
+    </style>
   </head>
   <body>
-    <div id="status">loading...</div>
+    <header>
+      <h1>SODP -- Synthetic Core</h1>
+      <p id="status">loading present-day map...</p>
+      <label style="margin-left: auto; font-size: 0.8rem; display: flex; align-items: center; gap: 0.4rem; cursor: pointer;">
+        <input type="checkbox" id="belt-toggle" />
+        Option A: equatorial Radiolarian belt (Diesing-informed, ADR-0013)
+      </label>
+    </header>
+    <main>
+      <div id="map-pane">
+        <canvas id="map-canvas"></canvas>
+      </div>
+      <div id="side-panel">
+        <h2>Click a point in the ocean</h2>
+        <div id="side-content">
+          <p style="color: #999;">Down-core Lithology Class log appears here after a click.</p>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

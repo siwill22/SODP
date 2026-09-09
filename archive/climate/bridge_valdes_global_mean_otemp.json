@@ -1,0 +1,555 @@
+{
+  "source": "Valdes, P. J., Scotese, C. R., and Lunt, D. J.: Deep ocean temperatures through time, Clim. Past, 17, 1483-1506, https://doi.org/10.5194/cp-17-1483-2021, 2021 (BRIDGE scotese_02 HadCM3 run sequence)",
+  "variable": "OTEMP",
+  "sst_layer_index": 0,
+  "sst_layer_depth_km": 0.005,
+  "bottom_layer_index": 19,
+  "bottom_layer_depth_km": 5.19265,
+  "curve": [
+    {
+      "age_ma": 0,
+      "sst_c": 14.588757853600551,
+      "bottom_water_c": 1.7019443239982746
+    },
+    {
+      "age_ma": 3,
+      "sst_c": 15.442806982160025,
+      "bottom_water_c": 1.7706003780717363
+    },
+    {
+      "age_ma": 11,
+      "sst_c": 15.124261803035818,
+      "bottom_water_c": 1.9045450715066692
+    },
+    {
+      "age_ma": 15,
+      "sst_c": 15.569649842176162,
+      "bottom_water_c": -0.20187651151566482
+    },
+    {
+      "age_ma": 20,
+      "sst_c": 16.10282198316644,
+      "bottom_water_c": -0.07130248625442268
+    },
+    {
+      "age_ma": 26,
+      "sst_c": 17.57880997149991,
+      "bottom_water_c": 2.097878861941967
+    },
+    {
+      "age_ma": 31,
+      "sst_c": 18.832941426411146,
+      "bottom_water_c": 6.283241904557817
+    },
+    {
+      "age_ma": 36,
+      "sst_c": 20.767158435745223,
+      "bottom_water_c": 9.197455005468568
+    },
+    {
+      "age_ma": 40,
+      "sst_c": 20.403036919319817,
+      "bottom_water_c": 9.819484099971111
+    },
+    {
+      "age_ma": 45,
+      "sst_c": 20.06053050075221,
+      "bottom_water_c": 10.798420021541839
+    },
+    {
+      "age_ma": 52,
+      "sst_c": 20.386073459679242,
+      "bottom_water_c": 10.105403985877906
+    },
+    {
+      "age_ma": 56,
+      "sst_c": 19.006285976454286,
+      "bottom_water_c": 8.574054315931267
+    },
+    {
+      "age_ma": 61,
+      "sst_c": 16.398727025613123,
+      "bottom_water_c": 3.8846614287434775
+    },
+    {
+      "age_ma": 66,
+      "sst_c": 14.480207970776682,
+      "bottom_water_c": 0.6436282096959572
+    },
+    {
+      "age_ma": 69,
+      "sst_c": 14.922458438766352,
+      "bottom_water_c": 0.9665513065037742
+    },
+    {
+      "age_ma": 75,
+      "sst_c": 19.057989121824722,
+      "bottom_water_c": 8.280137520481047
+    },
+    {
+      "age_ma": 81,
+      "sst_c": 20.05608632105022,
+      "bottom_water_c": 10.267764578105952
+    },
+    {
+      "age_ma": 87,
+      "sst_c": 19.300872082113806,
+      "bottom_water_c": 8.414249239850491
+    },
+    {
+      "age_ma": 92,
+      "sst_c": 18.375277187687708,
+      "bottom_water_c": 6.098243660729119
+    },
+    {
+      "age_ma": 97,
+      "sst_c": 20.5336707493834,
+      "bottom_water_c": 9.569760208780737
+    },
+    {
+      "age_ma": 103,
+      "sst_c": 23.07204847081556,
+      "bottom_water_c": 13.785242281847413
+    },
+    {
+      "age_ma": 107,
+      "sst_c": 23.10669635497355,
+      "bottom_water_c": 12.414715019589678
+    },
+    {
+      "age_ma": 111,
+      "sst_c": 22.65813038453064,
+      "bottom_water_c": 12.350047205075796
+    },
+    {
+      "age_ma": 116,
+      "sst_c": 20.194121039326294,
+      "bottom_water_c": 11.524910999536328
+    },
+    {
+      "age_ma": 122,
+      "sst_c": 20.0770233014386,
+      "bottom_water_c": 9.664379244447545
+    },
+    {
+      "age_ma": 127,
+      "sst_c": 18.890996797367706,
+      "bottom_water_c": 7.475401105832307
+    },
+    {
+      "age_ma": 131,
+      "sst_c": 18.857582584455994,
+      "bottom_water_c": 7.111258089589515
+    },
+    {
+      "age_ma": 136,
+      "sst_c": 20.260068497056405,
+      "bottom_water_c": 15.425200644542064
+    },
+    {
+      "age_ma": 142,
+      "sst_c": 20.807470045572796,
+      "bottom_water_c": 11.396198253059795
+    },
+    {
+      "age_ma": 145,
+      "sst_c": 18.521473986910344,
+      "bottom_water_c": 9.13271854678604
+    },
+    {
+      "age_ma": 149,
+      "sst_c": 17.117755979890163,
+      "bottom_water_c": 8.458826701186535
+    },
+    {
+      "age_ma": 155,
+      "sst_c": 17.543359474637537,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 160,
+      "sst_c": 17.73836519134406,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 165,
+      "sst_c": 18.03203530632828,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 168,
+      "sst_c": 18.694279543808875,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 172,
+      "sst_c": 18.59120974639804,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 178,
+      "sst_c": 17.782356538352392,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 187,
+      "sst_c": 17.6784351951862,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 191,
+      "sst_c": 18.571000825203665,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 196,
+      "sst_c": 20.497101231024757,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 201,
+      "sst_c": 20.290293943252415,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 205,
+      "sst_c": 19.910188790878923,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 213,
+      "sst_c": 18.444003059692196,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 218,
+      "sst_c": 19.666436492578015,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 222,
+      "sst_c": 21.145754228044414,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 227,
+      "sst_c": 20.667375190509922,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 232,
+      "sst_c": 19.44588982660946,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 234,
+      "sst_c": 19.565535953149542,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 240,
+      "sst_c": 17.17629371581255,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 245,
+      "sst_c": 14.509908270874368,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 252,
+      "sst_c": 17.08316568653584,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 256,
+      "sst_c": 16.764248013062623,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 263,
+      "sst_c": 13.334275565801773,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 265,
+      "sst_c": 13.181477588552058,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 269,
+      "sst_c": 13.16433577725291,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 275,
+      "sst_c": 15.314010096540091,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 280,
+      "sst_c": 15.688161421019943,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 287,
+      "sst_c": 15.58866576500866,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 293,
+      "sst_c": 15.024774606126451,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 297,
+      "sst_c": 14.72215310456376,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 301,
+      "sst_c": 13.297721145597192,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 305,
+      "sst_c": 13.531598523721907,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 311,
+      "sst_c": 13.293115396041557,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 315,
+      "sst_c": 12.864775765122918,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 319,
+      "sst_c": 13.437404075521465,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 327,
+      "sst_c": 13.332656020938717,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 331,
+      "sst_c": 13.192367786604176,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 333,
+      "sst_c": 12.633535155030993,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 339,
+      "sst_c": 12.162626469306126,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 344,
+      "sst_c": 15.057406528455612,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 349,
+      "sst_c": 15.118994803981941,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 354,
+      "sst_c": 14.703394877863433,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 359,
+      "sst_c": 14.066428636894242,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 366,
+      "sst_c": 15.859027652671594,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 370,
+      "sst_c": 16.190726889763788,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 375,
+      "sst_c": 16.454701849373063,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 380,
+      "sst_c": 17.6695087491992,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 385,
+      "sst_c": 17.71751041256926,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 391,
+      "sst_c": 18.27678146094021,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 395,
+      "sst_c": 18.190818260902752,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 400,
+      "sst_c": 18.438849722531405,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 405,
+      "sst_c": 18.285015922736335,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 409,
+      "sst_c": 18.0406070922856,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 415,
+      "sst_c": 17.83152393968498,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 421,
+      "sst_c": 16.899823560377666,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 425,
+      "sst_c": 16.89648194926622,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 430,
+      "sst_c": 16.233915919729874,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 436,
+      "sst_c": 15.873210227296846,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 441,
+      "sst_c": 15.573141449687299,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 445,
+      "sst_c": 15.946223563025526,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 449,
+      "sst_c": 16.08655446907671,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 456,
+      "sst_c": 16.95019747576134,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 460,
+      "sst_c": 16.917851110258237,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 465,
+      "sst_c": 16.931046176080294,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 470,
+      "sst_c": 17.11422416612598,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 475,
+      "sst_c": 17.76598490757671,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 482,
+      "sst_c": 17.49766244854383,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 485,
+      "sst_c": 17.39244991797547,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 492,
+      "sst_c": 17.36903871650293,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 496,
+      "sst_c": 17.052462741075182,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 499,
+      "sst_c": 17.122228851981287,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 505,
+      "sst_c": 17.528175340045482,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 510,
+      "sst_c": 17.63375133925602,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 515,
+      "sst_c": 17.596707631349165,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 520,
+      "sst_c": 17.029755184225724,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 525,
+      "sst_c": 16.806371971446357,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 530,
+      "sst_c": 16.941031777385618,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 535,
+      "sst_c": 16.809827692233828,
+      "bottom_water_c": null
+    },
+    {
+      "age_ma": 541,
+      "sst_c": 17.224504275314843,
+      "bottom_water_c": null
+    }
+  ]
+}

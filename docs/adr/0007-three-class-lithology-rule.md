@@ -96,3 +96,14 @@ both curves at every step and flags disagreement rather than picking one.
   (e.g. real oligotrophic-but-weakly-upwelling regions painting as
   productive, or vice versa), revisit this ADR before tuning a magnitude
   cutoff in code with no record of why.
+
+> **Superseded by ADR-0010 (2026-09-09), then ADR-0011 (2026-09-09):** a
+> real check against 14,400 independent point observations found this rule
+> scoring 43.1% overall 3-way accuracy against real labels — below guessing
+> "carbonate-ooze" for everything — with the OVEL-sign gate specifically
+> scoring *worse* than a trivial baseline. Replaced by
+> `classifyLithologyProbabilistic()` (67.9% cross-validated accuracy),
+> which as of ADR-0011 is used for **both** the present-day map and Phase
+> 2's through-time query (`syntheticCore.ts`) — this rule is kept in
+> `src/lithology.ts`, unused by either, for any future caller that wants a
+> zero-external-data-dependency fallback.

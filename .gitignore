@@ -1,3 +1,8 @@
 node_modules/
 dist/
 .DS_Store
+
+# Downloaded third-party raw datasets (GeoTIFFs, NetCDF) used by one-off
+# show-me investigations -- large, reproducible by re-running the fetch
+# commands in each folder's README, not meant to live in git history.
+show-me/*/data/

@@ -1,10 +1,14 @@
 # Synthetic Core
 
-**Status: designed, not yet built.** Everything below is the resolved
-output of a grilling session (2026-09-08) against Geode's own codebase and
-archive. No code exists in this repo yet. See `CONTEXT.md` for the terms
-used here and `docs/adr/` for the reasoning behind the decisions marked
-below.
+**Status: both build-order phases below are built and validated** (Present-
+Day Lithology Map: ADR-0006/0007/0008/0011/0012/0013; through-time
+Synthetic Core: ADR-0009, also now on ADR-0011/0012/0013's classifier).
+The rest of this doc is largely the original design record from a grilling
+session (2026-09-08); driver details below (esp. Productivity Signal) have
+since changed in ways the ADRs record but this doc doesn't fully reflect
+line-by-line — treat the ADRs as authoritative where they disagree with
+prose here. See `CONTEXT.md` for the terms used here and `docs/adr/` for
+the reasoning behind the decisions marked below.
 
 ## What it is
 
@@ -35,8 +39,13 @@ deployable sites from Geode's catalog. See ADR-0001.
   other: a digitized literature compilation, and the Foster et al. (2017)
   CO2 curve run through an empirical CO2-to-CCD relationship (ADR-0005).
   Global only in v1, no basin differentiation.
-- **Productivity Signal** — `OVEL` (modeled vertical velocity,
-  upwelling-positive) from BRIDGE-Valdes's ocean-depth data.
+- **Productivity Signal** — originally `OVEL` (modeled vertical velocity,
+  upwelling-positive) from BRIDGE-Valdes's ocean-depth data; ADR-0012
+  dropped it (no measurable classification skill once OTEMP was included,
+  checked against 8,445 real points) in favour of `OTEMP` (ocean
+  temperature) alone, with an optional equal second option (ADR-0013)
+  layering a Diesing-informed equatorial adjustment on top. See
+  CONTEXT.md's Productivity Signal entry.
 - **Climate Driver** — BRIDGE-Valdes only
   (`bridge-valdes2021-monthly` + `bridge-valdes2021-ocean-depth`); every
   other climate Model in Geode's archive lacks any ocean field at all
@@ -50,7 +59,10 @@ IRD), no biogenic-producer subdivision (calcareous vs. siliceous ooze).
 
 **Deferred, in rough order:**
 1. δ18O / Mg/Ca — fall out of temperature data BRIDGE-Valdes already
-   carries, no new data source needed.
+   carries, no new data source needed. That prerequisite is now doubly
+   true: OTEMP is already fetched and used per-step by both maps
+   (ADR-0011/0012), real paleo-OTEMP, not a proxy — the natural next
+   increment.
 2. Basin-specific CCD, sharing a basin-membership-through-time scheme with
    the item below rather than building it twice.
 3. Nd isotope basin-mixing proxy — the hardest, least-validated piece,

@@ -47,11 +47,22 @@ falling back to the single global value elsewhere — see ADR-0008. The
 through-time CCD Curve itself is unchanged.
 
 **Productivity Signal**:
-A stand-in for surface-ocean biological productivity, read directly from
-`OVEL` (modeled vertical velocity, upwelling-positive) in the Climate
-Driver's ocean-depth data. Distinguishes an oligotrophic gyre center from an
-upwelling zone at the same depth relative to the CCD Curve — information the
-CCD Curve alone cannot supply.
+The signal that distinguishes calcareous from siliceous biogenic
+production at a given depth relative to the CCD Curve — information the
+CCD Curve alone cannot supply. Originally `OVEL` (modeled vertical
+velocity, upwelling-positive) from the Climate Driver's ocean-depth data;
+checked directly against 8,445 real seafloor-lithology points and found to
+carry no measurable classification skill once `OTEMP` (ocean temperature,
+~5m depth) was included, so ADR-0012 dropped it. The signal now used is
+`OTEMP` alone — the actual physical driver this project's own domain
+framing already names (calcifying plankton are temperature-limited,
+diatoms/radiolarians are not). ADR-0013 adds an optional, EQUAL second
+option ("Option A") that layers a smooth, latitude-graded equatorial
+Radiolarian-ooze adjustment on top of the same OTEMP-based classification,
+informed by an independent published map (Diesing 2020) — kept alongside
+the OTEMP-only classification ("Option B"), not replacing it; see
+ADR-0011/0012/0013 for the full reasoning and the honest tradeoff between
+the two.
 
 **Climate Driver**:
 BRIDGE-Valdes (`bridge-valdes2021-monthly` + `bridge-valdes2021-ocean-depth`
