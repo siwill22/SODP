@@ -1,0 +1,66 @@
+[
+  {
+    "event": "WIND-5B",
+    "lat": -31.34,
+    "lon": 47.34,
+    "elev": -3684.0,
+    "mgca": 2.35,
+    "area": "Western Indian Ocean"
+  },
+  {
+    "event": "WIND-20B",
+    "lat": -20.1,
+    "lon": 49.2,
+    "elev": -2274.0,
+    "mgca": 4.83,
+    "area": "Western Indian Ocean"
+  },
+  {
+    "event": "WIND-33B",
+    "lat": -11.13,
+    "lon": 58.46,
+    "elev": -3520.0,
+    "mgca": 3.52,
+    "area": "Western Indian Ocean"
+  },
+  {
+    "event": "1BC3",
+    "lat": -2.2,
+    "lon": 157.0,
+    "elev": -1616.0,
+    "mgca": 4.81,
+    "area": "Ontong Java Plateau; Pacific Ocean"
+  },
+  {
+    "event": "3BC24",
+    "lat": 0.0,
+    "lon": 160.4,
+    "elev": -2965.0,
+    "mgca": 4.28,
+    "area": "Ontong Java Plateau; Pacific Ocean"
+  },
+  {
+    "event": "GeoB4406-2",
+    "lat": 5.09,
+    "lon": -43.761667,
+    "elev": null,
+    "mgca": 4.73,
+    "area": "Ceara Rise; Atlantic Ocean"
+  },
+  {
+    "event": "GeoB4421-2",
+    "lat": 16.99,
+    "lon": -46.01,
+    "elev": null,
+    "mgca": 4.33,
+    "area": "Mid-Atlantic Ridge"
+  },
+  {
+    "event": "M35010-2",
+    "lat": 18.933333,
+    "lon": -64.09,
+    "elev": null,
+    "mgca": 5.53,
+    "area": "Caribbean Sea"
+  }
+]
