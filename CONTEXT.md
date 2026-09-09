@@ -90,3 +90,32 @@ starts from a present-day (lon, lat). This is the scoping condition that
 makes ADR-0002's Scotese/Seton pairing acceptable: both describe the same
 surviving crust closely enough at present day, even though their deeper-time
 reconstructions diverge in general.
+
+**Hiatus Risk**:
+A continuous, always-computed per-step probability that a Synthetic Core's
+down-core record is missing at that age — deliberately an annotation on the
+existing age-depth model, not a change to it (no depth discontinuity, no
+removed step; see ADR-0019). Not the same as a real "unconformity", a
+discrete stratigraphic surface/event with a threshold implied by the word
+"major" — this project computes no such threshold or event, only the
+probability; a "major unconformity" is a viewer-side interpretation of a
+high Hiatus Risk value, never a category the model itself decides.
+Decomposed into two independently-sourced, differently-mechanistic
+components rather than one blended number (ADR-0019): **Current Erosion
+Risk** (real BRIDGE-Valdes bottom-current speed's PERCENTILE RANK within
+this model's own real speed distribution, not a threshold on the absolute
+value — two absolute-threshold calibrations were tried first, a real
+literature erosion-velocity figure and this model's own 95th percentile as
+a centre, and both proved unreachable by any real query point; ranking
+sidesteps trusting this coarse model's absolute magnitudes at all, see
+ADR-0019) and **Dissolution Risk**
+(depth below the CCD Curve, boosted when the two CCD Curves diverge). A derived combined
+probability exists for callers wanting one number, alongside the two
+underlying signals — the same Primary-on-top-of-full-detail shape the CCD
+Curve and Lithology Class already use. Deliberately not fit or validated
+against any real hiatus-occurrence dataset (no such dataset is sourced in
+this project) — a physically-justified but unvalidated hypothesis, the same
+honest-caveat treatment already given the Proxy Tracers' own simplifications.
+_Avoid_: "unconformity" alone (reserve for real IODP/ODP/DSDP material, same
+policy as "core log"/"sediment column" under Synthetic Core).
+

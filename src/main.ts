@@ -4,7 +4,7 @@ import { FrameByteCache } from './core/frameByteCache';
 import { loadPresentDayInputs, buildPresentDayGrid, NO_DATA, type PresentDayGrid } from './presentDayMap';
 import {
   buildAgeDepthModel, buildLithologyLog, createUnboundedPlateFramePoint,
-  fetchClimateSeriesForCore, type LithologyLogStep,
+  fetchClimateSeriesForCore, fetchCurrentSpeedSeriesForCore, type LithologyLogStep,
 } from './syntheticCore';
 import type { CcdCurve } from './ccdCurve';
 import type { LonLat } from './core/constants';
@@ -204,7 +204,7 @@ function drawDepthPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], base
 
 /** ADR-0015: stacked-area chart of `probsPrimary` -- the full probability
  *  distribution behind each step's argmax label, not just the winning
- *  class. Panel 2 of 4. */
+ *  class. Panel 2 of 6. */
 function drawProbPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basementAgeMa: number): void {
   const W = canvas.width, H = canvas.height;
   const ctx = canvas.getContext('2d')!;
@@ -244,7 +244,7 @@ function drawProbPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basem
  *  on the argmax class) -- marker radius encodes `probsPrimary['carbonate-
  *  ooze']`, the confidence a carbonate signal is actually plausible there,
  *  since the table this replaced showed that as its own column. Panel 3
- *  of 5. */
+ *  of 6. */
 function drawDelta18OPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basementAgeMa: number): void {
   const W = canvas.width, H = canvas.height;
   const ctx = canvas.getContext('2d')!;
@@ -280,7 +280,7 @@ function drawDelta18OPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], b
  *  divergence between the two panels at a given age is a real signal
  *  (analogous to the CCD curves' own Published-vs-CO2-Linked divergence
  *  flag) rather than something this project resolves to one number. Panel
- *  4 of 5. */
+ *  4 of 6. */
 function drawMgCaPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basementAgeMa: number): void {
   const W = canvas.width, H = canvas.height;
   const ctx = canvas.getContext('2d')!;
@@ -316,7 +316,7 @@ function drawMgCaPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basem
  *  (prep/prep_global_climate_curve.mjs, archive/climate/
  *  bridge_valdes_global_mean_otemp.json). Lets a click be read as "warmer/
  *  colder than the contemporaneous global mean," not just an absolute
- *  number. Panel 5 of 5. */
+ *  number. Panel 5 of 6. */
 function drawTemperaturePanel(
   canvas: HTMLCanvasElement, log: LithologyLogStep[], basementAgeMa: number, globalCurve: GlobalClimateCurve | undefined,
 ): void {
@@ -351,6 +351,38 @@ function drawTemperaturePanel(
   drawLine(globalInRange.map((p) => ({ age: p.age_ma, v: p.sst_c })), '#dd8844', [4, 2]);
   drawLine(globalInRange.map((p) => ({ age: p.age_ma, v: p.bottom_water_c })), '#4488cc', [1, 2]);
   drawLine(log.map((s) => ({ age: s.ageMa, v: s.otempC })), '#eeeeee', []);
+}
+
+/** ADR-0019: Hiatus Risk -- currentErosionRisk (solid) and dissolutionRisk
+ *  (dashed), 0-1, deliberately kept as two separate lines rather than just
+ *  plotting the derived hiatusRisk: seeing which mechanism drives a spike
+ *  is the reason the two were kept separate in the first place, not merged
+ *  into one blended number. An annotation only -- does not affect any other
+ *  panel, curve, or class field. Panel 6 of 6. */
+function drawHiatusRiskPanel(canvas: HTMLCanvasElement, log: LithologyLogStep[], basementAgeMa: number): void {
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.clearRect(0, 0, W, H);
+  if (log.length === 0) return;
+  const ageMax = basementAgeMa || 1;
+  const { xFor, yFor } = drawAxisFrame(ctx, W, H, ageMax, 0, 1, (v) => v.toFixed(1), true);
+
+  const drawLine = (key: 'currentErosionRisk' | 'dissolutionRisk', color: string, dash: number[]) => {
+    ctx.strokeStyle = color;
+    ctx.setLineDash(dash);
+    ctx.beginPath();
+    let started = false;
+    for (const s of log) {
+      const v = s[key];
+      if (v === undefined) { started = false; continue; }
+      const x = xFor(s.ageMa), y = yFor(v);
+      if (!started) { ctx.moveTo(x, y); started = true; } else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+  };
+  drawLine('currentErosionRisk', '#dd6666', []);
+  drawLine('dissolutionRisk', '#dd6666', [4, 2]);
 }
 
 function angularDistanceDeg(a: LonLat, b: LonLat): number {
@@ -389,12 +421,16 @@ function renderSidePanel(
     <div class="chart-title">Ocean temperature -- this point (white) vs global mean SST (orange dash) / global mean
       bottom water at ${globalCurve?.bottom_layer_depth_km.toFixed(2) ?? '?'} km (blue dot)</div>
     <canvas id="chart-temp" width="380" height="110"></canvas>
+    <div class="chart-title">Hiatus Risk (ADR-0019) -- current erosion risk (solid) / dissolution risk (dashed),
+      an unvalidated, physically-justified annotation only</div>
+    <canvas id="chart-hiatus" width="380" height="90"></canvas>
   `;
   drawDepthPanel(document.getElementById('chart-depth') as HTMLCanvasElement, log, basementAgeMa);
   drawProbPanel(document.getElementById('chart-probs') as HTMLCanvasElement, log, basementAgeMa);
   drawDelta18OPanel(document.getElementById('chart-d18o') as HTMLCanvasElement, log, basementAgeMa);
   drawMgCaPanel(document.getElementById('chart-mgca') as HTMLCanvasElement, log, basementAgeMa);
   drawTemperaturePanel(document.getElementById('chart-temp') as HTMLCanvasElement, log, basementAgeMa, globalCurve);
+  drawHiatusRiskPanel(document.getElementById('chart-hiatus') as HTMLCanvasElement, log, basementAgeMa);
 }
 
 async function main(): Promise<void> {
@@ -418,6 +454,8 @@ async function main(): Promise<void> {
   globalCurve = fetchedGlobalCurve;
   const oceanDepthManifest = await loadManifest(GEODE_BASE, 'models/bridge-valdes2021-ocean-depth/manifest.json');
   const otempVar = oceanDepthManifest.variables.find((v) => v.id === 'OTEMP')!;
+  const ocuruVar = oceanDepthManifest.variables.find((v) => v.id === 'OCURU')!;
+  const ocurvVar = oceanDepthManifest.variables.find((v) => v.id === 'OCURV')!;
   const cache = new FrameByteCache(GEODE_BASE);
 
   setStatus(`ready -- click anywhere in the ocean (${grid.nlon}x${grid.nlat} present-day map)`);
@@ -443,16 +481,23 @@ async function main(): Promise<void> {
     sideContent.innerHTML = '<p>building Synthetic Core...</p>';
     const t0 = performance.now();
     const framePoint = createUnboundedPlateFramePoint(assignment, scotesePolyData.table, point, 0);
-    const otempSeries = await fetchClimateSeriesForCore(
-      cache, oceanDepthManifest, otempVar, framePoint, scotesePolyData.table, basementAgeMa, 0,
-    );
+    const [otempSeries, currentSpeedSeries] = await Promise.all([
+      fetchClimateSeriesForCore(
+        cache, oceanDepthManifest, otempVar, framePoint, scotesePolyData.table, basementAgeMa, 0,
+      ),
+      fetchCurrentSpeedSeriesForCore(
+        cache, oceanDepthManifest, ocuruVar, ocurvVar, framePoint, scotesePolyData.table, basementAgeMa,
+      ),
+    ]);
     // ADR-0013: both options computed from the one fetched series -- classification-only work,
     // cheap, no extra network round-trip -- so the toggle can switch between them instantly.
     const logFitted = buildLithologyLog(
       framePoint, scotesePolyData.table, basementAgeMa, otempSeries, publishedCurve, co2LinkedCurve, false,
+      currentSpeedSeries,
     );
     const logBelt = buildLithologyLog(
       framePoint, scotesePolyData.table, basementAgeMa, otempSeries, publishedCurve, co2LinkedCurve, true,
+      currentSpeedSeries,
     );
     const trajectory = buildAgeDepthModel(framePoint, scotesePolyData.table, basementAgeMa, 1);
     const formation = trajectory[trajectory.length - 1]?.position ?? point;

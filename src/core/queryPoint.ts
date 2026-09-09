@@ -81,6 +81,70 @@ export async function ageSeries(
   });
 }
 
+/**
+ * Age Series for a Plate-Frame Point, sampling a DIFFERENT depth layer per
+ * Frame rather than one fixed layer for the whole series -- ADR-0019, added
+ * for Hiatus Risk's Current Erosion Risk, which needs bottom-current speed
+ * near a Synthetic Core step's own modeled seafloor depth, and that depth
+ * changes across the core's lifetime (a young step and an old step sit at
+ * very different real depths). `layerOrderForAge(ageMa)` ranks every real
+ * depth layer by proximity to that Frame's target depth; this tries them
+ * IN THAT ORDER and returns the first one that isn't itself masked/no-data
+ * at this real grid column, rather than giving up the moment the single
+ * nearest layer happens to be invalid.
+ *
+ * That fallback matters here specifically: BRIDGE-Valdes's own per-layer
+ * no-data encoding means a column can be genuinely masked at one depth
+ * (that Frame's own paleobathymetry doesn't reach that deep at that exact
+ * grid cell) while still carrying real current data one layer shallower or
+ * deeper, at the SAME real location and time -- discarding that real,
+ * nearby data and reporting "no data" would be strictly worse than using
+ * it, given a Synthetic Core step already knows (from Basement Age +
+ * GDH1) that real seafloor genuinely exists there; the mismatch is between
+ * this model's own coarser paleobathymetry and that fact, not evidence
+ * there is nothing to sample. Only returns NaN if EVERY layer is masked at
+ * that column and Frame -- a real, total absence, not a near-miss.
+ *
+ * No extra network cost from trying every layer, same as the single-layer
+ * version this replaces: `cache.get()` returns a whole Frame's bytes (every
+ * depth layer at once, see core/volume.ts's fetchVariableBytes doc) keyed
+ * by (model, variable, resolution, frame) -- independent of layer index --
+ * so every candidate layer is sliced out of bytes already fetched once.
+ */
+export async function plateFrameAgeSeriesNearestLayer(
+  cache: FrameByteCache, manifest: Manifest, variable: VariableInfo,
+  point: PlateFramePoint, table: RotationTable,
+  layerOrderForAge: (ageMa: number) => number[],
+  resolutionId: string = manifest.default_resolution,
+): Promise<(CellSample & { age: number })[]> {
+  const res = manifest.resolutions.find((r) => r.id === resolutionId);
+  if (!res) throw new Error(`${manifest.id}: no resolution ${resolutionId}`);
+  const { nlon, nlat } = res;
+  const plane = nlon * nlat;
+  const maskVar = manifest.mask_variable;
+  const sentinel = manifest.no_data_sentinel;
+
+  const frames = manifest.frames.filter((f) => f.age_ma <= point.beginAge);
+
+  return mapPool(frames, CONCURRENCY, async (frame) => {
+    const at = positionAt(point, table, frame.age_ma)!; // frames filtered above, so never null
+    const idx = texelIndex(nlon, nlat, at.lon, at.lat);
+    const cell = cellCenter(nlon, nlat, idx % nlon, Math.floor(idx / nlon));
+
+    const [valueBytes, maskBytes] = await Promise.all([
+      cache.get(manifest, variable.id, frame.id, resolutionId),
+      maskVar ? cache.get(manifest, maskVar, frame.id, resolutionId) : Promise.resolve(null),
+    ]);
+    for (const layer of layerOrderForAge(frame.age_ma)) {
+      const byte = valueBytes[layer * plane + idx];
+      if (!isInvalid(idx, byte, { maskBytes, sentinel })) {
+        return { age: frame.age_ma, cell, value: texelToPhysical(variable, byte) };
+      }
+    }
+    return { age: frame.age_ma, cell, value: NaN }; // every real layer masked at this column
+  });
+}
+
 /** Age Series for a Plate-Frame Point: the grid cell moves with the point's
  *  assigned Plate instead of staying fixed. Frames older than
  *  `point.beginAge` are left out entirely. */

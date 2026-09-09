@@ -42,7 +42,7 @@ import type { Manifest, RotationTable, VariableInfo } from './core/types';
 import {
   positionAt, createPlateFramePoint, type PlateFramePoint, type PlateAssignment,
 } from './core/staticPolygons';
-import { plateFrameAgeSeries, type CellSample } from './core/queryPoint';
+import { plateFrameAgeSeries, plateFrameAgeSeriesNearestLayer, type CellSample } from './core/queryPoint';
 import type { FrameByteCache } from './core/frameByteCache';
 import {
   ageToDepthKm, classifyLithologyProbabilistic, applyEquatorialRadiolarianBelt, argmaxLithologyClass,
@@ -50,6 +50,9 @@ import {
 } from './lithology';
 import { ccdKmAt, type CcdCurve } from './ccdCurve';
 import { delta18OFromTemperature, mgCaFromTemperature } from './proxies';
+import {
+  depthLayerSearchOrder, currentErosionRiskFromSpeed, dissolutionRiskFromMargin, combineHiatusRisk,
+} from './hiatusRisk';
 
 /**
  * SODP's rule for a Plate-Frame Point is different from Geode's own (ADR-
@@ -113,6 +116,41 @@ export async function fetchClimateSeriesForCore(
 ): Promise<(CellSample & { age: number })[]> {
   const boundedManifest: Manifest = { ...manifest, frames: manifest.frames.filter((f) => f.age_ma <= basementAgeMa) };
   return plateFrameAgeSeries(cache, boundedManifest, variable, point, table, undefined, layerIndex);
+}
+
+/**
+ * Real bottom-current speed (`sqrt(OCURU^2 + OCURV^2)`, m/s) for Hiatus
+ * Risk's Current Erosion Risk (ADR-0019), sampled at whichever of the
+ * ocean-depth manifest's real depth layers is nearest each Frame's own
+ * GDH1 depth at this point (`ageToDepthKm(basementAgeMa - ageMa)`) --
+ * NOT a fixed layer, since a core's own seafloor depth ranges from ~2.6 km
+ * at the ridge crest to ~5.65 km asymptotically over its lifetime. Falls
+ * back through progressively-less-near layers (`depthLayerSearchOrder()`)
+ * when the single nearest one is masked at this real column/Frame, rather
+ * than reporting no data outright -- see plateFrameAgeSeriesNearestLayer()'s
+ * doc for why (real, nearby data at no extra network cost over a fixed
+ * layer).
+ */
+export async function fetchCurrentSpeedSeriesForCore(
+  cache: FrameByteCache, manifest: Manifest, ocuruVar: VariableInfo, ocurvVar: VariableInfo,
+  point: PlateFramePoint, table: RotationTable, basementAgeMa: number,
+): Promise<(CellSample & { age: number })[]> {
+  const depthLabelsKm = manifest.depth_labels_km;
+  if (!depthLabelsKm) throw new Error(`${manifest.id}: no depth_labels_km, cannot pick a bottom-current layer`);
+
+  const boundedManifest: Manifest = { ...manifest, frames: manifest.frames.filter((f) => f.age_ma <= basementAgeMa) };
+  const layerOrderForAge = (ageMa: number) => depthLayerSearchOrder(depthLabelsKm, ageToDepthKm(basementAgeMa - ageMa));
+
+  const [uSeries, vSeries] = await Promise.all([
+    plateFrameAgeSeriesNearestLayer(cache, boundedManifest, ocuruVar, point, table, layerOrderForAge),
+    plateFrameAgeSeriesNearestLayer(cache, boundedManifest, ocurvVar, point, table, layerOrderForAge),
+  ]);
+
+  return uSeries.map((u, i) => {
+    const v = vSeries[i];
+    const value = Number.isNaN(u.value) || Number.isNaN(v.value) ? NaN : Math.hypot(u.value, v.value);
+    return { age: u.age, cell: u.cell, value };
+  });
 }
 
 export interface CoreStep {
@@ -222,6 +260,24 @@ export interface LithologyLogStep {
   /** Published where available, else CO2-Linked -- same tiering as
    *  classPrimary, for a caller that just wants one distribution. */
   probsPrimary: LithologyProbabilities | undefined;
+  /** Hiatus Risk (ADR-0019) -- an ANNOTATION only, no effect on
+   *  oceanDepthKm/position/any class or Proxy Tracer field above. Real
+   *  bottom-current speed (OCURU/OCURV, nearest depth layer) against a
+   *  literature critical-erosion-velocity threshold. undefined only when
+   *  current speed itself is missing/invalid (e.g. no currentSpeedSeries
+   *  passed to buildLithologyLog()). */
+  currentErosionRisk: number | undefined;
+  /** Hiatus Risk (ADR-0019) -- margin below classPrimary's CCD, boosted
+   *  when `divergent`. undefined only when classPrimary/its margin is
+   *  itself undefined (Published curve N/A this far back AND CO2-Linked
+   *  N/A too -- shouldn't happen in practice but mirrors the other
+   *  undefined-propagation fields above). */
+  dissolutionRisk: number | undefined;
+  /** Derived convenience field, ADR-0019: probability at least one of
+   *  currentErosionRisk/dissolutionRisk applies, treating them as
+   *  independent. Both underlying risks stay separately available -- see
+   *  their own doc comments. undefined iff either is undefined. */
+  hiatusRisk: number | undefined;
 }
 
 /**
@@ -245,6 +301,12 @@ export interface LithologyLogStep {
  * the same two equal, parallel options apply here, using each step's own
  * real paleo-latitude (`position.lat`) rather than a present-day one.
  * Callers wanting both should call this twice.
+ *
+ * `currentSpeedSeries` (ADR-0019, optional): real bottom-current speed at
+ * OTEMP's own Frame ages (fetchCurrentSpeedSeriesForCore()), matched to
+ * each step by age. Omitted entirely -> currentErosionRisk/hiatusRisk are
+ * undefined for every step, same "no live fetch, no derived value" shape
+ * the rest of this file already uses for missing inputs.
  */
 export function buildLithologyLog(
   point: PlateFramePoint,
@@ -254,8 +316,10 @@ export function buildLithologyLog(
   publishedCurve: CcdCurve,
   co2LinkedCurve: CcdCurve,
   applyBelt = false,
+  currentSpeedSeries?: (CellSample & { age: number })[],
 ): LithologyLogStep[] {
   const steps: LithologyLogStep[] = [];
+  const speedByAge = new Map((currentSpeedSeries ?? []).map((s) => [s.age, s.value]));
 
   for (let i = 0; i < otempSeries.length; i++) {
     const sample = otempSeries[i];
@@ -288,10 +352,20 @@ export function buildLithologyLog(
     const delta18O = validInputs ? delta18OFromTemperature(otempC) : undefined;
     const mgCa = validInputs ? mgCaFromTemperature(otempC) : undefined;
 
+    const speedMs = speedByAge.get(sample.age);
+    const currentErosionRisk = speedMs === undefined || Number.isNaN(speedMs)
+      ? undefined : currentErosionRiskFromSpeed(speedMs);
+    const ccdPrimaryKm = ccdPublishedKm ?? ccdCo2LinkedKm;
+    const dissolutionRisk = ccdPrimaryKm === undefined
+      ? undefined : dissolutionRiskFromMargin(oceanDepthKm - ccdPrimaryKm, divergent);
+    const hiatusRisk = currentErosionRisk === undefined || dissolutionRisk === undefined
+      ? undefined : combineHiatusRisk(currentErosionRisk, dissolutionRisk);
+
     steps.push({
       ageMa: sample.age, position, crustalAgeMa, oceanDepthKm, otempC,
       ccdPublishedKm, ccdCo2LinkedKm, classPublished, classCo2Linked, divergent,
       classPrimary, delta18O, mgCa, probsPublished, probsCo2Linked, probsPrimary,
+      currentErosionRisk, dissolutionRisk, hiatusRisk,
     });
   }
 
