@@ -36,6 +36,14 @@ export interface PresentDayInputs {
   bathyManifest: Manifest;
   bathyVar: VariableInfo;
   bathyBytes: Uint8Array;
+  /** Shaded-relief intensity (ADR-0023), same grid/frame as bathyBytes --
+   *  ships alongside it as a second variable in the same manifest rather
+   *  than a separate model (prep/prep_hillshade.py). Not gated on its own
+   *  no-data check: it's read only for cells the caller already knows are
+   *  valid ocean via bathyBytes/ageBytes, so land pixels' shade values
+   *  (real, just never displayed) are harmless. */
+  shadeVar: VariableInfo;
+  shadeBytes: Uint8Array;
   basinManifest: Manifest;
   basinBytes: Uint8Array;
   climateManifest: Manifest;
@@ -60,7 +68,9 @@ export async function loadPresentDayInputs(localBase: string, geodeBase: string)
   ]);
 
   const ageVar = ageManifest.variables[0];
-  const bathyVar = bathyManifest.variables[0];
+  const bathyVar = bathyManifest.variables.find((v) => v.id === 'depth')!;
+  const shadeVar = bathyManifest.variables.find((v) => v.id === 'shade');
+  if (!shadeVar) throw new Error('shade not found in bathymetry manifest -- run prep/prep_hillshade.py');
   const basinVar = basinManifest.variables[0];
   const otempVar = climateManifest.variables.find((v) => v.id === 'OTEMP');
   if (!otempVar) throw new Error('OTEMP not found in bridge-valdes2021-ocean-depth manifest');
@@ -78,9 +88,10 @@ export async function loadPresentDayInputs(localBase: string, geodeBase: string)
     throw new Error(`grid mismatch: basement-age ${res.nlon}x${res.nlat} vs OTEMP ${climateRes.nlon}x${climateRes.nlat}`);
   }
 
-  const [ageBytes, bathyBytes, basinBytes, publishedCurve] = await Promise.all([
+  const [ageBytes, bathyBytes, shadeBytes, basinBytes, publishedCurve] = await Promise.all([
     fetchVariableBytes(localBase, 'basement-age', ageManifest, ageVar.id, '000'),
     fetchVariableBytes(localBase, 'bathymetry', bathyManifest, bathyVar.id, '000'),
+    fetchVariableBytes(localBase, 'bathymetry', bathyManifest, shadeVar.id, '000'),
     fetchVariableBytes(localBase, 'basin-mask', basinManifest, basinVar.id, '000'),
     fetch(`${localBase}/ccd/published_ccd_curve.json`).then((r) => r.json()),
   ]);
@@ -99,7 +110,8 @@ export async function loadPresentDayInputs(localBase: string, geodeBase: string)
 
   return {
     nlon: res.nlon, nlat: res.nlat,
-    ageManifest, ageBytes, bathyManifest, bathyVar, bathyBytes, basinManifest, basinBytes,
+    ageManifest, ageBytes, bathyManifest, bathyVar, bathyBytes, shadeVar, shadeBytes,
+    basinManifest, basinBytes,
     climateManifest, otempVar, otempLayer0, globalCcdKm: ccdAge0.ccd_km,
   };
 }
@@ -109,6 +121,36 @@ export interface PresentDayGrid {
   nlat: number;
   /** 0=clay, 1=carbonate-ooze, 2=siliceous-ooze, 255=no-data. */
   classes: Uint8Array;
+}
+
+export interface PresentDayCellInputs {
+  oceanDepthKm: number;
+  ccdKm: number;
+}
+
+/** The real-bathymetry + per-basin-CCD inputs buildPresentDayGrid() itself
+ *  classifies cell `idx` with (ADR-0008) -- factored out so a caller with
+ *  its own reason to classify one cell (main.ts anchoring the Synthetic
+ *  Core's own ageMa=0 step to the map's real present-day inputs rather than
+ *  GDH1 + the global CCD curve, so the two never disagree at present day
+ *  for a reason no better than which of two present-day depth/CCD models
+ *  happened to be asked) gets the exact same numbers the map used for that
+ *  pixel, not a second, maybe-slightly-different implementation of the same
+ *  lookup. Returns undefined where the map itself would have left the cell
+ *  NO_DATA (bathymetry or OTEMP missing there) -- basement age is NOT
+ *  checked here, since that mask is about excluding land/continental crust
+ *  from the map loop, orthogonal to whether a specific already-known-
+ *  oceanic point has real bathymetry/OTEMP. */
+export function presentDayCellInputs(inputs: PresentDayInputs, idx: number): PresentDayCellInputs | undefined {
+  const { bathyManifest, bathyVar, bathyBytes, basinManifest, basinBytes, climateManifest, otempLayer0, globalCcdKm } = inputs;
+  if (bathyBytes[idx] === bathyManifest.no_data_sentinel) return undefined;
+  if (otempLayer0[idx] === climateManifest.no_data_sentinel) return undefined;
+
+  const oceanDepthKm = texelToPhysical(bathyVar, bathyBytes[idx]);
+  const basinByte = basinBytes[idx];
+  const basinName = basinByte === basinManifest.no_data_sentinel ? undefined : BASIN_CODE_TO_NAME[basinByte];
+  const ccdKm = basinName ? ccdKmForBasin(basinName) : globalCcdKm;
+  return { oceanDepthKm, ccdKm };
 }
 
 /** Pure classification loop -- ADR-0008's real-bathymetry + per-basin-CCD
@@ -128,22 +170,16 @@ export interface PresentDayGrid {
  *  informed by Diesing (2020), not a hard cutoff) before taking the
  *  argmax. Callers needing both should call this twice. */
 export function buildPresentDayGrid(inputs: PresentDayInputs, applyBelt = false): PresentDayGrid {
-  const { nlon, nlat, ageManifest, ageBytes, bathyManifest, bathyVar, bathyBytes, basinManifest, basinBytes,
-    climateManifest, otempVar, otempLayer0, globalCcdKm } = inputs;
+  const { nlon, nlat, ageManifest, ageBytes, otempVar, otempLayer0 } = inputs;
   const n = nlon * nlat;
   const classes = new Uint8Array(n).fill(NO_DATA);
 
   for (let i = 0; i < n; i++) {
     if (ageBytes[i] === ageManifest.no_data_sentinel) continue;
-    if (bathyBytes[i] === bathyManifest.no_data_sentinel) continue;
-    if (otempLayer0[i] === climateManifest.no_data_sentinel) continue;
-
-    const oceanDepthKm = texelToPhysical(bathyVar, bathyBytes[i]);
+    const cellInputs = presentDayCellInputs(inputs, i);
+    if (!cellInputs) continue;
+    const { oceanDepthKm, ccdKm } = cellInputs;
     const otempC = texelToPhysical(otempVar, otempLayer0[i]);
-
-    const basinByte = basinBytes[i];
-    const basinName = basinByte === basinManifest.no_data_sentinel ? undefined : BASIN_CODE_TO_NAME[basinByte];
-    const ccdKm = basinName ? ccdKmForBasin(basinName) : globalCcdKm;
 
     let probs = classifyLithologyProbabilistic({
       oceanDepthKm, ccdKm, otempC,

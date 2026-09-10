@@ -36,6 +36,16 @@
       "encode_max": 11.5,
       "value_min": 0.0,
       "value_max": 7.174
+    },
+    {
+      "id": "shade",
+      "name": "Shaded Relief (grdgradient, azimuth 315 deg)",
+      "units": "unitless",
+      "diverging": true,
+      "encode_min": -0.02144044731743636,
+      "encode_max": 0.02144044731743636,
+      "value_min": -0.0604,
+      "value_max": 0.0706
     }
   ]
 }

@@ -1,13 +1,17 @@
 import { texelIndex, texelToPhysical, fetchVariableBytes, loadManifest } from './core/volume';
 import { fetchStaticPolygonData, assignPlate } from './core/staticPolygons';
 import { FrameByteCache } from './core/frameByteCache';
-import { loadPresentDayInputs, buildPresentDayGrid, NO_DATA, type PresentDayGrid } from './presentDayMap';
+import {
+  loadPresentDayInputs, buildPresentDayGrid, presentDayCellInputs, NO_DATA, type PresentDayGrid,
+} from './presentDayMap';
 import {
   buildAgeDepthModel, buildLithologyLog, createUnboundedPlateFramePoint,
   fetchClimateSeriesForCore, fetchCurrentSpeedSeriesForCore, type LithologyLogStep,
 } from './syntheticCore';
 import type { CcdCurve } from './ccdCurve';
 import type { LonLat } from './core/constants';
+import type { VariableInfo } from './core/types';
+import { PROJECTIONS, orthographicRadius, type Projection, type GlobeView } from './projection';
 
 /** archive/climate/bridge_valdes_global_mean_otemp.json --
  *  prep/prep_global_climate_curve.mjs's output: real global-mean OTEMP at
@@ -19,15 +23,31 @@ interface GlobalClimateCurve {
 }
 
 /**
- * SODP v1 UI: a flat 2D present-day map (Phase 1, ADR-0006/0007/0008),
- * click anywhere in the ocean to build that point's through-time Synthetic
- * Core (Phase 2, ADR-0009) live in the browser. No three.js, no framework
- * -- plain canvas, matching this project's minimal-dependency convention.
+ * SODP viewer UI: a present-day map (Phase 1, ADR-0006/0007/0008), flat
+ * (Equirectangular) or an interactive globe (Orthographic, ADR-0023), click
+ * anywhere in the ocean to build that point's through-time Synthetic Core
+ * (Phase 2, ADR-0009) live in the browser. No three.js, no framework --
+ * plain canvas, matching this project's minimal-dependency convention; the
+ * globe is a math-only inverse projection (src/projection.ts) over the same
+ * canvas/ImageData machinery, not a WebGL scene.
  */
 
 const LOCAL_BASE = `${import.meta.env.BASE_URL}archive`;
 const GEODE_BASE = import.meta.env.VITE_ARCHIVE_BASE;
-const SCALE = 3; // canvas pixels per grid cell
+
+// Fixed logical canvas resolution (ADR-0023): independent of the grid's own
+// 360x181 resolution, since the orthographic globe has no natural tie to
+// grid dimensions the way the old cell-block equirectangular render did.
+const CANVAS_W = 1080;
+const CANVAS_H = 720;
+const DRAG_THRESHOLD_PX = 4; // below this, a pointerdown/up pair is a click, not a drag
+const ROTATE_DEG_PER_PX = 90 / orthographicRadius(CANVAS_W, CANVAS_H); // half the globe's radius drags ~45 deg
+const SHADE_ALPHA = 0.35; // hillshade overlay opacity (ADR-0023: "semi-transparent")
+const SHADE_STRENGTH = 90; // grey excursion from mid-grey (128) at the clip extremes
+
+function hexToRgb(hex: string): [number, number, number] {
+  return [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
+}
 
 const CLASS_COLOR: Record<number, string> = {
   0: '#4477aa', // clay
@@ -35,11 +55,24 @@ const CLASS_COLOR: Record<number, string> = {
   2: '#228833', // siliceous-ooze
 };
 const NO_DATA_COLOR = '#333333';
+const BACKGROUND_COLOR = '#0a0a12'; // space/letterbox margin
+
+const CLASS_RGB: Record<number, [number, number, number]> = Object.fromEntries(
+  Object.entries(CLASS_COLOR).map(([k, hex]) => [Number(k), hexToRgb(hex)]),
+);
+const NO_DATA_RGB = hexToRgb(NO_DATA_COLOR);
+const BACKGROUND_RGB = hexToRgb(BACKGROUND_COLOR);
 
 const statusEl = document.getElementById('status')!;
 const mapCanvas = document.getElementById('map-canvas') as HTMLCanvasElement;
 const sideContent = document.getElementById('side-content')!;
 const beltToggle = document.getElementById('belt-toggle') as HTMLInputElement;
+const projectionSelect = document.getElementById('projection-select') as HTMLSelectElement;
+
+let currentProjection: Projection = PROJECTIONS.equirectangular;
+const globeView: GlobeView = { lon0: 0, lat0: 0 };
+let shadeBytes: Uint8Array | undefined;
+let shadeVarInfo: VariableInfo | undefined;
 
 function setStatus(text: string): void {
   statusEl.textContent = text;
@@ -69,52 +102,81 @@ let globalCurve: GlobalClimateCurve | undefined;
 
 function renderActive(): void {
   const grid = activeGrid();
-  if (grid) drawPresentDayGrid(grid);
+  if (grid && shadeBytes && shadeVarInfo) {
+    renderProjectedGrid(mapCanvas, grid, shadeBytes, shadeVarInfo, currentProjection, globeView);
+  }
   if (lastCore) {
     const log = beltToggle.checked ? lastCore.logBelt : lastCore.logFitted;
     renderSidePanel(lastCore.point, lastCore.basementAgeMa, lastCore.plateId, log, lastCore.formation, globalCurve);
   }
 }
 
-function drawPresentDayGrid(grid: PresentDayGrid): void {
-  mapCanvas.width = grid.nlon * SCALE;
-  mapCanvas.height = grid.nlat * SCALE;
-  const ctx = mapCanvas.getContext('2d')!;
-  const img = ctx.createImageData(mapCanvas.width, mapCanvas.height);
+/** Hillshade byte (ADR-0023) -> a 0..255 grey value, symmetric around
+ *  mid-grey. shadeVar.encode_min/max is the symmetric raw-gradient clip
+ *  range prep/prep_hillshade.py fit (±p99.5(|gradient|)), so normalizing by
+ *  encode_max alone is valid -- encode_min is just its negation. */
+function shadeToGrey(byte: number, shadeVar: VariableInfo): number {
+  const value = texelToPhysical(shadeVar, byte);
+  const norm = shadeVar.encode_max > 0 ? value / shadeVar.encode_max : 0; // -1..1
+  return 128 + norm * SHADE_STRENGTH;
+}
 
-  for (let jLat = 0; jLat < grid.nlat; jLat++) {
-    // Grid row 0 is the SOUTH pole (core/volume.ts's cellCenter convention);
-    // canvas row 0 is the TOP of the image, so flip: canvas row r shows
-    // grid row (nlat-1-r), putting north at the top like a normal map.
-    const canvasRowTop = (grid.nlat - 1 - jLat) * SCALE;
-    for (let iLon = 0; iLon < grid.nlon; iLon++) {
-      const cls = grid.classes[jLat * grid.nlon + iLon];
-      const hex = cls === NO_DATA ? NO_DATA_COLOR : CLASS_COLOR[cls];
-      const r = parseInt(hex.slice(1, 3), 16);
-      const g = parseInt(hex.slice(3, 5), 16);
-      const b = parseInt(hex.slice(5, 7), 16);
-      for (let dy = 0; dy < SCALE; dy++) {
-        for (let dx = 0; dx < SCALE; dx++) {
-          const px = iLon * SCALE + dx;
-          const py = canvasRowTop + dy;
-          const o = (py * mapCanvas.width + px) * 4;
-          img.data[o] = r; img.data[o + 1] = g; img.data[o + 2] = b; img.data[o + 3] = 255;
-        }
+let canvasSized = false;
+
+/** Destination-pixel render loop (ADR-0023): walks every canvas pixel,
+ *  asks the active projection what geographic point it shows, and paints
+ *  that cell's Lithology Class color with the real hillshade blended over
+ *  it as a semi-transparent grey overlay. Replaces the old source-loop
+ *  drawPresentDayGrid(), which only worked because equirectangular's
+ *  forward mapping happens to be a clean per-cell block -- orthographic has
+ *  no such block structure (many/few/zero screen pixels per grid cell
+ *  depending on view), so painting must be destination-driven for both. */
+function renderProjectedGrid(
+  canvas: HTMLCanvasElement, grid: PresentDayGrid, shadeBytesForGrid: Uint8Array, shadeVar: VariableInfo,
+  projection: Projection, view: GlobeView,
+): void {
+  if (!canvasSized) {
+    canvas.width = CANVAS_W;
+    canvas.height = CANVAS_H;
+    canvasSized = true;
+  }
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d')!;
+  const img = ctx.createImageData(W, H);
+  const data = img.data;
+
+  for (let py = 0; py < H; py++) {
+    for (let px = 0; px < W; px++) {
+      const o = (py * W + px) * 4;
+      const ll = projection.screenToLonLat(px, py, W, H, view);
+      if (!ll) {
+        data[o] = BACKGROUND_RGB[0]; data[o + 1] = BACKGROUND_RGB[1]; data[o + 2] = BACKGROUND_RGB[2]; data[o + 3] = 255;
+        continue;
       }
+      const idx = texelIndex(grid.nlon, grid.nlat, ll.lon, ll.lat);
+      const rgb = grid.classes[idx] === NO_DATA ? NO_DATA_RGB : CLASS_RGB[grid.classes[idx]];
+      const grey = shadeToGrey(shadeBytesForGrid[idx], shadeVar);
+      data[o] = rgb[0] * (1 - SHADE_ALPHA) + grey * SHADE_ALPHA;
+      data[o + 1] = rgb[1] * (1 - SHADE_ALPHA) + grey * SHADE_ALPHA;
+      data[o + 2] = rgb[2] * (1 - SHADE_ALPHA) + grey * SHADE_ALPHA;
+      data[o + 3] = 255;
     }
   }
   ctx.putImageData(img, 0, 0);
 }
 
-/** Canvas click (CSS pixels, possibly scaled by max-width) -> (lon, lat). */
-function canvasClickToLonLat(ev: MouseEvent, nlon: number, nlat: number): LonLat {
+/** Pointer position (CSS pixels, possibly scaled by max-width) -> canvas
+ *  pixel coordinates. */
+function pointerToCanvasPx(ev: PointerEvent): { px: number; py: number } {
   const rect = mapCanvas.getBoundingClientRect();
-  const px = ((ev.clientX - rect.left) / rect.width) * mapCanvas.width;
-  const py = ((ev.clientY - rect.top) / rect.height) * mapCanvas.height;
-  const iLon = Math.min(nlon - 1, Math.max(0, Math.floor(px / SCALE)));
-  const canvasRow = Math.min(nlat - 1, Math.max(0, Math.floor(py / SCALE)));
-  const jLat = nlat - 1 - canvasRow; // undo the flip drawPresentDayGrid() applied
-  return { lon: ((iLon + 0.5) / nlon) * 360 - 180, lat: (jLat / (nlat - 1)) * 180 - 90 };
+  return {
+    px: ((ev.clientX - rect.left) / rect.width) * mapCanvas.width,
+    py: ((ev.clientY - rect.top) / rect.height) * mapCanvas.height,
+  };
+}
+
+function wrapLon(lon: number): number {
+  return ((((lon + 180) % 360) + 360) % 360) - 180;
 }
 
 const CLASS_INDEX = { clay: 0, 'carbonate-ooze': 1, 'siliceous-ooze': 2 } as const;
@@ -436,11 +498,18 @@ function renderSidePanel(
 async function main(): Promise<void> {
   setStatus('loading present-day map (real bathymetry + basin CCD, ADR-0008)...');
   const inputs = await loadPresentDayInputs(LOCAL_BASE, GEODE_BASE);
+  shadeBytes = inputs.shadeBytes;
+  shadeVarInfo = inputs.shadeVar;
   gridFitted = buildPresentDayGrid(inputs, false);
   gridBelt = buildPresentDayGrid(inputs, true);
   const grid = gridFitted;
   renderActive();
   beltToggle.addEventListener('change', renderActive);
+  projectionSelect.addEventListener('change', () => {
+    currentProjection = PROJECTIONS[projectionSelect.value as Projection['id']];
+    mapCanvas.style.cursor = currentProjection.id === 'orthographic' ? 'grab' : 'crosshair';
+    renderActive();
+  });
   setStatus('loading plate reconstruction + CCD curves for click handling...');
 
   const [scotesePolyData, publishedCurve, co2LinkedCurve, fetchedGlobalCurve] = await Promise.all([
@@ -460,8 +529,52 @@ async function main(): Promise<void> {
 
   setStatus(`ready -- click anywhere in the ocean (${grid.nlon}x${grid.nlat} present-day map)`);
 
-  mapCanvas.addEventListener('click', async (ev) => {
-    const point = canvasClickToLonLat(ev, grid.nlon, grid.nlat);
+  /** Click vs. drag-to-rotate share one pointer stream (ADR-0023): a
+   *  pointerdown/up pair under DRAG_THRESHOLD_PX of total movement is a
+   *  click (build a Synthetic Core, either projection); past that
+   *  threshold it's a drag, which only the orthographic globe responds to
+   *  by rotating (flat mode has no rotation state to drag). Pointer
+   *  capture keeps move/up events targeting the canvas even if the cursor
+   *  leaves it mid-drag. */
+  let dragOrigin: { x: number; y: number } | undefined;
+  let dragged = false;
+  let renderQueued = false;
+  const scheduleRender = () => {
+    if (renderQueued) return;
+    renderQueued = true;
+    requestAnimationFrame(() => { renderQueued = false; renderActive(); });
+  };
+
+  mapCanvas.addEventListener('pointerdown', (ev) => {
+    mapCanvas.setPointerCapture(ev.pointerId);
+    dragOrigin = { x: ev.clientX, y: ev.clientY };
+    dragged = false;
+  });
+
+  mapCanvas.addEventListener('pointermove', (ev) => {
+    if (!dragOrigin) return;
+    const dx = ev.clientX - dragOrigin.x, dy = ev.clientY - dragOrigin.y;
+    if (!dragged && Math.hypot(dx, dy) > DRAG_THRESHOLD_PX) dragged = true;
+    if (dragged && currentProjection.id === 'orthographic') {
+      globeView.lon0 = wrapLon(globeView.lon0 - dx * ROTATE_DEG_PER_PX);
+      globeView.lat0 = Math.max(-90, Math.min(90, globeView.lat0 + dy * ROTATE_DEG_PER_PX));
+      dragOrigin = { x: ev.clientX, y: ev.clientY }; // incremental delta each move
+      mapCanvas.style.cursor = 'grabbing';
+      scheduleRender();
+    }
+  });
+
+  mapCanvas.addEventListener('pointerup', async (ev) => {
+    const wasDrag = dragged;
+    dragOrigin = undefined;
+    dragged = false;
+    if (currentProjection.id === 'orthographic') mapCanvas.style.cursor = 'grab';
+    if (wasDrag) return;
+
+    const { px, py } = pointerToCanvasPx(ev);
+    const point = currentProjection.screenToLonLat(px, py, mapCanvas.width, mapCanvas.height, globeView);
+    if (!point) return; // clicked the letterbox margin / off the visible hemisphere
+
     const idx = texelIndex(grid.nlon, grid.nlat, point.lon, point.lat);
     const ageByte = inputs.ageBytes[idx];
     if (ageByte === inputs.ageManifest.no_data_sentinel) {
@@ -489,15 +602,21 @@ async function main(): Promise<void> {
         cache, oceanDepthManifest, ocuruVar, ocurvVar, framePoint, scotesePolyData.table, basementAgeMa,
       ),
     ]);
+    // Anchor the ageMa=0 step to the same real bathymetry + basin CCD the
+    // map itself classified this pixel with, not GDH1 + the global CCD
+    // curve -- otherwise the core's own "today" can disagree with the map
+    // it was clicked from (see PresentDayAnchor's doc in syntheticCore.ts).
+    const anchor = presentDayCellInputs(inputs, idx);
+
     // ADR-0013: both options computed from the one fetched series -- classification-only work,
     // cheap, no extra network round-trip -- so the toggle can switch between them instantly.
     const logFitted = buildLithologyLog(
       framePoint, scotesePolyData.table, basementAgeMa, otempSeries, publishedCurve, co2LinkedCurve, false,
-      currentSpeedSeries,
+      currentSpeedSeries, anchor,
     );
     const logBelt = buildLithologyLog(
       framePoint, scotesePolyData.table, basementAgeMa, otempSeries, publishedCurve, co2LinkedCurve, true,
-      currentSpeedSeries,
+      currentSpeedSeries, anchor,
     );
     const trajectory = buildAgeDepthModel(framePoint, scotesePolyData.table, basementAgeMa, 1);
     const formation = trajectory[trajectory.length - 1]?.position ?? point;
