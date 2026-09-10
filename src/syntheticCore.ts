@@ -307,7 +307,32 @@ export interface LithologyLogStep {
  * each step by age. Omitted entirely -> currentErosionRisk/hiatusRisk are
  * undefined for every step, same "no live fetch, no derived value" shape
  * the rest of this file already uses for missing inputs.
+ *
+ * `presentDayAnchor` (optional): at the sample.age === 0 step ONLY (and
+ * only when this is passed), oceanDepthKm/ccdPublishedKm/ccdCo2LinkedKm
+ * are taken from it instead of GDH1/the two modeled CCD curves -- the same
+ * real bathymetry + per-basin CCD ADR-0008 already gives the Present-Day
+ * Lithology Map for that pixel. Without this, a core's own ageMa=0 step
+ * and the map cell it was clicked from can classify differently for no
+ * better reason than which of two present-day depth/CCD models happened
+ * to be asked -- GDH1 has no dynamic topography/sediment-loading/hotspot-
+ * swell correction (ADR-0007/0008) and can disagree with real bathymetry
+ * by kilometres at a given point, which alone can flip which side of the
+ * CCD a cell falls on. Every step older than ageMa=0 still uses GDH1 and
+ * the two curves as before -- a real observed depth genuinely doesn't
+ * exist for any other age (ADR-0008's Consequences already named this as
+ * the deferred question; this is that anchor).
  */
+/** Real present-day depth/CCD for this point's own grid cell -- the exact
+ *  inputs presentDayMap.ts::presentDayCellInputs() gives the map for the
+ *  same cell (real bathymetry, per-basin CCD, ADR-0008), passed in so
+ *  buildLithologyLog()'s ageMa=0 step can be anchored to them instead of
+ *  GDH1 + the global CCD curve -- see buildLithologyLog()'s own doc. */
+export interface PresentDayAnchor {
+  oceanDepthKm: number;
+  ccdKm: number;
+}
+
 export function buildLithologyLog(
   point: PlateFramePoint,
   table: RotationTable,
@@ -317,6 +342,7 @@ export function buildLithologyLog(
   co2LinkedCurve: CcdCurve,
   applyBelt = false,
   currentSpeedSeries?: (CellSample & { age: number })[],
+  presentDayAnchor?: PresentDayAnchor,
 ): LithologyLogStep[] {
   const steps: LithologyLogStep[] = [];
   const speedByAge = new Map((currentSpeedSeries ?? []).map((s) => [s.age, s.value]));
@@ -327,12 +353,17 @@ export function buildLithologyLog(
     const position = positionAt(point, table, sample.age);
     if (!position) continue; // same rotation-table-edge case as buildAgeDepthModel()
 
+    const anchorHere = sample.age === 0 ? presentDayAnchor : undefined;
     const crustalAgeMa = basementAgeMa - sample.age;
-    const oceanDepthKm = ageToDepthKm(crustalAgeMa);
+    const oceanDepthKm = anchorHere ? anchorHere.oceanDepthKm : ageToDepthKm(crustalAgeMa);
     const otempC = sample.value;
 
-    const ccdPublishedKm = ccdKmAt(publishedCurve, sample.age);
-    const ccdCo2LinkedKm = ccdKmAt(co2LinkedCurve, sample.age);
+    // At the real present-day anchor there is only one observed CCD, not
+    // two competing modeled curves -- both fields take the same value, so
+    // classPublished === classCo2Linked and `divergent` is naturally false
+    // here, same as a real, directly-observed step should be.
+    const ccdPublishedKm = anchorHere ? anchorHere.ccdKm : ccdKmAt(publishedCurve, sample.age);
+    const ccdCo2LinkedKm = anchorHere ? anchorHere.ccdKm : ccdKmAt(co2LinkedCurve, sample.age);
     const validInputs = !Number.isNaN(otempC);
     const classify = (ccdKm: number): LithologyProbabilities => {
       let probs = classifyLithologyProbabilistic({ oceanDepthKm, ccdKm, otempC });

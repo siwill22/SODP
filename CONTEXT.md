@@ -3,15 +3,21 @@
 Vocabulary for the Synthetic Ocean Discovery Project: a tool that, given a
 present-day ocean point, synthesizes a plausible sediment core from sparse
 physical drivers. Glossary only — no implementation detail. See
-`docs/plans/sediment-core-simulator.md` for the design itself and
-`docs/adr/` for why particular choices were made.
+`docs/plans/sediment-core-simulator.md` for the design itself, `docs/adr/`
+for why particular choices were made, and `docs/model-reference.md` for the
+current per-data-type state (what's live/validated vs. prototyped vs.
+designed-only) of everything below.
 
 ## Language
 
 **Synthetic Core**:
 The full output for one queried (lon, lat): an age-depth model paired with
-a Lithology Class at each point down-core. v1 carries no Proxy Tracer
-values — those are a later increment.
+a Lithology Class at each point down-core, plus, at each step, a Proxy
+Tracer reading, a Hiatus Risk annotation, and (Python-validated, not yet
+live) a Depth-in-Core / Physical Property Log reading. Proxy Tracers and
+Hiatus Risk landed after v1 (ADR-0014/0018 and ADR-0019 respectively) —
+the original v1 scope carried neither; see the plan doc for that historical
+framing.
 _Avoid_: "sediment column", "core log" (both used loosely for real cores in
 the literature; reserve those for actual IODP/ODP/DSDP material if this
 project ever discusses it, to keep synthetic and real cleanly apart).
@@ -91,6 +97,27 @@ makes ADR-0002's Scotese/Seton pairing acceptable: both describe the same
 surviving crust closely enough at present day, even though their deeper-time
 reconstructions diverge in general.
 
+**Proxy Tracer**:
+A down-core geochemical value inferred from a Synthetic Core step's own
+real paleo-OTEMP via a published temperature-calcite calibration — δ18O
+first (ADR-0014, Shackleton 1974, inverted), Mg/Ca second (ADR-0018, Anand
+et al. 2003) — checked against real published core-top values
+(`show-me/2026-09-09-proxy-core-top-check/`: δ18O r=0.93, Mg/Ca r=0.71).
+Computed whenever OTEMP itself is valid, not gated on `classPrimary`
+(ADR-0016): the classifier's carbonate-ooze probability is a label
+confidence, not a measured volumetric composition, and real cores yield a
+calcite signal from minor/accessory carbonate even in clay-dominated
+intervals. Always paired with `probsPrimary['carbonate-ooze']` by a caller
+judging plausibility, never read alone. Distinct from a Physical Property
+Log: a Proxy Tracer is inferred from OTEMP and is only ever meaningful
+where calcite exists; a Physical Property Log is inferred from a point's
+Lithology Class mixture and Depth-in-Core, and applies regardless of
+composition.
+_Avoid_: "isotope tracer" (Mg/Ca is not an isotope; "Proxy Tracer" covers
+both), "paleothermometer" alone (accurate but omits that this project uses
+the *inverse* direction for δ18O — OTEMP is the known quantity here, not
+the unknown being solved for).
+
 **Hiatus Risk**:
 A continuous, always-computed per-step probability that a Synthetic Core's
 down-core record is missing at that age — deliberately an annotation on the
@@ -119,3 +146,53 @@ honest-caveat treatment already given the Proxy Tracers' own simplifications.
 _Avoid_: "unconformity" alone (reserve for real IODP/ODP/DSDP material, same
 policy as "core log"/"sediment column" under Synthetic Core).
 
+**Depth-in-Core**:
+Depth below the seafloor (metres below seafloor, mbsf) at a point in a
+Synthetic Core's down-core record, produced by integrating the
+Sedimentation Rate through the core's own history and compacting the
+result via the same porosity-depth relationship each Lithology Class
+carries (ADR-0020). A genuinely different axis from Ocean Depth (the water
+column above the seafloor, GDH1-derived) -- the two do not compose into a
+single "total depth," and there is no conversion between them.
+_Avoid_: "depth" alone (ambiguous with Ocean Depth), "burial depth" (used
+informally during design discussion, not the canonical term), "mbsf" as a
+standalone term outside of stating units.
+
+**Sedimentation Rate**:
+The rate (cm/kyr) at which uncompacted sediment accumulates at a Synthetic
+Core's own position and age -- a probsPrimary-weighted mixture of a
+literature end-member rate per Lithology Class, not a single global
+constant (ADR-0020). The per-class end-member values themselves are not
+yet sourced: real pelagic accumulation-rate literature doesn't cleanly
+separate Carbonate Ooze from Siliceous Ooze the way this project's other
+constants are cleanly sourced, so this is an open, explicitly-flagged
+sourcing TODO, not a placeholder pretending otherwise.
+
+**Physical Property Log**:
+A down-core physical measurement synthesized as a function of Depth-in-Core
+rather than age alone -- Bulk Density and Porosity first (ADR-0020),
+Magnetic Susceptibility second (ADR-0021), each via the same
+compaction/probsPrimary-mixture engine with a new per-Lithology-Class
+end-member table per property. Named after the real IODP/ODP shipboard
+Multi-Sensor Core Logger suite (bulk density, porosity, P-wave velocity,
+magnetic susceptibility, natural gamma radiation, color reflectance), of
+which SODP synthesizes only a growing subset, one property per increment.
+Distinct from a Proxy Tracer (δ18O, Mg/Ca): a Proxy Tracer is inferred from
+OTEMP and paired with carbonate plausibility, never gated on it (ADR-0016);
+a Physical Property Log is inferred from a point's own Lithology Class
+mixture and Depth-in-Core, and applies regardless of composition.
+_Avoid_: "MSCL log" (the real instrument name; this project synthesizes the
+measurement, not the instrument output, and only some of the suite).
+
+**Present-Day Sediment Thickness Map**:
+The validation milestone for the Sedimentation Rate model, checked against
+Straume et al. (2019)'s GlobSed global sediment-thickness compilation
+(ADR-0020). Named in deliberate parallel with the Present-Day Lithology
+Map (ADR-0006), but NOT the same shape of thing: the Present-Day Lithology
+Map could stay present-day-only because a point's Lithology Class only
+ever needed today's inputs, while total sediment thickness at a point is a
+sum over that point's entire age history, so this map requires the same
+through-time reconstruction machinery the single-point Synthetic Core
+already uses, run across a global grid rather than one point. Validated
+once, offline, in Python -- not built as a live app feature by default;
+whether it becomes one is a separate, later decision.

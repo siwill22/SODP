@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .DS_Store
+__pycache__/
 
 # Downloaded third-party raw datasets (GeoTIFFs, NetCDF) used by one-off
 # show-me investigations -- large, reproducible by re-running the fetch

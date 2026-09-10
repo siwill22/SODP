@@ -3,12 +3,17 @@
 **Status: both build-order phases below are built and validated** (Present-
 Day Lithology Map: ADR-0006/0007/0008/0011/0012/0013; through-time
 Synthetic Core: ADR-0009, also now on ADR-0011/0012/0013's classifier).
-The rest of this doc is largely the original design record from a grilling
-session (2026-09-08); driver details below (esp. Productivity Signal) have
-since changed in ways the ADRs record but this doc doesn't fully reflect
-line-by-line — treat the ADRs as authoritative where they disagree with
-prose here. See `CONTEXT.md` for the terms used here and `docs/adr/` for
-the reasoning behind the decisions marked below.
+Proxy Tracers landed (ADR-0014 δ18O, ADR-0018 Mg/Ca), as did Hiatus Risk
+(ADR-0019) and a first Physical Property Log increment -- depth-in-core,
+Sedimentation Rate, density/porosity, magnetic susceptibility (ADR-0020,
+ADR-0021) -- currently at the Python-validation-against-GlobSed stage, not
+yet ported to the live app. The rest of this doc is largely the original
+design record from a grilling session (2026-09-08); driver details below
+(esp. Productivity Signal) have since changed in ways the ADRs record but
+this doc doesn't fully reflect line-by-line — treat the ADRs as
+authoritative where they disagree with prose here. See `CONTEXT.md` for
+the terms used here and `docs/adr/` for the reasoning behind the decisions
+marked below.
 
 ## What it is
 
@@ -70,7 +75,9 @@ IRD), no biogenic-producer subdivision (calcareous vs. siliceous ooze).
    just a per-point read.
 4. Everything else from the original brainstorm not listed above (dust,
    IRD, turbidites, bottom-current scour/winnowing, redox proxies,
-   bioturbation mixing, compaction) — not scheduled, not ruled out.
+   bioturbation mixing) — not scheduled, not ruled out. Compaction/
+   Physical Property Logs, formerly listed here, are now scheduled —
+   see ADR-0020/ADR-0021.
 
 ## Build order
 
@@ -98,14 +105,25 @@ Present-Day Lithology Map check above.
 
 ## Open practical TODOs
 
-- Source an oceanic-inclusive Scotese-family static-polygon resource (the
-  one in Geode's archive today is continental-only, 245 polygons).
-- Identify and digitize the Published CCD Curve compilation (none chosen
-  yet).
-- Find/derive the empirical CO2-to-CCD relationship for the CO2-Linked CCD
-  Curve.
-- Obtain the Seton et al. (2020) grid itself and write the resampling prep
-  step (mirroring Geode's `prep_*.py` → `Volume` convention).
-- Decide and set up this repo's actual build tooling (framework, deploy
-  target) — not yet grilled, deliberately left for whichever session
-  starts implementation.
+**All five items originally listed here are done** — kept as a record of
+what they were, not as outstanding work:
+
+- ~~Source an oceanic-inclusive Scotese-family static-polygon resource~~ —
+  done; `archive/reconstructions/scotese-paleomap/` (503 polygons, per
+  ADR-0002's corollary), superseding the original 245-polygon
+  continental-only resource this item was written against.
+- ~~Identify and digitize the Published CCD Curve compilation~~ — done,
+  `prep/prep_ccd.py` → `archive/ccd/published_ccd_curve.json` (ADR-0005).
+- ~~Find/derive the empirical CO2-to-CCD relationship~~ — done, the same
+  `prep/prep_ccd.py` → `archive/ccd/co2_linked_ccd_curve.json` (ADR-0005;
+  fit quality and its own caveats in `show-me/2026-09-08-ccd-curves/`).
+- ~~Obtain the Seton et al. (2020) grid and write the resampling prep
+  step~~ — done, `prep/prep_basement_age.py` → `archive/models/basement-age`
+  (ADR-0004).
+- ~~Decide and set up this repo's actual build tooling~~ — done: Vite +
+  TypeScript, no backend (`package.json`), consistent with ADR-0001/0004's
+  static-site framing.
+
+See `docs/model-reference.md` for the current, per-data-type state of
+everything built on top of this foundation (what's live and validated vs.
+Python-prototyped vs. designed-only).

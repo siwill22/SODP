@@ -1,16 +1,24 @@
 # SODP — Synthetic Ocean Discovery Project
 
 A standalone add-on to [Geode](../Geode): given a present-day ocean (lon,
-lat), synthesize a plausible sediment core — an age-depth model and a
-primary lithology class through time — from sparse, physically-grounded
-drivers (basement age, carbonate compensation depth, modeled upwelling)
-rather than any precomputed database.
+lat), synthesize a plausible sediment core — an age-depth model, a
+Lithology Class through time, Proxy Tracer readings (δ18O, Mg/Ca), and a
+Hiatus Risk annotation — from sparse, physically-grounded drivers (basement
+age, carbonate compensation depth, real paleo-ocean temperature) rather
+than any precomputed database.
 
-**Status: designed, not yet built.** This repo currently holds the design
-record from the grilling session that produced it — `CONTEXT.md` (domain
-glossary) and `docs/adr/` (the decisions worth a future reader knowing the
-reasoning behind). See `docs/plans/sediment-core-simulator.md` for the full
-picture and what's left to build.
+**Status: built and live** (Vite + TypeScript, no backend — `npm run dev`).
+Both build-order phases (Present-Day Lithology Map, through-time Synthetic
+Core) are implemented and validated against real point data, plus two Proxy
+Tracers (δ18O, Mg/Ca), a Hiatus Risk annotation, and a global climate
+reference viewer. A further increment (Depth-in-Core, Sedimentation Rate,
+density/porosity/magnetic-susceptibility Physical Property Logs) is
+Python-validated but not yet ported in. See `docs/model-reference.md` for
+the current state of every data type this project produces — what's live,
+what's validated against what, and what's known to be wrong or missing —
+and `docs/plans/sediment-core-simulator.md` for the original design record.
+`CONTEXT.md` (domain glossary) and `docs/adr/` (the decisions and the
+reasoning behind them) are the source of truth throughout.
 
 Not a fork or a submodule of Geode. It borrows a handful of Geode's `core/`
 primitives (rotation, static-polygon plate assignment) as a one-time copy,
