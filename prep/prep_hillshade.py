@@ -1,38 +1,30 @@
 #!/usr/bin/env python3
-"""Real greyscale shaded-relief intensity for the present-day bathymetry,
-for the globe/map viewer's semi-transparent hillshade overlay (ADR-0023).
+"""Real greyscale shaded-relief intensity for the globe/map viewer's
+semi-transparent hillshade overlay (ADR-0023/ADR-0024).
 
-Why this exists: the viewer's Present-Day Lithology Map is a flat
-classification (clay/carbonate-ooze/siliceous-ooze); the globe view adds a
-literal shaded-relief render of the same real bathymetry underneath it, so
-ridges/trenches/seamounts read as terrain rather than flat color. Computing
-that shading correctly on a lon/lat grid needs a latitude-aware gradient
-(a plain Cartesian numpy gradient gets the longitude-direction derivative
-wrong toward the poles); this ports the fix already worked out for exactly
-this problem in ../Geode/prep/prep_paleogeography.py::compute_hillshade,
-rather than re-deriving it.
+Why a SEPARATE, much finer-grained model than bathymetry itself: the
+Present-Day Lithology Map's classification (`buildPresentDayGrid` in
+src/presentDayMap.ts) needs bathymetry on the SAME 360x181 grid as
+Basement Age and OTEMP, so `prep_bathymetry.py` deliberately downsamples
+real SRTM15 to that coarse 1-degree grid. The hillshade overlay is purely
+visual -- nothing classifies against it -- so it has no reason to share
+that constraint, and every reason not to: at 360x181 a hillshade looks
+blocky and defeats the point of shading a coastline or a ridge. This ships
+its own model, `bathymetry-hillshade`, at 0.1 degree (3600x1801) -- 10x
+the classification grid's resolution per axis -- fetched independently
+(PyGMT caches the underlying earth_relief download, so re-fetching at a
+different resolution here is cheap, not a duplicate cost of
+prep_bathymetry.py's own fetch).
 
-Same source and grid as prep_bathymetry.py (SRTM15 via PyGMT's
-load_earth_relief, resampled with grdsample onto the same std 360x181
-grid) -- deliberately re-fetched/re-resampled here rather than importing
-from prep_bathymetry.py, matching this repo's prep/ convention of each
-script being self-contained (see prep_basin_mask.py, prep_ccd.py). PyGMT
-caches the underlying earth_relief download, so the re-fetch is cheap.
-
-Unlike prep_bathymetry.py's own uint8 encoding, this variable's byte 255
-is NOT reserved as a no-data sentinel: the gradient is computed from the
-FULL elevation grid (land and ocean both), because a gradient computed
-only from ocean-masked depth would be discontinuous at every coastline.
-Nothing downstream ever reads a shade byte for a cell that presentDayMap.ts
-has not already validated via ageBytes/bathyBytes's OWN no-data sentinel
-(see presentDayCellInputs() in src/presentDayMap.ts) -- so a shade value
-existing at every land pixel too is harmless, and reserving 255 as a
-sentinel here would falsely blank out the real (and legitimate, at the
-tails of a percentile clip) fully-lit or fully-shadowed pixels.
+Shading logic ports what ../Geode/prep/prep_paleogeography.py's own
+compute_hillshade() already had to solve for a real hillshade on a lon/lat
+grid -- see compute_hillshade()'s docstring below for the two specific
+bugs (pole-row degeneracy, geographic vs. Cartesian derivative scaling)
+this avoids re-discovering.
 
 Output:
-  archive/models/bathymetry/frames/shade/std/000.bin
-  archive/models/bathymetry/manifest.json (variables[] gains a "shade" entry)
+  archive/models/bathymetry-hillshade/manifest.json
+  archive/models/bathymetry-hillshade/frames/shade/std/000.bin
 
 Usage:
     conda run -n pygmt17 python prep/prep_hillshade.py
@@ -46,17 +38,20 @@ import numpy as np
 import pygmt
 import xarray as xr
 
-DEFAULT_NLON = 360
-DEFAULT_NLAT = 181
+# 0.1 deg = 6 arc-min ("06m" in PyGMT's earth_relief resolution keywords) --
+# 10x prep_bathymetry.py's 360x181 classification grid per axis.
+DEFAULT_NLON = 3600
+DEFAULT_NLAT = 1801
+DEFAULT_SOURCE_RESOLUTION = "06m"
 DEFAULT_AZIMUTH = 315.0
 DEFAULT_CLIP_PERCENTILE = 99.5
 
 
-def load_and_resample(nlon, nlat):
-    """Identical fetch/resample to prep_bathymetry.py's own helper -- same
-    grid, same registration, so the shade grid lines up cell-for-cell with
-    the existing depth grid."""
-    relief = pygmt.datasets.load_earth_relief(resolution="01d", registration="gridline")
+def load_and_resample(source_resolution, nlon, nlat):
+    """Same shape as prep_bathymetry.py's own helper, parameterized on
+    source resolution instead of hardcoding '01d' -- see module docstring
+    for why this model needs a finer one."""
+    relief = pygmt.datasets.load_earth_relief(resolution=source_resolution, registration="gridline")
 
     tlon = np.linspace(-180.0, 180.0, nlon, endpoint=False)
     tlat = np.linspace(-90.0, 90.0, nlat)
@@ -104,7 +99,14 @@ def compute_hillshade(elev_m, lon, lat, azimuth):
 
 def encode_symmetric(shade, clip):
     """Linear uint8 encode over [-clip, +clip], saturating outside it. No
-    sentinel byte reserved -- see module docstring for why that's safe here."""
+    sentinel byte reserved: the gradient is computed from the FULL
+    elevation grid (land and ocean both -- masking to ocean-only first
+    would make the gradient discontinuous at every coastline), and nothing
+    downstream reads a shade byte for a cell it hasn't already validated as
+    real ocean via bathymetry's OWN sentinel (see presentDayCellInputs() in
+    src/presentDayMap.ts) -- so a real shade value under every land pixel
+    too is harmless, and reserving 255 here would falsely blank out real
+    fully-lit pixels at the top of the percentile clip."""
     scaled = np.clip((shade + clip) / (2.0 * clip), 0.0, 1.0) * 255.0
     return np.round(scaled).astype(np.uint8)
 
@@ -113,16 +115,17 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--nlon", type=int, default=DEFAULT_NLON)
     ap.add_argument("--nlat", type=int, default=DEFAULT_NLAT)
+    ap.add_argument("--source-resolution", default=DEFAULT_SOURCE_RESOLUTION)
     ap.add_argument("--azimuth", type=float, default=DEFAULT_AZIMUTH)
     ap.add_argument("--clip-percentile", type=float, default=DEFAULT_CLIP_PERCENTILE)
     ap.add_argument("--out", type=Path, default=Path(__file__).resolve().parent.parent / "archive")
     ap.add_argument("--validate", action="store_true")
     args = ap.parse_args()
 
-    print("fetching    SRTM15 earth_relief (01d, gridline) via pygmt.datasets.load_earth_relief")
-    elev_m, lon, lat = load_and_resample(args.nlon, args.nlat)
+    print(f"fetching    SRTM15 earth_relief ({args.source_resolution}, gridline) via pygmt.datasets.load_earth_relief")
+    elev_m, lon, lat = load_and_resample(args.source_resolution, args.nlon, args.nlat)
 
-    print(f"gradient    grdgradient, azimuth={args.azimuth:.0f} deg, geographic (gtype=1)")
+    print(f"gradient    grdgradient, azimuth={args.azimuth:.0f} deg, geographic (gtype=1), grid {elev_m.shape}")
     shade = compute_hillshade(elev_m, lon, lat, args.azimuth)
 
     clip = float(np.percentile(np.abs(shade), args.clip_percentile))
@@ -131,28 +134,45 @@ def main():
 
     byte = encode_symmetric(shade, clip)
 
-    model_dir = args.out / "models" / "bathymetry"
+    model_dir = args.out / "models" / "bathymetry-hillshade"
     frame_dir = model_dir / "frames" / "shade" / "std"
     frame_dir.mkdir(parents=True, exist_ok=True)
     out_path = frame_dir / "000.bin"
     byte.tofile(out_path)
-    kb = out_path.stat().st_size / 1024
-    print(f"encoded     [-{clip:.3f}, +{clip:.3f}] -> uint8, no sentinel   {kb:.1f} KB")
+    mb = out_path.stat().st_size / 1024 / 1024
+    print(f"encoded     [-{clip:.3f}, +{clip:.3f}] -> uint8, no sentinel   {mb:.2f} MB")
 
-    manifest_path = model_dir / "manifest.json"
-    manifest = json.loads(manifest_path.read_text())
-    manifest["variables"] = [v for v in manifest["variables"] if v["id"] != "shade"] + [{
-        "id": "shade",
-        "name": "Shaded Relief (grdgradient, azimuth 315 deg)",
-        "units": "unitless",
-        "diverging": True,
-        "encode_min": -clip,
-        "encode_max": clip,
-        "value_min": round(float(shade.min()), 4),
-        "value_max": round(float(shade.max()), 4),
-    }]
-    manifest_path.write_text(json.dumps(manifest, indent=2))
-    print(f"updated     {manifest_path} (variables[] now: {[v['id'] for v in manifest['variables']]})")
+    manifest = {
+        "id": "bathymetry-hillshade",
+        "name": "Present-Day Shaded Relief (SRTM15 / Tozer et al. 2019, via PyGMT grdgradient)",
+        "type": "hillshade",
+        "source": "Tozer, B. et al. (2019), Global Bathymetry and Topography at 15 Arc Sec: SRTM15+, "
+                   f"Earth and Space Science -- fetched via pygmt.datasets.load_earth_relief "
+                   f"(resolution={args.source_resolution}, registration=gridline), resampled with grdsample, "
+                   "shaded with pygmt.grdgradient. A purely visual overlay, deliberately at a much finer "
+                   "grid than the Present-Day Lithology Map's own 360x181 classification grid -- see "
+                   "ADR-0023/ADR-0024 and this script's module docstring for why.",
+        "lon_min": -180.0, "lon_max": 180.0,
+        "lat_min": -90.0, "lat_max": 90.0,
+        "dtype": "uint8",
+        "default_resolution": "std",
+        "resolutions": [{"id": "std", "nlon": args.nlon, "nlat": args.nlat, "ndepth": 1}],
+        "frames": [{"id": "000", "age_ma": 0}],
+        "path_template": "frames/{variable}/{resolution}/{frame}.bin",
+        "default_variable": "shade",
+        "variables": [{
+            "id": "shade",
+            "name": "Shaded Relief (grdgradient, azimuth 315 deg)",
+            "units": "unitless",
+            "diverging": True,
+            "encode_min": -clip,
+            "encode_max": clip,
+            "value_min": round(float(shade.min()), 4),
+            "value_max": round(float(shade.max()), 4),
+        }],
+    }
+    (model_dir / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    print(f"wrote       {model_dir / 'manifest.json'}")
 
     if args.validate:
         back = np.fromfile(out_path, dtype=np.uint8).reshape(args.nlat, args.nlon)

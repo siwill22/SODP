@@ -1,0 +1,40 @@
+{
+  "id": "bathymetry-hillshade",
+  "name": "Present-Day Shaded Relief (SRTM15 / Tozer et al. 2019, via PyGMT grdgradient)",
+  "type": "hillshade",
+  "source": "Tozer, B. et al. (2019), Global Bathymetry and Topography at 15 Arc Sec: SRTM15+, Earth and Space Science -- fetched via pygmt.datasets.load_earth_relief (resolution=06m, registration=gridline), resampled with grdsample, shaded with pygmt.grdgradient. A purely visual overlay, deliberately at a much finer grid than the Present-Day Lithology Map's own 360x181 classification grid -- see ADR-0023/ADR-0024 and this script's module docstring for why.",
+  "lon_min": -180.0,
+  "lon_max": 180.0,
+  "lat_min": -90.0,
+  "lat_max": 90.0,
+  "dtype": "uint8",
+  "default_resolution": "std",
+  "resolutions": [
+    {
+      "id": "std",
+      "nlon": 3600,
+      "nlat": 1801,
+      "ndepth": 1
+    }
+  ],
+  "frames": [
+    {
+      "id": "000",
+      "age_ma": 0
+    }
+  ],
+  "path_template": "frames/{variable}/{resolution}/{frame}.bin",
+  "default_variable": "shade",
+  "variables": [
+    {
+      "id": "shade",
+      "name": "Shaded Relief (grdgradient, azimuth 315 deg)",
+      "units": "unitless",
+      "diverging": true,
+      "encode_min": -0.08225060902535901,
+      "encode_max": 0.08225060902535901,
+      "value_min": -1.6181,
+      "value_max": 1.1068
+    }
+  ]
+}

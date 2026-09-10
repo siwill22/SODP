@@ -36,12 +36,17 @@ export interface PresentDayInputs {
   bathyManifest: Manifest;
   bathyVar: VariableInfo;
   bathyBytes: Uint8Array;
-  /** Shaded-relief intensity (ADR-0023), same grid/frame as bathyBytes --
-   *  ships alongside it as a second variable in the same manifest rather
-   *  than a separate model (prep/prep_hillshade.py). Not gated on its own
-   *  no-data check: it's read only for cells the caller already knows are
-   *  valid ocean via bathyBytes/ageBytes, so land pixels' shade values
-   *  (real, just never displayed) are harmless. */
+  /** Shaded-relief intensity (ADR-0023/ADR-0024) -- a SEPARATE model from
+   *  bathymetry, deliberately at a much finer grid (10x per axis,
+   *  prep/prep_hillshade.py) than nlon/nlat above, since it's a purely
+   *  visual overlay with no reason to share the classification grid's
+   *  coarse resolution. Callers index it with its OWN shadeNlon/shadeNlat,
+   *  never nlon/nlat. Not gated on its own no-data check: it's read only
+   *  for cells the caller already knows are valid ocean via
+   *  bathyBytes/ageBytes, so land pixels' shade values (real, just never
+   *  displayed) are harmless. */
+  shadeNlon: number;
+  shadeNlat: number;
   shadeVar: VariableInfo;
   shadeBytes: Uint8Array;
   basinManifest: Manifest;
@@ -60,17 +65,18 @@ export interface PresentDayInputs {
  *  the classifier entirely (no measurable weight once OTEMP was present),
  *  so it is no longer fetched. */
 export async function loadPresentDayInputs(localBase: string, geodeBase: string): Promise<PresentDayInputs> {
-  const [ageManifest, bathyManifest, basinManifest, climateManifest] = await Promise.all([
+  const [ageManifest, bathyManifest, shadeManifest, basinManifest, climateManifest] = await Promise.all([
     loadManifest(localBase, 'models/basement-age/manifest.json'),
     loadManifest(localBase, 'models/bathymetry/manifest.json'),
+    loadManifest(localBase, 'models/bathymetry-hillshade/manifest.json'),
     loadManifest(localBase, 'models/basin-mask/manifest.json'),
     loadManifest(geodeBase, 'models/bridge-valdes2021-ocean-depth/manifest.json'),
   ]);
 
   const ageVar = ageManifest.variables[0];
   const bathyVar = bathyManifest.variables.find((v) => v.id === 'depth')!;
-  const shadeVar = bathyManifest.variables.find((v) => v.id === 'shade');
-  if (!shadeVar) throw new Error('shade not found in bathymetry manifest -- run prep/prep_hillshade.py');
+  const shadeVar = shadeManifest.variables.find((v) => v.id === 'shade')!;
+  const shadeRes = shadeManifest.resolutions.find((r) => r.id === shadeManifest.default_resolution)!;
   const basinVar = basinManifest.variables[0];
   const otempVar = climateManifest.variables.find((v) => v.id === 'OTEMP');
   if (!otempVar) throw new Error('OTEMP not found in bridge-valdes2021-ocean-depth manifest');
@@ -91,7 +97,7 @@ export async function loadPresentDayInputs(localBase: string, geodeBase: string)
   const [ageBytes, bathyBytes, shadeBytes, basinBytes, publishedCurve] = await Promise.all([
     fetchVariableBytes(localBase, 'basement-age', ageManifest, ageVar.id, '000'),
     fetchVariableBytes(localBase, 'bathymetry', bathyManifest, bathyVar.id, '000'),
-    fetchVariableBytes(localBase, 'bathymetry', bathyManifest, shadeVar.id, '000'),
+    fetchVariableBytes(localBase, 'bathymetry-hillshade', shadeManifest, shadeVar.id, '000'),
     fetchVariableBytes(localBase, 'basin-mask', basinManifest, basinVar.id, '000'),
     fetch(`${localBase}/ccd/published_ccd_curve.json`).then((r) => r.json()),
   ]);
@@ -110,7 +116,8 @@ export async function loadPresentDayInputs(localBase: string, geodeBase: string)
 
   return {
     nlon: res.nlon, nlat: res.nlat,
-    ageManifest, ageBytes, bathyManifest, bathyVar, bathyBytes, shadeVar, shadeBytes,
+    ageManifest, ageBytes, bathyManifest, bathyVar, bathyBytes,
+    shadeNlon: shadeRes.nlon, shadeNlat: shadeRes.nlat, shadeVar, shadeBytes,
     basinManifest, basinBytes,
     climateManifest, otempVar, otempLayer0, globalCcdKm: ccdAge0.ccd_km,
   };

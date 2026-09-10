@@ -35,15 +35,10 @@ interface GlobalClimateCurve {
 const LOCAL_BASE = `${import.meta.env.BASE_URL}archive`;
 const GEODE_BASE = import.meta.env.VITE_ARCHIVE_BASE;
 
-// Fixed logical canvas resolution (ADR-0023): independent of the grid's own
-// 360x181 resolution, since the orthographic globe has no natural tie to
-// grid dimensions the way the old cell-block equirectangular render did.
-const CANVAS_W = 1080;
-const CANVAS_H = 720;
 const DRAG_THRESHOLD_PX = 4; // below this, a pointerdown/up pair is a click, not a drag
-const ROTATE_DEG_PER_PX = 90 / orthographicRadius(CANVAS_W, CANVAS_H); // half the globe's radius drags ~45 deg
 const SHADE_ALPHA = 0.35; // hillshade overlay opacity (ADR-0023: "semi-transparent")
 const SHADE_STRENGTH = 90; // grey excursion from mid-grey (128) at the clip extremes
+const MARKER_RADIUS_PX = 6;
 
 function hexToRgb(hex: string): [number, number, number] {
   return [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
@@ -64,6 +59,7 @@ const NO_DATA_RGB = hexToRgb(NO_DATA_COLOR);
 const BACKGROUND_RGB = hexToRgb(BACKGROUND_COLOR);
 
 const statusEl = document.getElementById('status')!;
+const mapPane = document.getElementById('map-pane')!;
 const mapCanvas = document.getElementById('map-canvas') as HTMLCanvasElement;
 const sideContent = document.getElementById('side-content')!;
 const beltToggle = document.getElementById('belt-toggle') as HTMLInputElement;
@@ -71,8 +67,29 @@ const projectionSelect = document.getElementById('projection-select') as HTMLSel
 
 let currentProjection: Projection = PROJECTIONS.equirectangular;
 const globeView: GlobeView = { lon0: 0, lat0: 0 };
+/** The most recent click, regardless of whether it landed on a classifiable
+ *  ocean cell -- marked on the canvas (ADR-0024) so it stays visible after
+ *  the globe is rotated away and back, or the projection is switched. */
+let markerPoint: LonLat | undefined;
 let shadeBytes: Uint8Array | undefined;
 let shadeVarInfo: VariableInfo | undefined;
+let shadeNlon = 0;
+let shadeNlat = 0;
+
+/** Canvas drawing-buffer size tracks #map-pane's own box (ADR-0024) --
+ *  independent of grid resolution either way, but now also independent of
+ *  any fixed constant, so the map/globe fills the available panel instead
+ *  of a small fixed box. Returns whether the size actually changed, so
+ *  callers only re-render when it did. */
+function resizeCanvasToContainer(): boolean {
+  const rect = mapPane.getBoundingClientRect();
+  const w = Math.max(200, Math.floor(rect.width));
+  const h = Math.max(200, Math.floor(rect.height));
+  if (w === mapCanvas.width && h === mapCanvas.height) return false;
+  mapCanvas.width = w;
+  mapCanvas.height = h;
+  return true;
+}
 
 function setStatus(text: string): void {
   statusEl.textContent = text;
@@ -101,9 +118,12 @@ function activeGrid(): PresentDayGrid | undefined {
 let globalCurve: GlobalClimateCurve | undefined;
 
 function renderActive(): void {
+  resizeCanvasToContainer();
   const grid = activeGrid();
   if (grid && shadeBytes && shadeVarInfo) {
-    renderProjectedGrid(mapCanvas, grid, shadeBytes, shadeVarInfo, currentProjection, globeView);
+    renderProjectedGrid(
+      mapCanvas, grid, shadeBytes, shadeVarInfo, shadeNlon, shadeNlat, currentProjection, globeView, markerPoint,
+    );
   }
   if (lastCore) {
     const log = beltToggle.checked ? lastCore.logBelt : lastCore.logFitted;
@@ -121,25 +141,45 @@ function shadeToGrey(byte: number, shadeVar: VariableInfo): number {
   return 128 + norm * SHADE_STRENGTH;
 }
 
-let canvasSized = false;
+/** Small pin: white disc, dark ring, darker center dot -- marks the last
+ *  clicked point (ADR-0024) so it stays visible after the globe rotates
+ *  away and back or the projection is switched. Drawn with the canvas
+ *  vector API after putImageData, not baked into the pixel buffer. */
+function drawMarker(ctx: CanvasRenderingContext2D, x: number, y: number): void {
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(x, y, MARKER_RADIUS_PX, 0, 2 * Math.PI);
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+  ctx.fill();
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'rgba(0, 0, 0, 0.85)';
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(x, y, MARKER_RADIUS_PX / 3, 0, 2 * Math.PI);
+  ctx.fillStyle = '#1b1f24';
+  ctx.fill();
+  ctx.restore();
+}
 
-/** Destination-pixel render loop (ADR-0023): walks every canvas pixel,
- *  asks the active projection what geographic point it shows, and paints
- *  that cell's Lithology Class color with the real hillshade blended over
- *  it as a semi-transparent grey overlay. Replaces the old source-loop
- *  drawPresentDayGrid(), which only worked because equirectangular's
- *  forward mapping happens to be a clean per-cell block -- orthographic has
- *  no such block structure (many/few/zero screen pixels per grid cell
- *  depending on view), so painting must be destination-driven for both. */
+/** Destination-pixel render loop (ADR-0023/ADR-0024): walks every canvas
+ *  pixel, asks the active projection what geographic point it shows, and
+ *  paints that cell's Lithology Class color with the real hillshade
+ *  blended over it as a semi-transparent grey overlay. Replaces the old
+ *  source-loop drawPresentDayGrid(), which only worked because
+ *  equirectangular's forward mapping happens to be a clean per-cell block
+ *  -- orthographic has no such block structure (many/few/zero screen
+ *  pixels per grid cell depending on view), so painting must be
+ *  destination-driven for both.
+ *
+ *  The classification grid and the hillshade grid are indexed
+ *  SEPARATELY (own nlon/nlat each) -- ADR-0024: the hillshade ships at a
+ *  much finer native resolution than the 360x181 classification grid, and
+ *  the whole point of that is lost if both are looked up through the same
+ *  texelIndex() call. */
 function renderProjectedGrid(
   canvas: HTMLCanvasElement, grid: PresentDayGrid, shadeBytesForGrid: Uint8Array, shadeVar: VariableInfo,
-  projection: Projection, view: GlobeView,
+  shadeGridNlon: number, shadeGridNlat: number, projection: Projection, view: GlobeView, marker: LonLat | undefined,
 ): void {
-  if (!canvasSized) {
-    canvas.width = CANVAS_W;
-    canvas.height = CANVAS_H;
-    canvasSized = true;
-  }
   const W = canvas.width, H = canvas.height;
   const ctx = canvas.getContext('2d')!;
   const img = ctx.createImageData(W, H);
@@ -155,7 +195,8 @@ function renderProjectedGrid(
       }
       const idx = texelIndex(grid.nlon, grid.nlat, ll.lon, ll.lat);
       const rgb = grid.classes[idx] === NO_DATA ? NO_DATA_RGB : CLASS_RGB[grid.classes[idx]];
-      const grey = shadeToGrey(shadeBytesForGrid[idx], shadeVar);
+      const shadeIdx = texelIndex(shadeGridNlon, shadeGridNlat, ll.lon, ll.lat);
+      const grey = shadeToGrey(shadeBytesForGrid[shadeIdx], shadeVar);
       data[o] = rgb[0] * (1 - SHADE_ALPHA) + grey * SHADE_ALPHA;
       data[o + 1] = rgb[1] * (1 - SHADE_ALPHA) + grey * SHADE_ALPHA;
       data[o + 2] = rgb[2] * (1 - SHADE_ALPHA) + grey * SHADE_ALPHA;
@@ -163,6 +204,11 @@ function renderProjectedGrid(
     }
   }
   ctx.putImageData(img, 0, 0);
+
+  if (marker) {
+    const screen = projection.lonLatToScreen(marker, W, H, view);
+    if (screen) drawMarker(ctx, screen.x, screen.y);
+  }
 }
 
 /** Pointer position (CSS pixels, possibly scaled by max-width) -> canvas
@@ -500,6 +546,8 @@ async function main(): Promise<void> {
   const inputs = await loadPresentDayInputs(LOCAL_BASE, GEODE_BASE);
   shadeBytes = inputs.shadeBytes;
   shadeVarInfo = inputs.shadeVar;
+  shadeNlon = inputs.shadeNlon;
+  shadeNlat = inputs.shadeNlat;
   gridFitted = buildPresentDayGrid(inputs, false);
   gridBelt = buildPresentDayGrid(inputs, true);
   const grid = gridFitted;
@@ -510,6 +558,11 @@ async function main(): Promise<void> {
     mapCanvas.style.cursor = currentProjection.id === 'orthographic' ? 'grab' : 'crosshair';
     renderActive();
   });
+  // #map-pane fills whatever height the flex layout gives it (ADR-0024) --
+  // re-measure and re-render whenever that box actually changes, rather
+  // than only on window resize (a container can resize without the window
+  // doing so, e.g. the side panel's own content changing width).
+  new ResizeObserver(() => { if (resizeCanvasToContainer()) renderActive(); }).observe(mapPane);
   setStatus('loading plate reconstruction + CCD curves for click handling...');
 
   const [scotesePolyData, publishedCurve, co2LinkedCurve, fetchedGlobalCurve] = await Promise.all([
@@ -556,8 +609,12 @@ async function main(): Promise<void> {
     const dx = ev.clientX - dragOrigin.x, dy = ev.clientY - dragOrigin.y;
     if (!dragged && Math.hypot(dx, dy) > DRAG_THRESHOLD_PX) dragged = true;
     if (dragged && currentProjection.id === 'orthographic') {
-      globeView.lon0 = wrapLon(globeView.lon0 - dx * ROTATE_DEG_PER_PX);
-      globeView.lat0 = Math.max(-90, Math.min(90, globeView.lat0 + dy * ROTATE_DEG_PER_PX));
+      // Degrees-per-pixel scales with the globe's own on-screen radius (now
+      // container-dependent, ADR-0024), not a fixed constant -- dragging
+      // half the radius rotates ~45 deg regardless of canvas size.
+      const degPerPx = 90 / orthographicRadius(mapCanvas.width, mapCanvas.height);
+      globeView.lon0 = wrapLon(globeView.lon0 - dx * degPerPx);
+      globeView.lat0 = Math.max(-90, Math.min(90, globeView.lat0 + dy * degPerPx));
       dragOrigin = { x: ev.clientX, y: ev.clientY }; // incremental delta each move
       mapCanvas.style.cursor = 'grabbing';
       scheduleRender();
@@ -574,6 +631,9 @@ async function main(): Promise<void> {
     const { px, py } = pointerToCanvasPx(ev);
     const point = currentProjection.screenToLonLat(px, py, mapCanvas.width, mapCanvas.height, globeView);
     if (!point) return; // clicked the letterbox margin / off the visible hemisphere
+
+    markerPoint = point; // mark it even if the click below turns out to be on land (ADR-0024)
+    renderActive();
 
     const idx = texelIndex(grid.nlon, grid.nlat, point.lon, point.lat);
     const ageByte = inputs.ageBytes[idx];
