@@ -1,0 +1,58 @@
+# Build the viewer and publish it to GitHub Pages.
+#
+# Unlike Geode's own deploy.yml (../Geode/.github/workflows/deploy.yml),
+# there is no release-asset download step and no vendored-submodule
+# checkout here: SODP's archive/ is real data (ADR-0004/0006/0008 etc.) but
+# small (a few MB) and already committed to this repo, not a ~374MB
+# generated archive that would bloat git history the way Geode's does, and
+# SODP has no vendored submodule (ADR-0001: `core/` is a one-time copy, not
+# a git submodule). So a plain checkout already has everything the build
+# needs.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; drop superseded ones rather than queueing them.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+        env:
+          # A project site is served from /<repo>/, not the domain root.
+          VITE_BASE: /${{ github.event.repository.name }}/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
